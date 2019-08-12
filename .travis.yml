@@ -19,7 +19,7 @@ before_install:
 
 script: 
   - python -c "import fiona"
-  - python -c "import pysal;import geopandas;s=geopandas.read_file(pysal.examples.get_path('columbus.shp'));s.crs['init']='epsg:26918';s.to_crs(epsg=4326)"
+  - python -c "import pysal;import geopandas;s=geopandas.read_file(pysal.lib.examples.get_path('columbus.shp'));s.crs['init']='epsg:26918';s.to_crs(epsg=4326)"
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then jupyter nbconvert --to markdown --execute --ExecutePreprocessor.timeout=480 content/infrastructure/check_gds_stack.ipynb; fi
  #- cd content/labs
  #- jupyter nbconvert --execute --ExecutePreprocessor.timeout=120 *.ipynb
