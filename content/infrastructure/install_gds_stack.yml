@@ -9,6 +9,7 @@ dependencies:
   - geopandas
   - ipywidgets
   - jupyterlab
+  - mapclassify
   - mplleaflet
   - palettable
   - pip:
