@@ -1,0 +1,398 @@
+<!-- Copied from https://gist.github.com/aaronwolen/5017084#file-template-revealjs-html -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+ 
+<title>Geographic Data Science - Lecture III</title>
+ 
+<meta name="description" content="Geographic Data Science - Lecture III">    
+ 
+  <meta name="author" content="(Geo-)Visualization" />
+ 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+<link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/journal.css" id="theme">
+ 
+ 
+<!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+ 
+ 
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+  document.write( '<link rel="stylesheet" href="css/print/' +
+    ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + 
+    '.css" type="text/css" media="print">' );
+</script>
+ 
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+ 
+<body>
+ 
+<div class="reveal">
+ 
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+ 
+<section>
+<h1>Geographic Data Science - Lecture III</h1>
+<h3>(Geo-)Visualization</h3>
+<p>
+<h4><a href="http://darribas.org">Dani Arribas-Bel</a></h4>
+</p>
+</section>  
+ 
+ 
+<section id="section" class="level1">
+<h1></h1>
+<section id="today" class="level2">
+<h2>Today</h2>
+<ul>
+<li><p>Visualization</p>
+<ul>
+<li><em>What</em> and <em>why</em></li>
+<li>History</li>
+<li>Examples</li>
+</ul></li>
+<li><p>Geovisualization</p>
+<ul>
+<li><em>What</em></li>
+<li>“A map for everyone”</li>
+<li>Dangers of geovisualization</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="section-1" class="level1">
+<h1></h1>
+<section id="visualization" class="level2">
+<h2>Visualization</h2>
+</section>
+<section id="section-2" class="level2">
+<h2></h2>
+<center>
+<em>“Data graphics <strong>visually display measured quantities</strong> by means of the <strong>combined use</strong> of points, lines, a coordinate system, numbers, symbols, words, shading, and color.”</em>
+</center>
+<div style="text-align:right">
+<p><small> <em>The Visual Display of Quantitative Information</em>. Edward R. Tufte. </small></p>
+</div>
+</section>
+<section id="section-3" class="level2">
+<h2></h2>
+<CENTER>
+<img src="../content/lectures/figs/l03_monalisa_data.png" alt="ML data"
+style="width:450px;height:450px;"/> <span class="fragment"> <img src="../content/lectures/figs/l03_monalisa.png" alt="ML pic"
+style="width:450px;height:450px;"/>
+</CENTER>
+<p>[<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg/687px-Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg">Source</a>]</p>
+</section>
+<section id="a-bit-of-history" class="level2">
+<h2>A bit of history</h2>
+<center>
+Maps <span class="fragment"> –&gt; Data Maps (XVIIth.C.) <span class="fragment"> –&gt; Time series (1786) <span class="fragment"> –&gt; Scatter plots
+</center>
+<span class="fragment">
+<ul>
+<li>
+Surprisingly recent: 1750-1800 approx. (much later than many other advances in math and stats!)
+</li>
+<li>
+<strong>William Playfair</strong>’s <em>“linear arithmetic”</em>: encode/replace numbers in tables into visual representations.
+</li>
+<li>
+Other relevant names throughout history: Lambert, Minard, Marey.
+</li>
+</ul>
+</section>
+<section id="visualization-1" class="level2">
+<h2>Visualization</h2>
+<p><em>The Visual Display of Quantitative Information</em>. Edward R. Tufte.</p>
+<ul>
+<li>By <strong>encoding information visually</strong>, they allow to present <strong>large amounts</strong> of numbers in a <strong>meaninful</strong> way.</li>
+<li>If well made, visualizations provide leads into the processes underlying the graphic.</li>
+</ul>
+</section>
+<section id="historical-examples" class="level2">
+<h2>Historical examples</h2>
+<TABLE>
+<TR>
+<TD class="fragment">
+<center>
+<img src="../content/lectures/figs/l03_pyrometrie.gif" alt=""
+style="width:150px;height:150px;"/> <small> [<a href="http://www.fisme.science.uu.nl/wiskrant/artikelen/hist_grafieken/begin/images/pyrometrie.gif">Source</a>] XVIIIth. Cent. - <em>Pytometrie</em> by J. H Lambert<br />
+</small>
+</center>
+</TD>
+<TD class="fragment">
+<center>
+<img src="../content/lectures/figs/l03_playfair.gif" alt=""
+style="width:150px;height:150px;"/> <small> [<a href="https://upload.wikimedia.org/wikipedia/commons/3/3f/Playfair_Barchart.gif">Source</a>] Playfair’s bar chart in The Commercial and Political Atlas (1786) </small>
+</center>
+</TD>
+</small>
+</TR>
+<TR>
+<TD class="fragment">
+<CENTER>
+<img src="../content/lectures/figs/l03_lambert_plot.png" alt=""
+style="width:150px;height:150px;"/> <small> [<a href="https://hal.archives-ouvertes.fr/halshs-00663305/document">Source</a>] Lambert - Evaporation rate against temperature, 1769 </small>
+</CENTER>
+</TD>
+<TD class="fragment">
+<CENTER>
+<img src="../content/lectures/figs/l03_minard.png" alt=""
+style="width:250px;height:100px;"/> <small> Minard - Napoleon army map (XIXth. Cent.) </small>
+</CENTER>
+</TD>
+</TR>
+</TABLE>
+</section>
+</section>
+<section id="section-4" class="level1">
+<h1></h1>
+<section id="geovisualization" class="level2">
+<h2><strong>Geo</strong>visualization</h2>
+</section>
+<section id="tufte-1983" class="level2">
+<h2>Tufte (1983)</h2>
+<center>
+<em>“The most extensive data maps […] place millions of bits of information on a single page before our eyes. No other method for the display of statistical information is so powerful”</em>
+</center>
+</section>
+<section id="maceachren-1994" class="level2">
+<h2>MacEachren (1994)</h2>
+<center>
+<em>“<strong>Geographic visualization</strong> can be defined as the use of concrete visual representations –whether on paper or through computer displays or other media–to <strong>make spatial contexts and problems visible</strong>, so as to engage the most powerful <strong>human information processing</strong> abilities, those associated with vision.”</em>
+</center>
+</section>
+<section id="geovisualization-1" class="level2">
+<h2>GeoVisualization</h2>
+<ul>
+<li>End goal is not to replace the human <em>in the loop</em>, but to <strong>augment</strong> her/him.</li>
+<li>Augmentation here comes through engaging the <strong>pattern recognition</strong> capabilities that our brain inherently has.</li>
+<li>Combines:
+<ul>
+<li>Traditional maps</li>
+<li>Statistical maps</li>
+<li>Statistical devices of other kind (charts, scatter plots, etc.)</li>
+</ul></li>
+<li><strong>Different roles</strong> in the analysis process…</li>
+</ul>
+</section>
+<section id="a-map-for-everyone" class="level2">
+<h2>A map for everyone</h2>
+<p>Maps can fulfill several needs</p>
+<p>Depending on which one we want to stress, the best map will look very different</p>
+<p>MacEachren &amp; Kraak (1997) identify three main dimensions:</p>
+<ul>
+<li>Knowledge of what is being plotted</li>
+<li>Target audience</li>
+<li>Degree of interactivity</li>
+</ul>
+</section>
+<section id="maceachren-kraak-1997-map-cube" class="level2">
+<h2>MacEachren &amp; Kraak (1997) map cube</h2>
+<div style="height: 500px;" data-markdown="1">
+<p><img src="../content/lectures/figs/l03_map_cube.png" /></p>
+</div>
+<p>[<a href="http://cartography.tuwien.ac.at/wordpress/wp-content/uploads/2013/01/cartotalk-corne-van-elzakker.pdf">Source</a>]</p>
+</section>
+<section id="unknown-fast-and-slow-maps" class="level2">
+<h2>Un/known: <em>fast</em> and <em>slow</em> maps</h2>
+</section>
+<section id="fast-maps-source" class="level2">
+<h2>Fast maps [<a href="http://darribas.org/buzz_adam/">Source</a>]</h2>
+<div style="height: 450px;" data-markdown="1">
+<p><img src="../content/lectures/figs/l03_adam_pc.png" /></p>
+</div>
+</section>
+<section id="slow-maps-source" class="level2">
+<h2>Slow maps [<a href="http://www.tandfonline.com/doi/full/10.1080/21681376.2015.1067151">Source</a>]</h2>
+<div style="height: 500px;" data-markdown="1">
+<p><img src="../content/lectures/figs/l03_pc4_low.png" /></p>
+</div>
+</section>
+<section id="audience-easy-and-hard-maps" class="level2">
+<h2>Audience: <em>easy</em> and <em>hard</em> maps</h2>
+<!--
+The larger and non-specialized the audience, the less you can assume about
+what they know, hence less information can be emedded
+
+Highly specialized maps are not particularly compelling to the general eye,
+but they contain a lot of specific information that can be easily decoded by
+the trained eye
+
+This changes with statistical/geographic literacy (the minimum grows)
+
+Pro-tip: know your audience and optimize for it
+-->
+</section>
+<section id="easy-map" class="level2">
+<h2>Easy map</h2>
+<p>[<a href="https://en.wikipedia.org/wiki/Template:Map_of_same-sex_marriage_in_the_United_States#/media/File:Same-sex_marriage_in_the_United_States.svg">Source</a>] Map of same-sex marriage in the US, 2015</p>
+<div style="height: 500px;" data-markdown="1">
+<p><img src="../content/lectures/figs/l03_easy_map.svg" /></p>
+</div>
+</section>
+<section id="hard-map-source" class="level2">
+<h2>Hard map [<a href="http://epn.sagepub.com/content/44/9/2041.short">Source</a>]</h2>
+<CENTER>
+<img src="../content/lectures/figs/l03_arribas_gerritse.png" alt="DAB-G"
+style="width:550px;height:550px;"/>
+</CENTER>
+</section>
+<section id="interaction-one-or-many-maps-in-one" class="level2">
+<h2>Interaction: one or many maps in one</h2>
+<!--
+Talk about interaction, oportunity for discovery, and the end-user as explorer
+rather than mere consumer
+
+Interactivity, however, not always desired: sometimes you need one-message,
+clear maps to make a case and you don't have time for rich interactive one. It
+also takes much more time (althought changing)
+-->
+</section>
+<section id="static-map" class="level2">
+<h2>Static map</h2>
+<div style="height: 500px;" data-markdown="1">
+<p><img src="../content/lectures/figs/l03_la.png" /></p>
+</div>
+</section>
+<section id="interactive-map" class="level2">
+<h2>Interactive map</h2>
+<iframe width="100%" height="450" frameborder="0" src="http://maps.cdrc.ac.uk/#/geodemographics/oac11/default/BTTTFTT/13/-2.9700/53.4000/">
+</iframe>
+</section>
+</section>
+<section id="section-5" class="level1">
+<h1></h1>
+<section id="dangers-of-geovisualization" class="level2">
+<h2><strong>Dangers</strong> of GeoVisualization</h2>
+</section>
+<section id="section-6" class="level2">
+<h2></h2>
+<div style="height: 600px;" data-markdown="1">
+<p><img src="../content/lectures/figs/l03_lie.png" /></p>
+</div>
+</section>
+<section id="how-to-lie-with-maps" class="level2">
+<h2><em>How to lie with maps</em></h2>
+<CENTER>
+<img src="../content/lectures/figs/l03_liv_equal.png" alt="ML data"
+style="width:450px;;"/> <img src="../content/lectures/figs/l03_liv_quantiles.png" alt="ML pic"
+style="width:450px;;"/>
+</CENTER>
+</section>
+<section id="how-to-lie-with-maps-1" class="level2">
+<h2><em>How to lie with maps</em></h2>
+<p>The human brain is so good a picking up patterns…</p>
+<p class="fragment">
+… that it finds them even where they don’t exist!
+</p>
+<p class="fragment">
+<strong>Patternicity</strong> (Shermer, 2008) <em>The tendency to find meaningful patterns in meaningless noise</em>
+</p>
+<p class="fragment">
+<strong>Apophenia</strong> (Konrad, 1958) <em>The experience of seeing patterns or connections in random or meaningless data</em>
+</p>
+</section>
+<section id="twitter-clusters" class="level2">
+<h2>Twitter clusters</h2>
+<CENTER>
+<img src="../content/lectures/figs/l03_kde.png" alt="ML data"
+style="width:550px;height:550px;"/>
+</CENTER>
+</section>
+<section id="how-to-be-truthful-with-maps" class="level2">
+<h2>How to <em>be truthful</em> with maps</h2>
+<center>
+<em>“With great power comes great responsibility”</em>
+</center>
+<span class="fragment"> <strong>Statistics</strong> to the rescue!!! <span class="fragment">
+<ul>
+<li>
+<strong>Complement</strong> and enhance visuals
+</li>
+<li>
+Help disentangling <strong>true</strong> from <strong>spurious</strong> patterns (a.k.a. identifying the “Jesus on the toast”)
+</li>
+<li>
+<strong>Reciprocity</strong>: GeoVis can also enhance statistics and make them more useful
+</li>
+</ul>
+</section>
+<section id="statistics-for-twitter-clusters" class="level2">
+<h2>Statistics for Twitter clusters</h2>
+<CENTER>
+<img src="../content/lectures/figs/l03_kfun.png" alt="ML data"
+style="width:550px;height:550px;"/>
+</CENTER>
+</section>
+</section>
+<section id="section-7" class="level1">
+<h1></h1>
+<section id="recapitulation" class="level2">
+<h2>Recapitulation</h2>
+<ul>
+<li>Visualization of statistical data is a fairly <strong>recent</strong> phenomenon.</li>
+<li>Its power comes from engaging and <strong>augmenting</strong> the human in the loop, rather than replacing her/him.</li>
+<li>Its power <strong>can be misused</strong>, but there are methods to limit this risk.</li>
+</ul>
+</section>
+</section>
+<section id="section-8" class="level1">
+<h1></h1>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" data-property="dct:title">Geographic Data Science’18</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://darribas.org" property="cc:attributionName" rel="cc:attributionURL">Dani Arribas-Bel</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+</section>
+</div>
+ 
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+ 
+<script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    transition: 'linear',
+
+        math: {
+            // mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+            config: 'TeX-AMS_HTML-full'
+        },
+
+  // available themes are in /css/theme
+      theme: Reveal.getQueryHash().theme || 'journal', 
+   
+  // default/cube/page/concave/zoom/linear/fade/none
+      transition: Reveal.getQueryHash().transition || 'linear',
+   
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+    // { src: '../../lib/js/classList.js' },
+    { src: 'plugin/math/math.js', async: true }
+  ]
+  });
+ 
+</script>
+
+</body>
+</html>

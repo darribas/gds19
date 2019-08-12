@@ -1,0 +1,23 @@
+{
+  "@context": "https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld",
+  "@type": "Code",
+  "author": [
+    {
+      "@id": "http://orcid.org/0000-0002-6274-1619",
+      "@type": "Person",
+      "email": "D.Arribas-Bel@liverpool.ac.uk",
+      "name": "Dani Arribas-Bel",
+      "affiliation": "University of Liverpool"
+    }
+  ],
+  "identifier": "",
+  "codeRepository": "https://github.com/darribas/gds18",
+  "datePublished": "2019-01-03",
+  "dateModified": "2019-01-03",
+  "dateCreated": "2019-01-03",
+  "description": "A Course on Geographic Data Science",
+  "keywords": "Geographic Data Science, GIS, Data Science, geopandas, pysal",
+  "license": "CC-BY",
+  "title": "GDS'18",
+  "version": ""
+}

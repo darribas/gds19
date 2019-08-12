@@ -1,0 +1,391 @@
+<!-- Copied from https://gist.github.com/aaronwolen/5017084#file-template-revealjs-html -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+ 
+<title>Geographic Data Science - Lecture IV</title>
+ 
+<meta name="description" content="Geographic Data Science - Lecture IV">    
+ 
+  <meta name="author" content="Mapping Data" />
+ 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+<link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/journal.css" id="theme">
+ 
+ 
+<!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+ 
+ 
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+  document.write( '<link rel="stylesheet" href="css/print/' +
+    ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + 
+    '.css" type="text/css" media="print">' );
+</script>
+ 
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+ 
+<body>
+ 
+<div class="reveal">
+ 
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+ 
+<section>
+<h1>Geographic Data Science - Lecture IV</h1>
+<h3>Mapping Data</h3>
+<p>
+<h4><a href="http://darribas.org">Dani Arribas-Bel</a></h4>
+</p>
+</section>  
+ 
+ 
+<section id="section" class="level1">
+<h1></h1>
+<section id="today" class="level2">
+<h2>Today</h2>
+<ul>
+<li>Mapping data</li>
+<li>MAUP</li>
+<li>Choropleths
+<ul>
+<li>Definition</li>
+<li>Classes</li>
+</ul></li>
+<li>Cartograms</li>
+<li>Conditional maps</li>
+<li>Space-Time mapping</li>
+</ul>
+</section>
+</section>
+<section id="section-1" class="level1">
+<h1></h1>
+<section id="section-2" class="level2">
+<h2></h2>
+<h3>
+Mapping Data with Data maps
+</h3>
+<ul>
+<li><strong>Abstraction</strong> from the purely geographical map</li>
+<li>Representing <strong>numerical values</strong> within a <strong>spatial</strong> context</li>
+<li>A geographical approach to statistical visualization</li>
+</ul>
+<div class="fragment">
+<p><code>Key components</code></p>
+<ul>
+<li>“Container” geographies</li>
+<li>Choropleths: displaying data on maps (choropleths)</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="section-3" class="level1">
+<h1></h1>
+<section id="maup" class="level2">
+<h2>MAUP</h2>
+</section>
+<section id="section-4" class="level2">
+<h2></h2>
+<p><strong>M</strong>odifiable <strong>A</strong>real <strong>U</strong>nit <strong>P</strong>roblem <span class="fragment">(Openshaw, 1984)</span></p>
+</section>
+<section id="section-5" class="level2">
+<h2></h2>
+<center>
+<img src="../content/lectures/figs/l04_maup_pts.png" alt=""
+style="width:300px;height:300px;"/> <span class="fragment"> <img src="../content/lectures/figs/l04_maup_2x2_grid.png" alt=""
+style="width:300px;height:300px;"/> <span class="fragment"> <img src="../content/lectures/figs/l04_maup_2x2_map.png" alt=""
+style="width:300px;height:300px;"/>
+</center>
+</section>
+<section id="section-6" class="level2">
+<h2></h2>
+<center>
+<img src="../content/lectures/figs/l04_maup_pts.png" alt=""
+style="width:300px;height:300px;"/> <span class="fragment"> <img src="../content/lectures/figs/l04_maup_5x5_grid.png" alt=""
+style="width:300px;height:300px;"/> <span class="fragment"> <img src="../content/lectures/figs/l04_maup_5x5_map.png" alt=""
+style="width:300px;height:300px;"/>
+</center>
+</section>
+<section id="section-7" class="level2">
+<h2></h2>
+<center>
+<img src="../content/lectures/figs/l04_maup_pts.png" alt=""
+style="width:300px;height:300px;"/> <span class="fragment"> <img src="../content/lectures/figs/l04_maup_10x10_grid.png" alt=""
+style="width:300px;height:300px;"/> <span class="fragment"> <img src="../content/lectures/figs/l04_maup_10x10_map.png" alt=""
+style="width:300px;height:300px;"/>
+</center>
+</section>
+<section id="section-8" class="level2">
+<h2></h2>
+<center>
+<img src="../content/lectures/figs/l04_maup_2x2_map.png" alt=""
+style="width:300px;height:300px;"/> <img src="../content/lectures/figs/l04_maup_5x5_map.png" alt=""
+style="width:300px;height:300px;"/> <img src="../content/lectures/figs/l04_maup_10x10_map.png" alt=""
+style="width:300px;height:300px;"/>
+</center>
+</section>
+<section id="maup-1" class="level2">
+<h2>MAUP</h2>
+<p><strong>Scale</strong> and <strong>delineation mismatch</strong> between:</p>
+<ul>
+<li>Underlying process (e.g. individuals, firms, shops)</li>
+<li>Unit of measurement (e.g. neighborhoods, regions, etc.)</li>
+</ul>
+<p>In some cases, it can <strong>seriously mislead</strong> analysis on aggregated data (e.g. <a href="http://theconversation.com/how-zip-codes-nearly-masked-the-lead-problem-in-flint-65626">Flint, MI!!!</a>)</p>
+<p><span class="fragment">Always keep <strong>MAUP</strong> in mind when exploring aggregated data!!!</p>
+</section>
+</section>
+<section id="section-9" class="level1">
+<h1></h1>
+<section id="choropleths" class="level2">
+<h2>Choropleths</h2>
+</section>
+<section id="choropleths-1" class="level2">
+<h2>Choropleths</h2>
+<center>
+<em>Thematic map in which values of a variable are encoded using a color gradient of some sort</em>
+</center>
+<ul>
+<li>Counterpart of the histogram</li>
+<li><strong>Values</strong> are <strong>classified</strong> into specific <strong>colors</strong>: value –&gt; bin</li>
+<li><strong>Information loss</strong> as a trade off for <strong>simplicity</strong></li>
+</ul>
+</section>
+<section id="classification-choices" class="level2">
+<h2>Classification choices</h2>
+<ul>
+<li>Colors <span class="fragment"> –&gt; in alignment with the goal of the map</li>
+<li>Bins <span class="fragment"> –&gt; How many?</li>
+<li>Algorithm:</li>
+</ul>
+<ul class="fragment">
+<li>
+Unique values
+</li>
+<li>
+Equal interval
+</li>
+<li>
+Qua/Quintiles (equal count)
+</li>
+<li>
+Fisher-Jenks
+</li>
+<li>
+…
+</li>
+</ul>
+</section>
+<section id="color-schemes" class="level2">
+<h2>Color schemes</h2>
+<p>Align with your purpose</p>
+<ul>
+<li><strong>Categories</strong>, non-ordered <a href="https://jiffyclub.github.io/palettable/wesanderson/#fantasticfox2_5"><img src="../content/lectures/figs/l04_pal_qual.png" alt="Qualitative"
+style="width:300px;height:50px;vertical-align:middle;border:0px;" class="fragment"/></a></li>
+<li>Graduated, <strong>sequential</strong> <a href="https://jiffyclub.github.io/palettable/colorbrewer/sequential/#rdpu_5"><img src="../content/lectures/figs/l04_pal_seq.png" alt="Sequential"
+style="width:300px;height:50px;vertical-align:middle;border:0px;" class="fragment"/></a></li>
+<li>Graduated, <strong>divergent</strong> <a href="https://jiffyclub.github.io/palettable/colorbrewer/diverging/#rdylgn_5"><img src="../content/lectures/figs/l04_pal_div.png" alt="Divergent"
+style="width:300px;height:50px;vertical-align:middle;border:0px;" class="fragment"/></a></li>
+</ul>
+</section>
+<section id="section-10" class="level2" data-background="../content/lectures/figs/l04_colorbrewer.png" data-background-size="contain">
+<h2></h2>
+<p>[<a href="http://colorbrewer2.org/">Source</a>]</p>
+</section>
+<section id="classification-algorithms" class="level2">
+<h2>Classification algorithms</h2>
+</section>
+<section id="unique-values" class="level2">
+<h2>Unique values</h2>
+<ul>
+<li>Categorical data</li>
+<li>No gradient (reflect it with the color scheme!!!)</li>
+<li>Examples: Religion, country of origin…</li>
+</ul>
+</section>
+<section id="unique-values-1" class="level2">
+<h2>Unique values</h2>
+<center>
+<div style="height: 600px;" data-markdown="1">
+<p><img src="../content/lectures/figs/l04_unique_values.png" /></p>
+</div>
+</center>
+</section>
+<section id="equal-interval" class="level2">
+<h2>Equal interval</h2>
+<ul>
+<li>Take the <strong>value</strong> span of the data to represent and split it equally</li>
+<li><strong>Splitting</strong> happens based on the <strong>numerical value</strong></li>
+<li>Gives more weight to outliers if the distribution is skewed</li>
+</ul>
+</section>
+<section id="section-11" class="level2" data-background="../content/lectures/figs/l04_equal_interval.png" data-background-size="contain">
+<h2></h2>
+</section>
+<section id="quantiles" class="level2">
+<h2>Quantiles</h2>
+<ul>
+<li>Regardless of numerical values, split the distribution keeping the same amount of values in each bin</li>
+<li><strong>Splitting</strong> based on the <strong>rank</strong> of the value</li>
+<li>If distribution is skewed, it can put very different values in the same bin</li>
+</ul>
+</section>
+<section id="section-12" class="level2" data-background="../content/lectures/figs/l04_quantiles.png" data-background-size="contain">
+<h2></h2>
+</section>
+<section id="other" class="level2">
+<h2>Other</h2>
+<ul>
+<li>Fisher-Jenks</li>
+<li>Natural breaks</li>
+<li>Outlier maps: box maps, std. maps…</li>
+</ul>
+</section>
+<section id="tips" class="level2">
+<h2>Tips</h2>
+<p>Different classification schemes can produce widely different maps as a result of:</p>
+<ul>
+<li>The distribution of the values</li>
+<li>The inherent simplification that a choropleth implies</li>
+</ul>
+<p>Best advice is to <strong>explore</strong> different ones and <strong>combine</strong> choropleths with other graphical devices like histograms or density plots</p>
+</section>
+</section>
+<section id="section-13" class="level1">
+<h1></h1>
+<section id="cartograms" class="level2">
+<h2>Cartograms</h2>
+<p><em>“<strong>Data maps</strong> where the variable is encoded, not by a color gradient, but by <strong>distorting the shape/size</strong> of the geographical objects”</em></p>
+<ul class="fragment">
+<li>
+Useful in cases where the natural size/shape induces to wrong interpretation, or obscures the intended representation.
+</li>
+<li>
+If not done carefully, it can distort the message in unintended ways
+</li>
+</ul>
+</section>
+<section id="cartograms-1" class="level2">
+<h2>Cartograms</h2>
+<center>
+<img src="../content/lectures/figs/l04_liv_choro.png" alt=""
+style="width:400px"/> <span class="fragment"> <img src="../content/lectures/figs/l04_liv_carto.png" alt=""
+style="width:400px"/>
+</center>
+</section>
+<section id="section-14" class="level2" data-background="../content/lectures/figs/l04_carto_consumption.png" data-background-size="contain">
+<h2></h2>
+<p>[<a href="http://www.worldmapper.org/">Source</a>]</p>
+</section>
+</section>
+<section id="section-15" class="level1">
+<h1></h1>
+<section id="conditional-maps" class="level2">
+<h2>Conditional maps</h2>
+<center>
+Split a dataset in <em>buckets</em> by <em>conditioning</em> on additional variables, then create a map for each <em>bucket</em>
+</center>
+<ul>
+<li>If no association, maps should look the same</li>
+<li>But, if the conditioning variables are somewhat related to the outcome we are mapping, the spatial distribution can vary substantially</li>
+<li><strong>Exploration</strong> of <strong>multivariate</strong> relationships</li>
+</ul>
+</section>
+<section id="conditional-maps-1" class="level2">
+<h2>Conditional maps</h2>
+<center>
+<div style="width: 600px;" data-markdown="1">
+<p><img src="../content/lectures/figs/l04_conditional_plot.png" /></p>
+</div>
+</center>
+</section>
+</section>
+<section id="section-16" class="level1">
+<h1></h1>
+<section id="space-time-mapping" class="level2">
+<h2>Space-Time mapping</h2>
+</section>
+<section id="space-time-mapping-1" class="level2">
+<h2>Space-Time mapping</h2>
+<ul>
+<li>Bringing time into a spatial 2D context is “tricky” (it’s really 3D!)</li>
+<li>Traditionally <span class="fragment"> –&gt; sequence of time periods, 3D plots</li>
+<li>More recently <span class="fragment"> –&gt; animation and interactivity</li>
+</ul>
+</section>
+<section id="section-17" class="level2">
+<h2></h2>
+[<a href="http://www.svgopen.org/2005/papers/abstract_neumann_thematic_navigation_in_space_and_time/">Source</a>]
+<div style="height: 500px;" data-markdown="1">
+<p><img src="../content/lectures/figs/l04_space_time_cube.png" /></p>
+</div>
+<!--
+## {data-background-iframe="http://cartodb.github.io/torque/examples/navy_leaflet.html"}
+
+[[Source](http://cartodb.github.io/torque/examples/navy_leaflet.html)]
+-->
+</section>
+<section id="section-18" class="level2" data-background-iframe="https://d9a.cartodb.com/viz/fe9751f0-6ced-11e4-98f3-0e9d821ea90d/embed_map">
+<h2></h2>
+<p>[<a href="https://cartodb.com/case-studies/la-metro-movement/">Source</a>]</p>
+</section>
+</section>
+<section id="section-19" class="level1">
+<h1></h1>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" data-property="dct:title">Geographic Data Science’18</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://darribas.org" property="cc:attributionName" rel="cc:attributionURL">Dani Arribas-Bel</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+</section>
+</div>
+ 
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+ 
+<script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    transition: 'linear',
+
+        math: {
+            // mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+            config: 'TeX-AMS_HTML-full'
+        },
+
+  // available themes are in /css/theme
+      theme: Reveal.getQueryHash().theme || 'journal', 
+   
+  // default/cube/page/concave/zoom/linear/fade/none
+      transition: Reveal.getQueryHash().transition || 'linear',
+   
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+    // { src: '../../lib/js/classList.js' },
+    { src: 'plugin/math/math.js', async: true }
+  ]
+  });
+ 
+</script>
+
+</body>
+</html>

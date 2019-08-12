@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Dani Arribas-Bel">
+  <meta name="description" content="An introduction to Geographic Data Science">
+
+  <title>GDS18 &mdash; Lab 4 - Automated choropleths</title>
+
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/css/course-site-custom.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="../assets/js/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6032674-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</head>
+<body>
+
+  <!-- Static navbar -->
+  <div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><font color='#be1e2d'>GDS18</font></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../overview.html">Overview</a></li>
+          <li><a href="../syllabus.html">Syllabus</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle"
+                data-toggle="dropdown">Lectures <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              
+              
+              <li><a href="../notes/Class_01.html">Week 1 - Introduction</a></li>
+              
+              <li><a href="../notes/Class_02.html">Week 2 - Geo-Data</a></li>
+              
+              <li><a href="../notes/Class_03.html">Week 3 - (Geo)Visualization</a></li>
+              
+              <li><a href="../notes/Class_04.html">Week 4 - Choropleth mapping</a></li>
+              
+              <li><a href="../notes/Class_05.html">Week 5 - Spatial Weights</a></li>
+              
+              <li><a href="../notes/Class_06.html">Week 6 - ESDA</a></li>
+              
+              <li><a href="../notes/Class_07.html">Week 7 - Break</a></li>
+              
+              <li><a href="../notes/Class_08.html">Week 8 - Clustering</a></li>
+              
+              <li><a href="../notes/Class_09.html">Week 9 - Points</a></li>
+              
+              <li><a href="../notes/Class_10.html">Week 10 - Assignment preparation</a></li>
+              
+              <li><a href="../notes/Class_11.html">Week 11 - Causal Inference</a></li>
+              
+              <li><a href="../notes/Class_12.html">Week 12 - Geographic Data Science in Action</a></li>
+              
+              
+            </ul>
+          </li>
+          <li class="dropdown active">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Labs <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              
+              
+              <li><a href="../labs/Lab_00.html">Lab 0 - Tools</a></li>
+              
+              <li><a href="../labs/Lab_01.html">Lab 1 - Tidy Data (I)</a></li>
+              
+              <li><a href="../labs/Lab_02.html">Lab 2 - Tidy Data (II)</a></li>
+              
+              <li><a href="../labs/Lab_03.html">Lab 3 - (Geo)Visualization</a></li>
+              
+              <li><a href="../labs/Lab_04.html">Lab 4 - Automated choropleths</a></li>
+              
+              <li><a href="../labs/Lab_05.html">Lab 5 - Spatial Weights</a></li>
+              
+              <li><a href="../labs/Lab_06.html">Lab 6 - ESDA</a></li>
+              
+              <li><a href="../labs/Lab_08.html">Lab 8 - Clustering</a></li>
+              
+              <li><a href="../labs/Lab_09.html">Lab 9 - Points</a></li>
+              
+              
+            </ul>
+          </li>
+          <li><a href="../assignments.html">Assessment</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle"
+                data-toggle="dropdown">Resources <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+          <li><a href="../bibliography.html">Bibliography</a></li>
+          <li><a href="../datasets.html">Datasets</a></li>
+          <li><a href="../software.html">Software</a></li>
+          <li><a href="/gds18/further_resources.html">Further resources</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <div class="container" id="body">
+
+    
+    <h2>Lab 4 - Automated choropleths</h2>
+    
+
+    <h3 id="notebook">Notebook</h3>
+
+<ul>
+  <li><a href="../content/labs/lab_04.ipynb">ipynb</a></li>
+  <li><a href="../content/labs/lab_04.html">html</a></li>
+  <li><a href="../content/labs/lab_04.pdf">pdf</a></li>
+</ul>
+
+<p>Extra materials:</p>
+
+<ul>
+  <li><a href="../content/labs/lab_04_extras.ipynb">ipynb</a></li>
+  <li><a href="../content/labs/lab_04_extras.html">html</a></li>
+  <li><a href="../content/labs/lab_04_extras.pdf">pdf</a></li>
+</ul>
+
+<h3 id="data">Data</h3>
+
+<p>This session uses the <strong>“Index of Multiple Deprivation”“</strong> dataset as well as the Ordnance Survey <strong>(OS) Geodata Pack</strong>. Go to the <a href="../datasets.html">Datasets</a> tab to find out more information as well as instructions to download it.</p>
+
+<p>Additionally, you will need the raster file for the basemap of Liverpool. This has been assembled by <a href="http://darribas.org">Dani Arribas-Bel</a> from the <a href="https://www.ordnancesurvey.co.uk/business-and-government/products/vectormap-district.html">OS VectorMap District (Backdrop Raster)</a>, and it is licensed as OpenData. The file is available for download on the following link:</p>
+
+<blockquote>
+  <p><a href="http://darribas.org/gds17/content/labs/figs/lab04_liverpool.tif">http://darribas.org/gds17/content/labs/figs/lab04_liverpool.tif</a></p>
+</blockquote>
+
+
+
+  </div>
+
+  <div id="footer">
+    <div class="container text-muted small">
+      Content by <a href="http://darribas.org">Dani Arribas-Bel</a>.
+
+
+  Content licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0</a>.
+
+
+Created with <a href="http://jekyllrb.com/">Jekyll</a> and <a href="http://getbootstrap.com/">Bootstrap</a>.
+
+
+
+    </div>
+  </div>
+
+<!--jQuery & Twitter Bootstrap JavaScript-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+
+</body>
+</html>

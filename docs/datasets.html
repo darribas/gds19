@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Dani Arribas-Bel">
+  <meta name="description" content="An introduction to Geographic Data Science">
+
+  <title>GDS18 &mdash; Datasets</title>
+
+  <link href="/gds18/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/gds18/assets/css/course-site-custom.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="/gds18/assets/js/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6032674-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<body>
+
+  <!-- Static navbar -->
+  <div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/gds18/index.html"><font
+                                color='#be1e2d'>GDS18</font></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/gds18/index.html">Home</a></li>
+          <li><a href="/gds18/overview.html">Overview</a></li>
+          <li><a href="/gds18/syllabus.html">Syllabus</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle"
+                data-toggle="dropdown">Lectures <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              
+              
+              <li><a href="/gds18/notes/Class_01.html">Week 1 - Introduction</a></li>
+              
+              <li><a href="/gds18/notes/Class_02.html">Week 2 - Geo-Data</a></li>
+              
+              <li><a href="/gds18/notes/Class_03.html">Week 3 - (Geo)Visualization</a></li>
+              
+              <li><a href="/gds18/notes/Class_04.html">Week 4 - Choropleth mapping</a></li>
+              
+              <li><a href="/gds18/notes/Class_05.html">Week 5 - Spatial Weights</a></li>
+              
+              <li><a href="/gds18/notes/Class_06.html">Week 6 - ESDA</a></li>
+              
+              <li><a href="/gds18/notes/Class_07.html">Week 7 - Break</a></li>
+              
+              <li><a href="/gds18/notes/Class_08.html">Week 8 - Clustering</a></li>
+              
+              <li><a href="/gds18/notes/Class_09.html">Week 9 - Points</a></li>
+              
+              <li><a href="/gds18/notes/Class_10.html">Week 10 - Assignment preparation</a></li>
+              
+              <li><a href="/gds18/notes/Class_11.html">Week 11 - Causal Inference</a></li>
+              
+              <li><a href="/gds18/notes/Class_12.html">Week 12 - Geographic Data Science in Action</a></li>
+              
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Labs <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              
+              
+              <li><a href="/gds18/labs/Lab_00.html">Lab 0 - Tools</a></li>
+              
+              <li><a href="/gds18/labs/Lab_01.html">Lab 1 - Tidy Data (I)</a></li>
+              
+              <li><a href="/gds18/labs/Lab_02.html">Lab 2 - Tidy Data (II)</a></li>
+              
+              <li><a href="/gds18/labs/Lab_03.html">Lab 3 - (Geo)Visualization</a></li>
+              
+              <li><a href="/gds18/labs/Lab_04.html">Lab 4 - Automated choropleths</a></li>
+              
+              <li><a href="/gds18/labs/Lab_05.html">Lab 5 - Spatial Weights</a></li>
+              
+              <li><a href="/gds18/labs/Lab_06.html">Lab 6 - ESDA</a></li>
+              
+              <li><a href="/gds18/labs/Lab_08.html">Lab 8 - Clustering</a></li>
+              
+              <li><a href="/gds18/labs/Lab_09.html">Lab 9 - Points</a></li>
+              
+              
+            </ul>
+          </li>
+          <li><a href="/gds18/assignments.html">Assessment</a></li>
+          <li class="dropdown active">
+            <a href="#" class="dropdown-toggle"
+                data-toggle="dropdown">Resources <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+          <li><a href="/gds18/bibliography.html">Bibliography</a></li>
+          <li><a href="/gds18/datasets.html">Datasets</a></li>
+          <li><a href="/gds18/software.html">Software</a></li>
+          <li><a href="/gds18/further_resources.html">Further resources</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <div class="container" id="body">
+    <h2 id="datasets">Datasets</h2>
+
+<h4 id="census-socio-demographics">Census socio-demographics</h4>
+
+<p>There are two Census datasets used in the labs:</p>
+
+<ul>
+  <li><strong>Lab 1 - Part I</strong></li>
+</ul>
+
+<p>Table of LSOA areas in Liverpool with population counts by World region. The table is derived from the CDRC Census data pack (see below). <a href="labs/Lab_01.html">“Lab 1 - Extra”</a> contains an in detail explanation of how the table is constructed.</p>
+
+<p><strong>Source</strong>: available <a href="content/labs/data/liv_pop.csv">here</a>.</p>
+
+<ul>
+  <li><strong>Lab 1 - Part II</strong></li>
+</ul>
+
+<p>Collection of socio-demographic characteristics from the 2011 Census for the city of Liverpool. A detailed description of the dataset, as well as instructions as to how to download it are available on the source link.</p>
+
+<p><strong>Source</strong>: <a href="http://cdrc.ac.uk/">CDRC</a>’s Census data pack for the city of Liverpool (UK). Available in this
+<a href="https://data.cdrc.ac.uk/dataset/cdrc-2011-census-data-packs-for-local-authority-district-liverpool-e08000012">link</a>.</p>
+
+<p><strong>Instructions</strong>: you will need to be registered on the CDRC website, which is free and very easy. Once logged in, click on the link provided above and select “Download” on the dataset’s page.</p>
+
+<h4 id="index-of-multiple-deprivation">Index of Multiple Deprivation</h4>
+
+<p>Scores, ranks, and components of the 2015 Index of Multiple Deprivation (IMD). A detailed description of the dataset, as well as instructions as to how to download it are available on the source link.</p>
+
+<p><strong>Source</strong>: <a href="http://cdrc.ac.uk/">CDRC</a>’s English Indices of Deprivation 2015  Geodata Pack for the city of Liverpool (UK). Available in this <a href="https://data.cdrc.ac.uk/dataset/cdrc-english-indices-of-deprivation-2015-geodata-pack-liverpool-e08000012">link</a>.</p>
+
+<p><strong>Instructions</strong>: you will need to be registered on the CDRC website, which is free and very easy. Once logged in, click on the link provided above and select “Download” on the dataset’s page.</p>
+
+<h4 id="os-geodata-pack">OS Geodata Pack</h4>
+
+<p>This is a compilation of spatial data about the city of Liverpool produced by the Ordnance Survey, distributed as open data, and provided by the CDRC. A detailed description of the dataset, as well as instructions as to how to download it are available on the source link.</p>
+
+<p><strong>Source</strong>: <a href="http://cdrc.ac.uk/">CDRC</a>’s Geodata pack for the city of Liverpool (UK). Available in this <a href="https://data.cdrc.ac.uk/dataset/cdrc-2015-os-geodata-pack-liverpool-e08000012">link</a>.</p>
+
+<p><strong>Instructions</strong>: you will need to be registered on the CDRC website, which is free and very easy. Once logged in, click on the link provided above and select “Download” on the dataset’s page.</p>
+
+<h4 id="uk-raster">UK raster</h4>
+
+<p>Lab 2 includes a blurb on displaying raster data. To do that, it uses a file
+from the Ordnance Survey that is available from the OS website:</p>
+
+<blockquote>
+  <p>https://www.ordnancesurvey.co.uk/opendatadownload/products.html</p>
+</blockquote>
+
+<p>For convenience, the file is also available for download <a href="content/labs/figs/lab02_GBOverview.tif">here</a>.</p>
+
+<h4 id="john-snows-cholera-map">John Snow’s Cholera map</h4>
+
+<p>This is the dataset of the results of the 2016 referendum vote to leave the EU, at the local authority level. All the necessary data have been assembled for convenience in a single file that contains geographic information about each local authority in England, Wales and Scotland, as well as the vote attributes. The file is in the modern geospatial format <a href="http://www.geopackage.org/">GeoPackage</a>, which presents several advantages over the more traditional shapefile (chief among them, the need of a single file instead of several). The file is available as a download from the course website on the following link:</p>
+
+<blockquote>
+  <p><a href="http://darribas.org/gds18/content/labs/data/brexit.gpkg">http://darribas.org/gds18/content/labs/data/brexit.gpkg</a></p>
+</blockquote>
+
+<p>The source data used to compile the file linked above include:</p>
+
+<ul>
+  <li>Electoral Commission data on the EU referendum results (<a href="https://www.electoralcommission.org.uk/find-information-by-subject/elections-and-referendums/past-elections-and-referendums/eu-referendum/electorate-and-count-information">[<code class="highlighter-rouge">url</code>]</a>)</li>
+  <li>Local Authority District boundaries (<a href="https://data.gov.uk/dataset/83f065f7-3b55-4871-97c8-21579adbee1c/local-authority-districts-december-2015-full-extent-boundaries-in-great-britain">[<code class="highlighter-rouge">url</code>]</a>)</li>
+</ul>
+
+<h4 id="airbnb-listing-for-inner-london---msoa-level">AirBnb listing for Inner London - MSOA level</h4>
+
+<p>This dataset contains information for <a href="http://www.airbnb.com">AirBnb</a> properties for the area of Inner London aggregated at the MSOA level. It has been prepared by Dani Arribas-Bel using as the original source the full listing of AirBnb locations for London provided by <a href="http://insideairbnb.com/">Inside AirBnb</a>. Same as the source, the dataset is released under a <a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a> License.</p>
+
+<p>For every polygon, the following variables are provided:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">id</code>: MSOA unique identifier.</li>
+  <li><code class="highlighter-rouge">accommodates</code>: average property capacity in the MSOA.</li>
+  <li><code class="highlighter-rouge">bathrooms</code>: average number of bathrooms in the properties within the MSOA.</li>
+  <li><code class="highlighter-rouge">bedrooms</code>: average number of bedrooms in the properties within the MSOA.</li>
+  <li><code class="highlighter-rouge">beds</code>: average number of beds in the properties within the MSOA.</li>
+  <li><code class="highlighter-rouge">number_of_reviews</code>: average number of reviews received by the properties within the MSOA.</li>
+  <li><code class="highlighter-rouge">reviews_per_month</code>: average number of reviews per month received by the properties within the MSOA.</li>
+  <li><code class="highlighter-rouge">review_scores_ratings</code>: average rating score received by the properties within the MSOA.</li>
+  <li><code class="highlighter-rouge">review_scores_accuracy</code>: average accuracy score received by the properties within the MSOA.</li>
+  <li><code class="highlighter-rouge">review_scores_cleanliness</code>: average cleanliness score received by the properties within the MSOA.</li>
+  <li><code class="highlighter-rouge">review_scores_checkin</code>: average checkin score received by the properties within the MSOA.</li>
+  <li><code class="highlighter-rouge">review_scores_communication</code>: average communication score received by the properties within the MSOA.</li>
+  <li><code class="highlighter-rouge">review_scores_location</code>: average location score received by the properties within the MSOA.</li>
+  <li><code class="highlighter-rouge">review_scores_value</code>: average value score received by the properties within the MSOA.</li>
+  <li><code class="highlighter-rouge">property_count</code>: total number of AirBnb properties listed withing the MSOA.</li>
+</ul>
+
+<p><strong>Source</strong>: <a href="http://insideairbnb.com/">Inside AirBnb</a>’s extract of AirBnb locations in London (UK).</p>
+
+<p><strong>Instructions</strong>: the data is provided as a <code class="highlighter-rouge">GeoJSON</code> file and is available for download in the following url (right-clik and “Save As” on the link):</p>
+
+<blockquote>
+  <p><a href="content/labs/data/ilm_abb.geojson">http://darribas.org/gds16/content/labs/data/ilm_abb.geojson</a></p>
+</blockquote>
+
+<p>The lab also uses an additional file that contains the boundary lines of the London boroughs, which has been obtained from:</p>
+
+<blockquote>
+  <p><a href="https://github.com/radoi90/housequest-data/blob/master/london_boroughs.geojson">https://github.com/radoi90/housequest-data/blob/master/london_boroughs.geojson</a></p>
+</blockquote>
+
+<p>However, some students have experienced problems with the original file. If that is the case for you, go ahead and download this version from the course website:</p>
+
+<blockquote>
+  <p><a href="content/labs/data/london_boroughs.geojson">http://darribas.org/gds16/content/labs/data/london_boroughs.geojson</a></p>
+</blockquote>
+
+<p><strong>Additional files</strong>: A Jupyter notebook showing the process of cleaning and aggregation carried out from the original data to the file provided here can be accessed in <a href="content/labs/lab_08_airbnb_data_prep.ipynb"><code class="highlighter-rouge">.ipynb</code></a> and <a href="content/labs/lab_08_airbnb_data_prep.html">html</a> format.</p>
+
+<h4 id="geo-referenced-tweets">Geo-referenced tweets</h4>
+
+<p>This dataset, provided as a shapefile, contains a collection of locations and
+time stamps relating to <a href="http://twitter.com">Twitter</a> postings within the 
+municipality of Liverpool. The data was originally provided by Guy Lansley
+from UCL and processed by Dani Arribas-Bel.</p>
+
+<p>Every row in the dataset contains an individual tweet, and is provided with the
+following information:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">LAT</code>: latitude of the location where the posting took place.</li>
+  <li><code class="highlighter-rouge">LON</code>: longitude of the location where the posting took place.</li>
+  <li><code class="highlighter-rouge">YEAR</code>: year of posting.</li>
+  <li><code class="highlighter-rouge">MONTH</code>: month of posting.</li>
+  <li><code class="highlighter-rouge">DAY</code>: day of the month (1-31) when the message was posted.</li>
+  <li><code class="highlighter-rouge">DOW</code>: day of the week (0-6) when the message was posted.</li>
+  <li><code class="highlighter-rouge">HOUR</code>: hour of the posting.</li>
+  <li><code class="highlighter-rouge">MINUTE</code>: minute of the posting.</li>
+  <li><code class="highlighter-rouge">X</code>: longitude projected to the British National Grid (<a href="http://epsg.io/27700">EPSG:
+27700</a>).</li>
+  <li><code class="highlighter-rouge">Y</code>: latitude projected to the British National Grid (<a href="http://epsg.io/27700">EPSG:
+27700</a>).</li>
+  <li><code class="highlighter-rouge">LSOA11CD</code>: unique identifier code of the LSOA where the tweet location falls
+into.</li>
+</ul>
+
+<p><strong>Source</strong>: <a href="http://twitter.com">Twitter</a> via Guy Lansley (UCL).</p>
+
+<p><strong>Instructions</strong>: given the Twitter license that applies to the data, this
+dataset cannot be redistributed publicly online. For that reason, it has been
+uploaded to the VITAL page of the course. You can find it instructions on
+access and download on VITAL:</p>
+
+<blockquote>
+  <p>VITAL ENVS3/563 –&gt; Learning Resources –&gt; Twitter dataset</p>
+</blockquote>
+
+<p>The shapefile is provided as a compressed <code class="highlighter-rouge">.zip</code> file. Download it and extract
+it where you can access and set the path appropriately.</p>
+
+
+  </div>
+
+  <div id="footer">
+    <div class="container text-muted small">
+      Content by <a href="http://darribas.org">Dani Arribas-Bel</a>.
+
+
+  Content licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0</a>.
+
+
+Created with <a href="http://jekyllrb.com/">Jekyll</a> and <a href="http://getbootstrap.com/">Bootstrap</a>.
+
+
+
+    </div>
+  </div>
+
+<!--jQuery & Twitter Bootstrap JavaScript-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/gds18/assets/js/bootstrap.min.js"></script>
+
+</body>
+</html>

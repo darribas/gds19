@@ -67,12 +67,11 @@ la09:
 
 website:
 	jekyll build
-	git checkout gh-pages
-	cp -r _site/* ./
-	git add .
-	git commit -am "Building website..."
-	git push origin gh-pages
-	git checkout master
+	rm -r docs/
+	mv _site docs
+
+website_local:
+	jekyll serve --watch --host 0.0.0.0
 
 update:
 	git checkout master

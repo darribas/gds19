@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Dani Arribas-Bel">
+  <meta name="description" content="An introduction to Geographic Data Science">
+
+  <title>GDS18 &mdash; Assignments</title>
+
+  <link href="/gds18/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/gds18/assets/css/course-site-custom.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="/gds18/assets/js/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6032674-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<body>
+
+  <!-- Static navbar -->
+  <div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/gds18/index.html"><font
+                                color='#be1e2d'>GDS18</font></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/gds18/index.html">Home</a></li>
+          <li><a href="/gds18/overview.html">Overview</a></li>
+          <li><a href="/gds18/syllabus.html">Syllabus</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle"
+                data-toggle="dropdown">Lectures <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              
+              
+              <li><a href="/gds18/notes/Class_01.html">Week 1 - Introduction</a></li>
+              
+              <li><a href="/gds18/notes/Class_02.html">Week 2 - Geo-Data</a></li>
+              
+              <li><a href="/gds18/notes/Class_03.html">Week 3 - (Geo)Visualization</a></li>
+              
+              <li><a href="/gds18/notes/Class_04.html">Week 4 - Choropleth mapping</a></li>
+              
+              <li><a href="/gds18/notes/Class_05.html">Week 5 - Spatial Weights</a></li>
+              
+              <li><a href="/gds18/notes/Class_06.html">Week 6 - ESDA</a></li>
+              
+              <li><a href="/gds18/notes/Class_07.html">Week 7 - Break</a></li>
+              
+              <li><a href="/gds18/notes/Class_08.html">Week 8 - Clustering</a></li>
+              
+              <li><a href="/gds18/notes/Class_09.html">Week 9 - Points</a></li>
+              
+              <li><a href="/gds18/notes/Class_10.html">Week 10 - Assignment preparation</a></li>
+              
+              <li><a href="/gds18/notes/Class_11.html">Week 11 - Causal Inference</a></li>
+              
+              <li><a href="/gds18/notes/Class_12.html">Week 12 - Geographic Data Science in Action</a></li>
+              
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Labs <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              
+              
+              <li><a href="/gds18/labs/Lab_00.html">Lab 0 - Tools</a></li>
+              
+              <li><a href="/gds18/labs/Lab_01.html">Lab 1 - Tidy Data (I)</a></li>
+              
+              <li><a href="/gds18/labs/Lab_02.html">Lab 2 - Tidy Data (II)</a></li>
+              
+              <li><a href="/gds18/labs/Lab_03.html">Lab 3 - (Geo)Visualization</a></li>
+              
+              <li><a href="/gds18/labs/Lab_04.html">Lab 4 - Automated choropleths</a></li>
+              
+              <li><a href="/gds18/labs/Lab_05.html">Lab 5 - Spatial Weights</a></li>
+              
+              <li><a href="/gds18/labs/Lab_06.html">Lab 6 - ESDA</a></li>
+              
+              <li><a href="/gds18/labs/Lab_08.html">Lab 8 - Clustering</a></li>
+              
+              <li><a href="/gds18/labs/Lab_09.html">Lab 9 - Points</a></li>
+              
+              
+            </ul>
+          </li>
+          <li class="active"><a href="/gds18/assignments.html">Assessment</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle"
+                data-toggle="dropdown">Resources <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+          <li><a href="/gds18/bibliography.html">Bibliography</a></li>
+          <li><a href="/gds18/datasets.html">Datasets</a></li>
+          <li><a href="/gds18/software.html">Software</a></li>
+          <li><a href="/gds18/further_resources.html">Further resources</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <div class="container" id="body">
+    
+<p><a name="assessment"></a></p>
+
+<h2 id="assessment">Assessment</h2>
+
+<p>The final mark for the course is composed of the following three components:</p>
+
+<ul>
+  <li><a href="#forum">Contribution to module’s discussion forum</a> (5%)</li>
+  <li><a href="#task_01">Assignment 1</a> (20%)</li>
+  <li><a href="#task_02">Assignment 2</a> (25%)</li>
+  <li><a href="#task_03">Assignment 3</a> (50%)</li>
+</ul>
+
+<p>Assignments 1 and 2 are described below. Students should keep in mind the following information regarding the submission of assignments:</p>
+
+<ul>
+  <li><strong>Submission is electronic only</strong> and will be managed through Turnitin.</li>
+  <li>Assignments will be prepared in the Jupyter Notebook file format and then converted into a self-contained HTML file that will then be submitted on Turnitin.</li>
+</ul>
+
+<p><a name="marking_criteria"></a></p>
+
+<h3 id="marking-criteria">Marking Criteria</h3>
+
+<p>This course follows the standard marking criteria (the general ones and those relating to GIS assignments in particular) set by the School of Environmental Sciences. In addition to these generic criteria, the following specific criteria relating to the code provided will be used:</p>
+
+<ul>
+  <li><strong>0-15</strong>: the code does not run and there is no documentation to follow it.</li>
+  <li><strong>16-39</strong>: the code does not run, or runs but it does not produce the expected outcome. There is some documentation explaining its logic.</li>
+  <li><strong>40-49</strong>: the code runs and produces the expected output.  There is some documentation explaining its logic.</li>
+  <li><strong>50-59</strong>: the code runs and produces the expected output. There is extensive documentation explaining its logic.</li>
+  <li><strong>60-69</strong>: the code runs and produces the expected output. There is extensive documentation, properly formatted, explaining its logic.</li>
+  <li><strong>70-79</strong>: all as above, plus the code design includes clear evidence of skills presented in advanced sections of the course (e.g. custom methods, list comprehensions, etc.).</li>
+  <li><strong>80-100</strong>: all as above, plus the code contains novel contributions that extend/improve the functionality the student was provided with (e.g. algorithm optimizations, novel methods to perform the task, etc.).</li>
+</ul>
+
+<p><a name="forum"></a></p>
+
+<h3 id="discussion-forum"><strong>Discussion forum</strong></h3>
+
+<ul>
+  <li>Type: <code class="highlighter-rouge">Coursework</code></li>
+  <li>Continuous assessment</li>
+  <li>5% of the final mark</li>
+  <li>NO chance to be reassessed</li>
+  <li>Electronic submission only.</li>
+</ul>
+
+<p>Students are encouraged to contribute to the online discussion forum set up for the module. The contribution to the discussion forum is assessed as an all-or-nothing 5% of the mark that can be obtained by contributing <em>meaninfully</em> to the online discussion board setup for the course. <em>Meaningful</em> contributions include both questions and answers that demonstrate the student is committed to make the forum a more useful resource for the rest of the group.</p>
+
+<p><a name="task_01"></a></p>
+
+<h3 id="assignment-1---in-lab-computer-test-i"><strong>Assignment 1</strong> - In-lab computer test I</h3>
+
+<ul>
+  <li>Type: <code class="highlighter-rouge">Coursework</code></li>
+  <li>1h.</li>
+  <li>Date: <strong>Friday, October 26th-2018</strong> (Week 5).</li>
+  <li>20% of the final mark</li>
+  <li>Chance to be reassessed</li>
+  <li>In-lab electronic submission.</li>
+</ul>
+
+<p>This assessment will consist of an in-lab computer test with multi-option
+and short answer questions covering topics introduced in lectures and labs
+1-4. More details will be provided during class in advance.</p>
+
+<p><a name="task_02"></a></p>
+
+<h3 id="assignment-2---in-lab-computer-test-ii"><strong>Assignment 2</strong> - In-lab computer test II</h3>
+
+<ul>
+  <li>Type: <code class="highlighter-rouge">Coursework</code></li>
+  <li>1h.</li>
+  <li>Date: <strong>Friday, November 30th-2018</strong> (Week 10).</li>
+  <li>25% of the final mark</li>
+  <li>Chance to be reassessed</li>
+  <li>In-lab electronic submission.</li>
+</ul>
+
+<p>This assessment will consist of an in-lab computer test with multi-option
+and short answer questions covering topics introduced in lectures and labs
+5-9. More details will be provided during class in advance.</p>
+
+<p><a name="task_03"></a></p>
+
+<h3 id="assignment-3---targetting-areas"><strong>Assignment 3</strong> - <em>Targetting areas</em></h3>
+
+<ul>
+  <li>Type: <code class="highlighter-rouge">Coursework</code></li>
+  <li>[Equivalent to 2,500 words] Three maps/tables, code and 750 words.</li>
+  <li>50% of the final mark</li>
+  <li>Chance to be reassessed</li>
+  <li>Final Assessment</li>
+  <li>Due on <strong>Friday, December 14th-2018</strong> (Week 12).</li>
+  <li>Electronic submission only. Static HTML with NO interactive cells.</li>
+</ul>
+
+<p>In this assignment, you will take the role of a real-world data scientist tasked to identify areas to direct investments. You are consulting for the City of Liverpool on a program to target investments towards particularly disadvantaged areas that are nevertheless popular or have the potential to become so. The Economic Development division knows that only five local super output areas (LSOAs) will be funded but would like to know which ones.</p>
+
+<p>Develop a data strategy, deploy it, and present the results in a rigorous but intuitive fashion, together with the code.</p>
+
+<p><strong>Minimum requirements</strong> (complete <em>all</em>)</p>
+
+<ul>
+  <li>Combine <em>at least two</em> datasets, potentially among those used in the course.</li>
+  <li>Employ <em>at least two</em> techniques from the set of analytics covered in the course.</li>
+  <li>Justify why you have chosen the methods you use and how they help you answer the question at hand. Critically discuss their limitations too.</li>
+  <li>Provide a list of the top five areas that you recommend be funded for improvement.</li>
+  <li>Explain clearly how you have arrived at the list and how the decision has been informed by the data analysis and the methodologies employed.</li>
+  <li>Include documented code that demonstrate programming understanding of the student.</li>
+</ul>
+
+<p><strong>Suggestive paths</strong> (optional)</p>
+
+<ul>
+  <li>Combine a LISA analysis of deprivation with kernel density maps of Twitter activity to identify areas of high values at both.</li>
+  <li>Combine several relevant variables into a geodemographic analysis to obtain candidate areas and display the results in an aesthetically pleasant choropleth.</li>
+</ul>
+
+<p><strong>Data</strong></p>
+
+<p>This assignment can use any of the <a href="/gds18/datasets.html">datasets</a> employed in the course, and/or any other datasets you consider useful. If you are thinking of including additional datasets, or have ideas in this respect, please get in touch with the module lead (<a href="mailto:D.Arribas-Bel@liverpool.ac.uk">Dani Arribas-Bel</a>).</p>
+
+<p><strong>IMPORTANT - MSc Students</strong>: MSc students are <em>required</em> to use alternative datasets.</p>
+
+
+  </div>
+
+  <div id="footer">
+    <div class="container text-muted small">
+      Content by <a href="http://darribas.org">Dani Arribas-Bel</a>.
+
+
+  Content licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0</a>.
+
+
+Created with <a href="http://jekyllrb.com/">Jekyll</a> and <a href="http://getbootstrap.com/">Bootstrap</a>.
+
+
+
+    </div>
+  </div>
+
+<!--jQuery & Twitter Bootstrap JavaScript-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/gds18/assets/js/bootstrap.min.js"></script>
+
+</body>
+</html>
