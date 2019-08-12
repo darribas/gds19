@@ -14,11 +14,8 @@ before_install:
   - export PATH=`pwd`/miniconda/bin:$PATH
   - conda update --yes conda
   - conda install --yes psutil yaml pyyaml
-    #- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then conda create --name gds --file content/infrastructure/gds_requirements_linux-64.txt; fi
-    #- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then conda create --name gds --file content/infrastructure/gds_requirements_osx-64.txt; fi
   - "conda-env create -f content/infrastructure/install_gds_stack.yml"
-  - source activate gds
-  - pip install contextily
+  - conda activate gds
 
 script: 
   - python -c "import fiona"
