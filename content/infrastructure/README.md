@@ -76,8 +76,8 @@ done using Python!
    for the long token in the logs. Your prompt should look something (albeit
    not exactly) like this:
 
-   ```python
-    (base) dh073236:gds19 dani$ docker run --rm -ti -p 8888:8888 -v ${PWD}:/home/jovyan/work darribas/gds:3.0
+   ```shell
+    > docker run --rm -ti -p 8888:8888 -v ${PWD}:/home/jovyan/work darribas/gds:3.0
     Executing the command: jupyter notebook
     [I 11:38:40.234 NotebookApp] Writing notebook server cookie secret to /home/jovyan/.local/share/jupyter/runtime/notebook_cookie_secret
     [I 11:38:41.328 NotebookApp] Loading IPython parallel extension
