@@ -1,0 +1,358 @@
+<!-- Copied from https://gist.github.com/aaronwolen/5017084#file-template-revealjs-html -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+ 
+<title>Geographic Data Science - Lecture I</title>
+ 
+<meta name="description" content="Geographic Data Science - Lecture I">    
+ 
+  <meta name="author" content="Introduction" />
+ 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+<link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/journal.css" id="theme">
+ 
+ 
+<!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+ 
+ 
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+  document.write( '<link rel="stylesheet" href="css/print/' +
+    ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + 
+    '.css" type="text/css" media="print">' );
+</script>
+ 
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+ 
+<body>
+ 
+<div class="reveal">
+ 
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+ 
+<section>
+<h1>Geographic Data Science - Lecture I</h1>
+<h3>Introduction</h3>
+<p>
+<h4><a href="http://darribas.org">Dani Arribas-Bel</a></h4>
+</p>
+</section>  
+ 
+ 
+<section id="today" class="level2">
+<h2>Today</h2>
+<ul>
+<li>This course</li>
+<li>The (geo-)data revolution</li>
+<li>(Geo-)Data Science</li>
+</ul>
+</section>
+<section id="section" class="level1">
+<h1></h1>
+<section id="this-course" class="level2">
+<h2>This course</h2>
+</section>
+<section id="quiz" class="level2">
+<h2>Quiz</h2>
+<ul>
+<li>Can you think of a <strong>real-world</strong> context where <strong>data</strong> and statistics are being used to make a difference?</li>
+<li>Have you ever heard the term <strong>“Data Science”</strong>?</li>
+<li>Have you ever written a line of <strong>computer code</strong>?</li>
+</ul>
+</section>
+<section id="section-1" class="level2">
+<h2></h2>
+<div data-text-align="center" data-markdown="1">
+<p><em>More stats than a GIS course, more GIS than a stats course…</em></p>
+</div>
+<div class="fragment" data-text-align="center" data-markdown="1">
+<p><em>…but in a fun way!</em></p>
+</div>
+</section>
+<section id="philosophy" class="level2">
+<h2>Philosophy</h2>
+<ul>
+<li>(Lots of) <strong>methods</strong> and techniques
+<ul>
+<li>General overview</li>
+<li>Intuition</li>
+<li>Very little math</li>
+<li>Lots of ways to continue on your own</li>
+</ul></li>
+<li>Emphasis on the <strong>application</strong> and <strong>use</strong></li>
+<li>Close connection to <strong>“real world”</strong> applications</li>
+</ul>
+</section>
+<section id="logistics---website" class="level2">
+<h2>Logistics - Website</h2>
+<p><a href="http://darribas.org/gds18">http://darribas.org/gds18</a></p>
+<iframe src="http://darribas.org/gds18" width="600" height="400">
+</iframe>
+</section>
+<section id="logistics---format" class="level2">
+<h2>Logistics - Format</h2>
+<p>11 weeks of:</p>
+<ul>
+<li><strong>Prep. materials</strong>: videos, podcasts, articles… 1h. approx. (most recommended!)</li>
+<li><strong>1h. Lecture</strong>: concepts, methods, examples</li>
+<li><strong>2h. Computer practical</strong>: hands-on, application of concepts, Python (highly <em>employable</em>)</li>
+<li><strong>Further readings</strong>: how to go beyond the minimum</li>
+</ul>
+</section>
+<section id="logistics---content" class="level2">
+<h2>Logistics - Content</h2>
+<ul>
+<li class="fragment">
+<strong>Weeks 1-3</strong>: “big picture” lectures + introduction to computational tools (learning curve)
+</li>
+<li class="fragment">
+<strong>Weeks 4-9</strong>: “meat” of the course (lots of concepts packed) + Week 7 <strong>break</strong>
+</li>
+<li class="fragment">
+<strong>Weeks 10-11</strong>: catch up + prepare an awesome Computational Esssay
+</li>
+</ul>
+</section>
+<section id="code" class="level2">
+<h2>Code</h2>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/M_rfujuRHUU" frameborder="0" allowfullscreen>
+</iframe>
+<p><strong>Driving</strong> Vs <strong>automobile engineering</strong></p>
+</section>
+<section id="python" class="level2">
+<h2>Python</h2>
+<CENTER>
+<img src="../content/lectures/figs/l01_xkcd-python.png" />
+</CENTER>
+</section>
+<section id="python-1" class="level2">
+<h2>Python</h2>
+<ul>
+<ul>
+<li><strong>General purpose</strong> programming language</li>
+<li>Sweet spot between <em>“proof-of-concept”</em> and <em>“production-ready”</em></li>
+<li>Industry standard: <strong>GIS</strong> (Esri, QGIS) and <strong>Data Science</strong> (Google, Facebook, Amazon, Netflix, The New York Times, NASA…)</li>
+</ul>
+</ul>
+</section>
+<section id="self-directed-learning" class="level2">
+<h2>Self-directed learning</h2>
+<p><strong>Prepare</strong> for the labs</p>
+<ul>
+<li class="fragment">
+<strong>I won’t</strong> be leading/lecturing at the computer labs
+</li>
+<li class="fragment">
+<strong>Go over the notebooks</strong> before the lecture and the computer lab –&gt; If the first time you see a notebook is at the lab, you won’t be able to follow on
+</li>
+<li class="fragment">
+<strong>Bring</strong> questions, comments, feedback, (informed) rants to class/labs
+</li>
+<li class="fragment">
+Use the <strong>forum</strong> (link on VITAL)
+</li>
+<li class="fragment">
+<strong>Collaborate</strong> (it’s <strong>NOT</strong> a zero-sum win!!!)
+</li>
+</ul>
+</section>
+<section id="more-help" class="level2">
+<h2>More help!!!</h2>
+<p>This course is much more about <strong>“learning to learn”</strong> and <strong>problem solving</strong> rather than acquiring specific programming tricks or stats wizardry</p>
+<ul>
+<li class="fragment">
+Learn to <strong>ask</strong> questions <span class="fragment"> (but don’t expect exact answers all the time!!!) </span>
+</li>
+<li class="fragment">
+<strong>Help</strong> others as much as you can (the best way to learn is to teach)
+</li>
+<li class="fragment">
+<strong>Search</strong> heavily on Google + Stack Overflow
+</li>
+</ul>
+</section>
+<section id="assignments" class="level2">
+<h2>Assignments</h2>
+<ul>
+<li>In-lab <span class="hlg">computer tests</span>: W.5 (25%) and W.10 (25%)</li>
+<li><span class="hlg">Computational essay</span> (W.12, 50%)
+<ul>
+<li>Equivalent to 2,500 word</li>
+<li>Report (<em>notebook</em>) with <strong>code</strong>, <strong>figures</strong> (e.g. maps), and <strong>text</strong></li>
+</ul></li>
+<li><span class="hlg">Discussion board</span> (5%)</li>
+</ul>
+<p><strong>NOTE</strong>: recommendation letters only for great students (<strong>&gt;70</strong>)</p>
+</section>
+</section>
+<section id="section-2" class="level1">
+<h1></h1>
+<section id="the-geo-data-revolution" class="level2">
+<h2>The (geo-)data revolution</h2>
+</section>
+<section id="the-geo-data-revolution-1" class="level2">
+<h2>The (geo-)data revolution</h2>
+<p>Exciting times to be a:</p>
+<ul>
+<li>Geographer</li>
+<li>Map fan</li>
+<li>Data fan</li>
+</ul>
+<p>The world is being <strong>“datafied”</strong>…</p>
+</section>
+<section id="datafication" class="level2">
+<h2>“Datafication”</h2>
+<p><em>Quantification of phenomena through the systematic recording of data</em>, <em>“taking all aspects of life and turning them into data”</em> <a href="https://www.foreignaffairs.com/articles/2013-04-03/rise-big-data"><small style="vertical-align: middle;">(Cukier &amp; Mayer-Schoenberg)</a></small></p>
+<p><strong>Examples</strong>: credit transactions, public transit, tweets, facebook likes, spotify songs, etc.</p>
+</section>
+<section id="datafication-1" class="level2">
+<h2>“Datafication”</h2>
+<p>Many <strong>implications</strong>:</p>
+<ul>
+<li><strong>Window</strong> into human <strong>behaviour</strong> (this course)</li>
+<li>Opportunities for optimization of systems (Industrial IoT, planning systems…)</li>
+<li>Issues with <strong>intentionality</strong> and <strong>privacy</strong></li>
+<li>…</li>
+</ul>
+</section>
+<section id="why-now" class="level2">
+<h2><em>Why now?</em></h2>
+<div class="fragment">
+<p>Advances in:</p>
+<ul>
+<li>Computing power and storage</li>
+<li>Connectivity</li>
+<li>Geospatial technology</li>
+</ul>
+</div>
+</section>
+<section id="the-geo-data-revolution-2" class="level2">
+<h2>The (geo-)data revolution</h2>
+<p>The confluence of the three (computing, communication and geospatial) is creating large amounts of data.</p>
+<p>Now, <strong>data in itself is not very valuable</strong>:</p>
+<ul>
+<li>Data –&gt; Information –&gt; Knowledge –&gt; Action</li>
+</ul>
+</section>
+</section>
+<section id="section-3" class="level1">
+<h1></h1>
+<section id="data-science" class="level2">
+<h2>Data Science</h2>
+</section>
+<section id="section-4" class="level2">
+<h2></h2>
+<div data-text-align="center" data-markdown="1">
+<p><em>Methods, tools and techniques to turn data into <strong>actionable knowledge</strong> </em></p>
+</div>
+</section>
+<section id="data-science-1" class="level2">
+<h2>Data Science</h2>
+<p><strong>Statistics</strong> + …</p>
+</ul>
+<li class="fragment">
+<strong>Computational tools</strong> –&gt; Programming (hence this course’s <strong>tutorials</strong>!)
+</li>
+<li class="fragment">
+<strong>Comunication skills</strong> –&gt; “Story telling” (hence this course’s <strong>assignments</strong>)
+</li>
+<li class="fragment">
+<strong>Domain expertise</strong> –&gt; Theories about why the data are the way they are (hence the rest of your <strong>degree</strong>)
+</li>
+</ul>
+<p><span class="fragment"> Some examples… </span></p>
+</section>
+<section id="section-5" class="level2" data-background="../content/lectures/figs/l01_chocolate.png" data-background-size="contain">
+<h2></h2>
+</section>
+<section id="section-6" class="level2" data-background="../content/lectures/figs/l01_okcupid.png" data-background-size="contain">
+<h2></h2>
+</section>
+</section>
+<section id="section-7" class="level1">
+<h1></h1>
+<section id="geo-data-science" class="level2">
+<h2><strong>Geo</strong>-Data Science</h2>
+</section>
+<section id="geo-data-science-1" class="level2">
+<h2><strong>Geo</strong>-Data Science</h2>
+<ul>
+<li>A (very) large portion of all these new data are inherently <strong>geographic</strong> or can be traced back to some location over space.</li>
+<li>Spatial is special.</li>
+<li>Some of the methods require an explicitly spatial treatment –&gt; (Geo-)Data Science</li>
+</ul>
+<p>Some examples…</p>
+</section>
+<section id="section-8" class="level2" data-background="../content/lectures/figs/l01_airbnb.png" data-background-size="contain">
+<h2></h2>
+</section>
+<section id="section-9" class="level2" data-background="../content/lectures/figs/l01_uber.png" data-background-size="contain">
+<h2></h2>
+</section>
+<section id="section-10" class="level2" data-background="../content/lectures/figs/l01_gmaps.png" data-background-size="contain">
+<h2></h2>
+</section>
+<section id="section-11" class="level2" data-background="../content/lectures/figs/l01_jsnow.jpg" data-background-size="contain">
+<h2></h2>
+</section>
+</section>
+<section id="section-12" class="level1">
+<h1></h1>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" data-property="dct:title">Geographic Data Science’18</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://darribas.org" property="cc:attributionName" rel="cc:attributionURL">Dani Arribas-Bel</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+</section>
+</div>
+ 
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+ 
+<script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    transition: 'linear',
+
+        math: {
+            // mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+            config: 'TeX-AMS_HTML-full'
+        },
+
+  // available themes are in /css/theme
+      theme: Reveal.getQueryHash().theme || 'journal', 
+   
+  // default/cube/page/concave/zoom/linear/fade/none
+      transition: Reveal.getQueryHash().transition || 'linear',
+   
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+    // { src: '../../lib/js/classList.js' },
+    { src: 'plugin/math/math.js', async: true }
+  ]
+  });
+ 
+</script>
+
+</body>
+</html>

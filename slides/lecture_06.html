@@ -1,0 +1,292 @@
+<!-- Copied from https://gist.github.com/aaronwolen/5017084#file-template-revealjs-html -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+ 
+<title>Geographic Data Science - Lecture VI</title>
+ 
+<meta name="description" content="Geographic Data Science - Lecture VI">    
+ 
+  <meta name="author" content="Exploring Space in Data" />
+ 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+<link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/journal.css" id="theme">
+ 
+ 
+<!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+ 
+ 
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+  document.write( '<link rel="stylesheet" href="css/print/' +
+    ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + 
+    '.css" type="text/css" media="print">' );
+</script>
+ 
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+ 
+<body>
+ 
+<div class="reveal">
+ 
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+ 
+<section>
+<h1>Geographic Data Science - Lecture VI</h1>
+<h3>Exploring Space in Data</h3>
+<p>
+<h4><a href="http://darribas.org">Dani Arribas-Bel</a></h4>
+</p>
+</section>  
+ 
+ 
+<section id="section" class="level1">
+<h1></h1>
+<section id="today" class="level2">
+<h2>Today</h2>
+<ul>
+<li>ESDA</li>
+<li>Spatial Autocorrelation</li>
+<li><p>Measures</p>
+<ul>
+<li>Global</li>
+<li>Local</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="section-1" class="level1">
+<h1></h1>
+<section id="esda" class="level2">
+<h2><strong><code>ESDA</code></strong></h2>
+</section>
+<section id="section-2" class="level2">
+<h2></h2>
+<p><strong>E</strong>xploratory</p>
+<p><strong>S</strong>patial</p>
+<p><strong>D</strong>ata</p>
+<p><strong>A</strong>nalysis</p>
+</section>
+<section id="section-3" class="level2">
+<h2></h2>
+<p><strong>[Exploratory]</strong></p>
+<p>Focus on discovery and assumption-free investigation</p>
+<p><strong>[Spatial]</strong></p>
+<p>Patterns and processes that put <em>space</em> and <em>geography</em> at the core</p>
+<p><strong>[Data Analysis]</strong></p>
+<p>Statistical techniques</p>
+</section>
+<section id="section-4" class="level2">
+<h2></h2>
+<p>Questions that <strong>ESDA</strong> helps…</p>
+<p><strong>Answer</strong></p>
+<ul>
+<li><em>Is the variable I’m looking at concentrated over space? Do similar values tend to locate closeby?</em></li>
+<li><em>Can I identify any particular areas where certain values are clustered?</em></li>
+</ul>
+<div class="fragment">
+<p><strong>Ask</strong></p>
+<ul>
+<li><em>What is behind this pattern? What could be generating the process?</em></li>
+<li><em>Why do we observe certain clusters over space?</em></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="section-5" class="level1">
+<h1></h1>
+<section id="spatial-autocorrelation" class="level2">
+<h2>Spatial Autocorrelation</h2>
+</section>
+<section id="section-6" class="level2">
+<h2></h2>
+<center>
+<em>Everything is related to everything else, but near things are more related than distant things</em>
+</center>
+<div style="text-align:right">
+<p><small> Waldo Tobler (1970) </small></p>
+</div>
+</section>
+<section id="spatial-autocorrelation-1" class="level2">
+<h2>Spatial Autocorrelation</h2>
+<p>-Statistical representation of Tobler’s law</p>
+<p>-Spatial counterpart of traditional correlation</p>
+<p><span class="fragment"> <b><em>Degree to which similar values are located in similar locations</em></b></p>
+<div class="fragment">
+<p>Two flavors:</p>
+<ul>
+<li><strong>Positive</strong>: similar values <span class="math inline">→</span> similar location (<em>closeby</em>)</li>
+<li><strong>Negative</strong>: similar values <span class="math inline">→</span> disimilar location (<em>further apart</em>)</li>
+</ul>
+</div>
+</section>
+<section id="examples" class="level2">
+<h2>Examples</h2>
+<p><strong>Positive</strong> SA: <span class="fragment">income, <span class="fragment"> poverty, <span class="fragment"> vegetation, <span class="fragment"> temperature…</p>
+<p><strong>Negative</strong> SA: <span class="fragment"> supermarkets, <span class="fragment"> police stations, <span class="fragment"> fire stations, <span class="fragment"> hospitals…</p>
+</section>
+<section id="scales" class="level2">
+<h2>Scales</h2>
+<div>
+<p><strong>[Global]</strong></p>
+<p><em>Clustering</em>: do values tend to be close to other (dis)similar values?</p>
+</div>
+<div class="fragment">
+<p><strong>[Local]</strong></p>
+<p><em>Clusters</em>: are there any specific parts of a map with an extraordinary concentration of (dis)similar values?</p>
+</div>
+</section>
+</section>
+<section id="section-7" class="level1">
+<h1></h1>
+<section id="global-spatial-autocorr." class="level2">
+<h2><strong>Global</strong> Spatial Autocorr.</h2>
+</section>
+<section id="global-spatial-autocorr.-1" class="level2">
+<h2><strong>Global</strong> Spatial Autocorr.</h2>
+<p><strong><i>“Clustering”</i></strong></p>
+<p><em>Overall trend where the distribution of values follows a particular pattern over space</em></p>
+<p><span class="fragment"> <strong>[Positive]</strong> Similar values close to each other (high-high, low-low)</p>
+<p><span class="fragment"> <strong>[Negative]</strong> Similar values far from each other (high-low)</p>
+<p><span class="fragment"> How to measure it???</p>
+</section>
+<section id="moran-plot" class="level2">
+<h2>Moran Plot</h2>
+<ul>
+<li>Graphical device that displays <strong>a variable</strong> on the horizontal axis against <strong>its spatial lag</strong> on the vertical one</li>
+<li>Variable and spatial weights matrix are preferably <strong>standardized</strong></li>
+<li>Asssessment of the overall association between a variable in a given location and in its <em>neighborhood</em></li>
+</ul>
+</section>
+<section id="section-8" class="level2">
+<h2></h2>
+<center>
+<img src="../content/lectures/figs/l06_imd_score_choro.png" alt="IMD Choropleth"
+style="width:450px;height:450px;"/> <span class="fragment"> <img src="../content/lectures/figs/l05_moranplot_std.png" alt="IMD Moran Plot"
+style="width:450px;height:450px;"/>
+</center>
+</section>
+<section id="interactive-demo" class="level2">
+<h2><a href="http://mybinder.org/repo/darribas/int_sp_auto">[Interactive Demo]</a></h2>
+</section>
+<section id="morans-i" class="level2">
+<h2>Moran’s I</h2>
+<p><strong>Formal test</strong> of global spatial autocorrelation</p>
+<p><strong>Statistically</strong> identify the presence of clustering in a variable</p>
+<p>Slope of the Moran plot</p>
+<p>Inference based on how likely it is to obtain a map like observed from a purely random pattern</p>
+<div class="fragment">
+<script type="math/tex; mode=display">
+I = \dfrac{N} {\sum_{i} \sum_{j} w_{ij}} \dfrac {\sum_{i} \sum_{j}
+w_{ij}(Z_i) (Z_j)} {\sum_{i} (Z_i)^2}
+</script>
+</div>
+</section>
+</section>
+<section id="section-9" class="level1">
+<h1></h1>
+<section id="local-spatial-autocorr." class="level2">
+<h2><strong>Local</strong> Spatial Autocorr.</h2>
+</section>
+<section id="local-spatial-autocorr.-1" class="level2">
+<h2><strong>Local</strong> Spatial Autocorr.</h2>
+<p><strong><i>“Clusters”</i></strong></p>
+<p><em>Pockets of spatial instability</em></p>
+<p>Portions of a map where values are correlated in a particularly strong and specific way</p>
+<p><span class="fragment"> <strong>[High-High]</strong> + SA of <em>high</em> values (<em>hotspots</em>)</p>
+<p><span class="fragment"> <strong>[Low-Low]</strong> + SA of <em>low</em> values (<em>coldspots</em>)</p>
+<p><span class="fragment"> <strong>[High-Low]</strong> - SA (<em>spatial outliers</em>)</p>
+<p><span class="fragment"> <strong>[Low-High]</strong> - SA (<em>spatial outliers</em>)</p>
+</section>
+<section id="lisas" class="level2">
+<h2>LISAs</h2>
+<p><strong>L</strong>ocal <strong>I</strong>ndicators of <strong>S</strong>patial <strong>A</strong>ssociation</p>
+<p>Statistical tests for <strong>spatial cluster detection</strong> <span class="math inline">→</span> Statistical significance</p>
+<p><strong>Compares</strong> the <strong>observed</strong> map with many <strong>random</strong>ly generated ones to see how likely it is to obtain the observed associations <strong>for each location</strong></p>
+<div class="fragment">
+<script type="math/tex; mode=display">
+I_i = \frac{Z_i}{m_2} \sum_j W_{ij} Z_j \; \; ; \; \;  m_2= \frac{\sum_i Z_i^2
+}{N}
+</script>
+</div>
+</section>
+<section id="section-10" class="level2">
+<h2></h2>
+<center>
+<img src="../content/lectures/figs/l06_brexit_choro.png" alt="Choropleth"
+style="width:450px;height:650px;"/> <span class="fragment"> <img src="../content/lectures/figs/l06_brexit_lisa.png" alt="LISA Map"
+style="width:450px;height:650px;"/>
+</center>
+</section>
+</section>
+<section id="section-11" class="level1">
+<h1></h1>
+<section id="recapitulation" class="level2">
+<h2>Recapitulation</h2>
+<p><strong>ESDA</strong> is a family of techniques to explore and spatially interrogate data</p>
+<p>Main function: characterize <strong>spatial autocorrelation</strong>, which can be explored:</p>
+<ul>
+<li><strong>Global</strong>ly (e.g. Moran Plot, Moran’s I)</li>
+<li><strong>Local</strong>ly (e.g. LISAs)</li>
+</ul>
+</section>
+</section>
+<section id="section-12" class="level1">
+<h1></h1>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" data-property="dct:title">Geographic Data Science’18</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://darribas.org" property="cc:attributionName" rel="cc:attributionURL">Dani Arribas-Bel</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+</section>
+</div>
+ 
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+ 
+<script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    transition: 'linear',
+
+        math: {
+            // mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+            config: 'TeX-AMS_HTML-full'
+        },
+
+  // available themes are in /css/theme
+      theme: Reveal.getQueryHash().theme || 'journal', 
+   
+  // default/cube/page/concave/zoom/linear/fade/none
+      transition: Reveal.getQueryHash().transition || 'linear',
+   
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+    // { src: '../../lib/js/classList.js' },
+    { src: 'plugin/math/math.js', async: true }
+  ]
+  });
+ 
+</script>
+
+</body>
+</html>

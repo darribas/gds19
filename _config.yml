@@ -1,0 +1,71 @@
+# Jekyll configuration; see https://github.com/mojombo/jekyll/wiki/Configuration
+# Note: Jekyll configuration settings may not be respected by GitHub Pages.
+# Read the friendly manual: https://help.github.com/articles/using-jekyll-with-pages
+
+baseurl: "/gds18"  # Replace with name of repo
+#baseurl: "."  # Replace with name of repo
+subbaseurl: ".."
+
+markdown: kramdown
+
+highlighter: rouge
+
+kramdown:
+    input: GFM
+    syntax_highlighter: rouge
+
+collections:
+  notes:
+    output: true
+  labs:
+    output: true
+  assignments:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""  # All files
+    values:
+      layout: default
+  -
+    scope:
+      path: ""  # All files
+      type: "notes"
+    values:
+      category: note
+      layout: note
+  -
+    scope:
+      path: ""  # All files
+      type: "labs"
+    values:
+      category: lab
+      layout: assignment
+  -
+    scope:
+      path: ""  # All files
+      type: "assignments"
+    values:
+      category: assignment
+      layout: assignment
+      
+scholar:
+    style: assets/bibliography/my_apa.csl
+    locale: en
+    
+    sort_by: author
+    order: ascending
+    
+    source: content/bibliography
+    bibliography: bibliography.bib
+    bibliography_template: "{{reference}}"
+    
+    replace_strings: true
+    join_strings:    true
+    
+    details_dir:    bibliography
+    details_layout: bibtex.html
+    details_link:   Details
+    
+    query: "@*"

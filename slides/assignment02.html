@@ -1,0 +1,147 @@
+<!-- Copied from https://gist.github.com/aaronwolen/5017084#file-template-revealjs-html -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+ 
+<title>Assignment II</title>
+ 
+<meta name="description" content="Assignment II">    
+ 
+  <meta name="author" content="Geographic Data Science" />
+ 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+<link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/journal.css" id="theme">
+ 
+ 
+<!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+ 
+ 
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+  document.write( '<link rel="stylesheet" href="css/print/' +
+    ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + 
+    '.css" type="text/css" media="print">' );
+</script>
+ 
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+ 
+<body>
+ 
+<div class="reveal">
+ 
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+ 
+<section>
+<h1>Assignment II</h1>
+<h3>Geographic Data Science</h3>
+<p>
+<h4><a href="http://darribas.org">Dani Arribas-Bel</a></h4>
+</p>
+</section>  
+ 
+ 
+<section id="task" class="level1">
+<h1>Task</h1>
+<ul>
+<li>Use (at least) two methods from class</li>
+<li>Justify them</li>
+<li>Combine (at least) two datasets used in the labs</li>
+<li>Provide a list of five LSOAs in Liverpool identified as disadvantaged <em>and</em> popular. Be explicit about what definition you use for each of them</li>
+<li>Justify your choice of the list on the basis of your analysis</li>
+<li>Remember to <em>always</em> document your code</li>
+</ul>
+<p>Full detail list on course website</p>
+</section>
+<section id="limits" class="level1">
+<h1>Limits</h1>
+<ul>
+<li>Submitted by <strong>Monday, December 12th. 2016</strong></li>
+<li>750 words (sharp!)</li>
+<li>Three (3) figures. To avoid &quot;cheating&quot;, the definition of a figure this time is changed to &quot;an object that comes out of a single <code>matplotlib.figure</code>&quot;. You create a new <code>matplotlib.figure</code> everytime:
+<ul>
+<li>You call any <code>seaborn</code> function and do not append the output into an axis <code>ax</code></li>
+<li>You set up a new canvas using <code>plt.subplots</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="submission" class="level1">
+<h1>Submission</h1>
+<ul>
+<li>Turnitin</li>
+<li>Do <strong>not</strong> submit raw notebook this time</li>
+<li>Instead, submit an HTML version (from a running notebook, you can convert it into html in <code>File</code> <span class="math inline">→</span> <code>Download as</code> <span class="math inline">→</span> <code>HTML</code>)</li>
+<li>Make sure the HTML page renders correctly independently (e.g. copy it to a different folder and open it on a browser to see all the elements are there as you would expect)</li>
+</ul>
+</section>
+<section id="marking-guide" class="level1">
+<h1>Marking guide</h1>
+<ul>
+<li>Minimum requirements are <strong>basic</strong></li>
+<li>Including some of the suggestions is positively valued</li>
+<li>Routes that are not suggested but go beyond what is suggested is even better</li>
+<li>Creativity counts: doing what is suggested exactly the way it's been taught is OK but going the extra mile is valued</li>
+</ul>
+</section>
+<section id="help" class="level1">
+<h1>Help</h1>
+<ul>
+<li>Unless it's strictly personal, please <strong>post to the forum</strong> (faster answer)</li>
+<li>You are <strong>most encouraged</strong> to not only ask but to <strong>respond</strong> as well</li>
+<li>Feel free to run by me ideas in Lab time</li>
+</ul>
+</section>
+</div>
+ 
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+ 
+<script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    transition: 'linear',
+
+        math: {
+            // mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+            config: 'TeX-AMS_HTML-full'
+        },
+
+  // available themes are in /css/theme
+      theme: Reveal.getQueryHash().theme || 'journal', 
+   
+  // default/cube/page/concave/zoom/linear/fade/none
+      transition: Reveal.getQueryHash().transition || 'linear',
+   
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+    // { src: '../../lib/js/classList.js' },
+    { src: 'plugin/math/math.js', async: true }
+  ]
+  });
+ 
+</script>
+
+</body>
+</html>

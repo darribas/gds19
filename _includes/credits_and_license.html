@@ -1,0 +1,11 @@
+Content by {% if site.data.instructor.url %}<a href="{{site.data.instructor.url}}">{{site.data.instructor.name}}</a>{% else %}{{site.data.instructor.name}}{% endif %}.
+
+{% if site.data.license %}
+  Content licensed under <a href="{{site.data.license.url}}">{{site.data.license.name}}</a>.
+{% endif %}
+
+Created with <a href="http://jekyllrb.com/">Jekyll</a> and <a href="http://getbootstrap.com/">Bootstrap</a>.
+
+{% if site.github %}
+  Hosted <a href="{{site.github.repository_url}}">on Github</a>.
+{% endif %}
