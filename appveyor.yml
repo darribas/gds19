@@ -31,12 +31,13 @@ test_script:
   - python -c "import nbformat;
                import os;
                from nbconvert.preprocessors import ExecutePreprocessor;
-               print(os.getcwd());
                p = os.path.join(os.getcwd(), 
-                                'content/infrastructure/check_gds_stack.ipynb');
+                                'content\\infrastructure\\check_gds_stack.ipynb');
                print(p);
+               fo = open(p);
+               print('About to execute notebook...');
                ep = ExecutePreprocessor(timeout=600, kernel_name='python3');
-               ep.preprocess(nbformat.read(open(p), as_version=4), {});"
+               ep.preprocess(nbformat.read(fo, as_version=4), {});"
  #- "jupyter nbconvert --to markdown --execute --ExecutePreprocessor.timeout=120 content\\infrastructure\\check_gds_stack.ipynb"
  #- cd content/labs
  #- jupyter nbconvert --execute --ExecutePreprocessor.timeout=120 *.ipynb
