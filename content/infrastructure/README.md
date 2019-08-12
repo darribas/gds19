@@ -5,7 +5,7 @@
 | <CENTER>OS</CENTER>    | | <CENTER>Status</CENTER> |
 | ------- | ----- | -----------------|
 | Linux & macOS  | | [![Build Status](https://travis-ci.org/darribas/gds19.svg?branch=master)](https://travis-ci.org/darribas/gds19) |
-| Windows |  | [![Build status](https://ci.appveyor.com/api/projects/status/w73hb3ds37gxlidv?svg=true)](https://ci.appveyor.com/project/darribas/gds19) |
+| Windows |  | [![Build status](https://ci.appveyor.com/api/projects/status/k9cbbpt03goyo3hd?svg=true)](https://ci.appveyor.com/project/darribas/gds19) |
 
 ---
 
