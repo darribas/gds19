@@ -28,7 +28,8 @@ test_script:
   - python -c "import os; print(os.listdir('./content/'))"
   - python -c "import os; print(os.listdir('./content/infrastructure'))"
   - python -c "import os; print(os.getcwd())"
-  - python -c "import os;
+  - python -c "import nbformat;
+               import os;
                from nbconvert.preprocessors import ExecutePreprocessor;
                p = os.path.join(os.getcwd(), 
                                 'content\\infrastructure\\check_gds_stack.ipynb');
