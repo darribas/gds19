@@ -22,6 +22,7 @@ install:
   - "conda-env create -f content/infrastructure/install_gds_stack.yml"
   - cmd: call %PYTHON%\Scripts\activate.bat
   - conda activate gds
+  - jupyter kernelspec list
 
 test_script:
   - python -c "import os; print(os.listdir('.'))"
