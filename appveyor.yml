@@ -38,8 +38,7 @@ test_script:
                fo = open(p);
                print('About to execute notebook...');
                ep = ExecutePreprocessor(timeout=600, kernel_name='python3');
-               ep.preprocess(nbformat.read(fo, as_version=4), \
-                             {'metadata': {'path': os.getcwd()}});"
+               ep.preprocess(nbformat.read(fo, as_version=4), {'metadata': {'path': os.getcwd()}});"
  #- "jupyter nbconvert --to markdown --execute --ExecutePreprocessor.timeout=120 content\\infrastructure\\check_gds_stack.ipynb"
  #- cd content/labs
  #- jupyter nbconvert --execute --ExecutePreprocessor.timeout=120 *.ipynb
