@@ -11,7 +11,7 @@ environment:
       PYTHON_ARCH: "32"
 
 init:
-  - "ECHO %PYTHON_VERSION% %MINICONDA%"
+  - "ECHO %PYTHON_VERSION% %PYTHON% %PYTHON_ARCH%"
 
 install:
   - "set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
