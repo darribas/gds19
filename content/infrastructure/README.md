@@ -62,9 +62,9 @@ to go! To get a Jupyter session started, you can follow these steps:
 
 1. Run on the same terminal as above the following command:
 
-```
-> docker run --rm -ti -p 8888:8888 -v ${PWD}:/home/jovyan/work darribas/gds:3.0
-```
+    ```
+    > docker run --rm -ti -p 8888:8888 -v ${PWD}:/home/jovyan/work darribas/gds:3.0
+    ```
 
 This will start a Python session, please do not quite the window until you are
 done using Python! 
