@@ -15,6 +15,7 @@ before_install:
   - conda update --yes conda
   - conda install --yes psutil yaml pyyaml
   - "conda-env create -f content/infrastructure/install_gds_stack.yml"
+  - conda init bash
   - conda activate gds
 
 script: 
