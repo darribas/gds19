@@ -6,14 +6,13 @@ channels:
 dependencies:
   - python=3.7
   - pip
+  - contextily==1.0rc2
   - geopandas
   - ipywidgets
   - jupyterlab
   - mapclassify
   - mplleaflet
   - palettable
-  - pip:
-        - contextily==1.0rc2
   - pysal==2.1
   - rasterio
   - scikit-learn
