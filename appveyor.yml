@@ -22,13 +22,17 @@ install:
   - "conda-env create -f content/infrastructure/install_gds_stack.yml"
   - cmd: call %PYTHON%\Scripts\activate.bat
   - conda activate gds
-  - jupyter kernelspec list
 
 test_script:
   - python -c "import os; print(os.listdir('.'))"
   - python -c "import os; print(os.listdir('./content/'))"
   - python -c "import os; print(os.listdir('./content/infrastructure'))"
   - python -c "import os; print(os.getcwd())"
+  - python -c "import os;
+               from nbconvert.preprocessors import ExecutePreprocessor;
+               p = os.path.join(os.getcwd(), 
+                                'content\\infrastructure\\check_gds_stack.ipynb');
+               nb = nbformat.read(open(p), as_version=4);"
   - python -c "import nbformat;
                import os;
                from nbconvert.preprocessors import ExecutePreprocessor;
