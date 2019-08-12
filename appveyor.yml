@@ -4,10 +4,10 @@ build: false
 environment:
   matrix:
     - PYTHON: "C:\\Miniconda-x64"
-      PYTHON_VERSION: "3.6"
+      PYTHON_VERSION: "3.7"
       PYTHON_ARCH: "64"
     - PYTHON: "C:\\Miniconda"
-      PYTHON_VERSION: "3.6"
+      PYTHON_VERSION: "3.7"
       PYTHON_ARCH: "32"
 
 init:
@@ -20,8 +20,7 @@ install:
   - conda update -q conda
   - conda info -a
   - "conda-env create -f content/infrastructure/install_gds_stack.yml"
-    #- "conda create --name gds --file content/infrastructure/gds_requirements_win-%PYTHON_ARCH%.txt"
-  - activate gds
+  - conda activate gds
 
 test_script:
   - python -c "import os; print(os.listdir('.'))"

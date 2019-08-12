@@ -4,41 +4,19 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.6
+  - python=3.7
   - pip
-  - bokeh
-  - contextily==1.0rc1
-  - cython
-  - dask
-  - datashader
-  - feather-format
   - geopandas
-  - hdbscan
-  - ipykernel==4.9
-  - ipyleaflet
   - ipywidgets
   - jupyterlab
-  - mkl-service
   - mplleaflet
-  - networkx
-  - nodejs
-  - osmnx
   - palettable
-  - pandas-datareader
-  - pillow
   - pip:
-      - cenpy
-      - geopy
-      - polyline
-  - pyhamcrest
-  - pysal=1.14
-  - pytest
-  - qgrid
+        - contextily==1.0rc2
+  - pysal==2.1
   - rasterio
   - scikit-learn
   - seaborn
   - statsmodels
-  - twisted
   - xlrd
   - xlsxwriter
-
