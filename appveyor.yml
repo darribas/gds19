@@ -20,6 +20,7 @@ install:
   - conda update -q conda
   - conda info -a
   - "conda-env create -f content/infrastructure/install_gds_stack.yml"
+  - cmd: call %PYTHON%\Scripts\activate.bat
   - conda activate gds
 
 test_script:
