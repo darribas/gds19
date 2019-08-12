@@ -28,24 +28,7 @@ test_script:
   - python -c "import os; print(os.listdir('./content/'))"
   - python -c "import os; print(os.listdir('./content/infrastructure'))"
   - python -c "import os; print(os.getcwd())"
-  - python -c "import nbformat;
-               import os;
-               from nbconvert.preprocessors import ExecutePreprocessor;
-               p = os.path.join(os.getcwd(), 
-                                'content\\infrastructure\\check_gds_stack.ipynb');
-               nb = nbformat.read(open(p), as_version=4);"
-  - jupyter nbconvert --to python ./content/infrastructure/check_gds_stack.ipynb
-  - python ./content/infrastructure/check_gds_stack.py
-  - python -c "import nbformat;
-               import os;
-               from nbconvert.preprocessors import ExecutePreprocessor;
-               p = os.path.join(os.getcwd(), 
-                                'content\\infrastructure\\check_gds_stack.ipynb');
-               print(p);
-               nb = nbformat.read(open(p), as_version=4);
-               ep = ExecutePreprocessor(timeout=600, kernel_name='python3');
-               ep.preprocess(nb, {});"
- #- "jupyter nbconvert --to markdown --execute --ExecutePreprocessor.timeout=120 content\\infrastructure\\check_gds_stack.ipynb"
+  - "jupyter nbconvert --to markdown --execute --ExecutePreprocessor.timeout=120 content\\infrastructure\\check_gds_stack.ipynb"
  #- cd content/labs
  #- jupyter nbconvert --execute --ExecutePreprocessor.timeout=120 *.ipynb
 
