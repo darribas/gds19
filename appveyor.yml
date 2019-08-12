@@ -34,6 +34,8 @@ test_script:
                p = os.path.join(os.getcwd(), 
                                 'content\\infrastructure\\check_gds_stack.ipynb');
                nb = nbformat.read(open(p), as_version=4);"
+  - jupyter nbconvert --to python ./content/infrastructure/check_gds_stack.ipynb
+  - python check_gds_stack.py
   - python -c "import nbformat;
                import os;
                from nbconvert.preprocessors import ExecutePreprocessor;
