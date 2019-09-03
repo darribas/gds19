@@ -128,7 +128,7 @@ In addition to disconnected resources, there are starting to appear full
 bodied courses on the use of Python for (Geographic) Data Science. Here are a
 couple of interest:
 
-- [Geographic Data Science](http://darribas.org/gds18/)
-  ([`http://darribas.org/gds18/`](http://darribas.org/gds18/)) is a course
+- [Geographic Data Science](http://darribas.org/gds19/)
+  ([`http://darribas.org/gds19/`](http://darribas.org/gds19/)) is a course
   taught entirely in Python at the University of Liverpool.
 
