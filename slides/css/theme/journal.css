@@ -12,8 +12,8 @@ body {
   counter-reset: sidenote-counter; }
 
 code {
-  color: #21409a;
-  background-color: #ffde17;
+  color: #f6f4f2;
+  background-color: #c6ad8f;
 }
 
 .reveal a {
@@ -234,14 +234,14 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #be1e2d;
+  color: #425664;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #be1e2d;
+  color: #425664;
   text-shadow: none;
   border: none; }
 
@@ -269,7 +269,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #be1e2d;
+  border-color: #425664;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -277,31 +277,31 @@ body {
  *********************************************/
 .reveal .controls .navigate-left,
 .reveal .controls .navigate-left.enabled {
-  border-right-color: #be1e2d; }
+  border-right-color: #425664; }
 
 .reveal .controls .navigate-right,
 .reveal .controls .navigate-right.enabled {
-  border-left-color: #be1e2d; }
+  border-left-color: #425664; }
 
 .reveal .controls .navigate-up,
 .reveal .controls .navigate-up.enabled {
-  border-bottom-color: #be1e2d; }
+  border-bottom-color: #425664; }
 
 .reveal .controls .navigate-down,
 .reveal .controls .navigate-down.enabled {
-  border-top-color: #be1e2d; }
+  border-top-color: #425664; }
 
 .reveal .controls .navigate-left.enabled:hover {
-  border-right-color: #be1e2d; }
+  border-right-color: #425664; }
 
 .reveal .controls .navigate-right.enabled:hover {
-  border-left-color: #be1e2d; }
+  border-left-color: #425664; }
 
 .reveal .controls .navigate-up.enabled:hover {
-  border-bottom-color: #be1e2d; }
+  border-bottom-color: #425664; }
 
 .reveal .controls .navigate-down.enabled:hover {
-  border-top-color: #be1e2d; }
+  border-top-color: #425664; }
 
 /*********************************************
  * PROGRESS BAR
@@ -310,7 +310,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #be1e2d;
+  background: #425664;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
