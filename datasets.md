@@ -6,6 +6,13 @@ layout: default
 
 ## Datasets
 
+* Census socio-demographics
+* IMD
+* OS Geodata Pack
+* Brexit vote
+* AirBnb
+* Twitter
+
 {% capture census %}{% include_relative content/datasets/census.md %}{% endcapture %}
 {{ census | markdownify }}
 
