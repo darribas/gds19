@@ -66,19 +66,20 @@ la09:
 	cd content/labs && jupyter nbconvert --to latex lab_09.ipynb --output lab_09.tex && texbuild lab_09.tex && rm lab_09.tex && rm -R lab_09_files/
 
 website:
+	rm -rf _site
 	jekyll build
-	rm -r docs/
+	rm -rf docs/
 	mv _site docs
+	rm -rf docs/docs/
 
 website_local:
+	rm -rf _site
 	jekyll serve --watch --host 0.0.0.0
+	rm -rf _site
 
 update:
 	git checkout master
 	git pull origin master
-	git checkout gh-pages
-	git pull origin gh-pages
-	git checkout master
 
 handbook:
 	cat content/handbook/head.md content/website_data/index.md content/website_data/overview.md content/website_data/syllabus.md content/website_data/assessment.md content/website_data/marking_criteria.md content/website_data/task_01.md content/website_data/task_02.md content/website_data/task_03.md > handbook.md
