@@ -5,9 +5,19 @@ how python can be used for data analysis and how to continue learning about
 Python for (Geographic) Data Science. This section collects a few references
 to point you in that direction.
 
+* [Books](#Books)
+* [Package references](#Package-references)
+* [Videos](#Videos)
+* [Online courses](#Online-courses)
+
 ### Books
 
-Two excellent (free) books are:
+Serge Rey, Dani Arribas-Bel and Levi Wolf are currently working on an open
+book for Geographic Data Science in Python:
+
+- [*Geographic Data Science with PySAL and the PyData Stack*](https://geographicdata.science/book/) ([`https://geographicdata.science/book/`](https://geographicdata.science/book/)). Note that the book is still currently being developed so, although there is a portion of if that is fairly advanced, there are some chapters that are still not available. More information about the project is available in the project's website [`https://geographicdata.science`](https://geographicdata.science)).
+
+Two excellent (free) books that will introduce you to Python and statistics are:
 
 - [*Think Python*](http://greenteapress.com/wp/think-python/) 
   ([`http://greenteapress.com/wp/think-python`](http://greenteapress.com/wp/think-python)) 
@@ -42,8 +52,8 @@ Data Science:
   Data Analysis" but this one includes more content on machine learning
   techniques.
 
-Note these are introductions to Data Science but there is very limited, if
-any, coverage of spatial data and spatial analysis.
+Note these are introductions to Data Science, and do not necessarily have a
+geographic component.
 
 ### Package references
 
@@ -130,5 +140,7 @@ couple of interest:
 
 - [Geographic Data Science](http://darribas.org/gds19/)
   ([`http://darribas.org/gds19/`](http://darribas.org/gds19/)) is a course
-  taught entirely in Python at the University of Liverpool.
+  taught entirely in Python at the University of Liverpool by Dani Arribas-Bel.
+- [Geo-Python 2019](https://geo-python.github.io/site/), by D. Whipp, H. Tenkanen and V. Heikinheimo.
+- [Working with Geospatial Data in Python](https://www.datacamp.com/courses/working-with-geospatial-data-in-python) ([`https://www.datacamp.com/courses/working-with-geospatial-data-in-python`](https://www.datacamp.com/courses/working-with-geospatial-data-in-python)), by Joris Van den Bossche and Dani Arribas-Bel is a short online course on the DataCamp platform (paywalled).
 

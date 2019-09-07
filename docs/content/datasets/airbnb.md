@@ -1,4 +1,4 @@
-#### AirBnb listing for Inner London - MSOA level
+#### AirBnb listing for Inner London
 
 This dataset contains information for [AirBnb](http://www.airbnb.com) properties for the area of Inner London aggregated at the MSOA level. It has been prepared by Dani Arribas-Bel using as the original source the full listing of AirBnb locations for London provided by [Inside AirBnb](http://insideairbnb.com/). Same as the source, the dataset is released under a [CC0 1.0 Universal](http://creativecommons.org/publicdomain/zero/1.0/) License.
 

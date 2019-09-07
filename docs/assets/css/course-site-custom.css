@@ -31,14 +31,15 @@ html {
     line-height: 1.5;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    font-color: #0000000;
 }
 
 a {
-  color: #be1e2d;
+  color: #425664;
   text-decoration: none;
 }
 
 code {
-  color: #21409a;
-  background-color: #ffde17;
+  color: #f6f4f2;
+  background-color: #c6ad8f;
 }
