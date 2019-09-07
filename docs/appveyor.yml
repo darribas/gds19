@@ -6,9 +6,6 @@ environment:
     - PYTHON: "C:\\Miniconda3-x64"
       PYTHON_VERSION: "3.7"
       PYTHON_ARCH: "64"
-    - PYTHON: "C:\\Miniconda3"
-      PYTHON_VERSION: "3.7"
-      PYTHON_ARCH: "32"
 
 init:
   - "ECHO %PYTHON_VERSION% %PYTHON% %PYTHON_ARCH%"
@@ -28,7 +25,7 @@ test_script:
   - python -c "import os; print(os.listdir('./content/'))"
   - python -c "import os; print(os.listdir('./content/infrastructure'))"
   - python -c "import os; print(os.getcwd())"
-  - "jupyter nbconvert --to markdown --execute --ExecutePreprocessor.timeout=120 ./content/infrastructure/check_gds_stack.ipynb"
+  - "jupyter nbconvert --to markdown --execute --ExecutePreprocessor.timeout=120 content\\infrastructure\\check_gds_stack.ipynb"
  #- cd content/labs
  #- jupyter nbconvert --execute --ExecutePreprocessor.timeout=120 *.ipynb
 
