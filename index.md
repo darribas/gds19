@@ -13,15 +13,20 @@ A pdf copy of the module handbook can be downloaded [here](content/handbook/hand
 
 ### Citation
 
+[![DOI](http://jose.theoj.org/papers/10.21105/jose.00042/status.svg)](https://doi.org/10.21105/jose.00042)
+
 If you use material from this course, I would appreciate if you used the
 following citation:
 
 ```
-@online{darribas_gds19,
+@article{darribas_gds18,
   author = {Dani Arribas-Bel},
-  title = {Geographic Data Science'19},
-  year = 2018,
-  url = {http://darribas.org/gds19},
+  title = {A course on Geographic Data Science},
+  year = 2019,
+  journal = {The Journal of Open Source Education},
+  volume = 2,
+  number = 14,
+  doi = {https://doi.org/10.21105/jose.00042}
 }
 ```
 
