@@ -1,32 +1,32 @@
 lectures: le01 le02 le03 le04 le05 le06 le07 le08 le09 le10
 le01:
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_01.md -o slides/lecture_01.html
-	decktape automatic --no-sandbox -s 1280x960 slides/lecture_01.html slides/lecture_01.pdf
+	decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_01.html slides/lecture_01.pdf
 le02:
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_02.md -o slides/lecture_02.html
-	decktape automatic --no-sandbox -s 1280x960 slides/lecture_02.html slides/lecture_02.pdf
+	decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_02.html slides/lecture_02.pdf
 le03:
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_03.md -o slides/lecture_03.html
-	decktape automatic --no-sandbox -s 1280x960 slides/lecture_03.html slides/lecture_03.pdf
+	decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_03.html slides/lecture_03.pdf
 le04:
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_04.md -o slides/lecture_04.html
-	decktape automatic --no-sandbox -s 1280x960 slides/lecture_04.html slides/lecture_04.pdf
+	decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_04.html slides/lecture_04.pdf
 le05:
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_05.md -o slides/lecture_05.html
-	decktape automatic --no-sandbox -s 1280x960 slides/lecture_05.html slides/lecture_05.pdf
+	decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_05.html slides/lecture_05.pdf
 le06:
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_06.md -o slides/lecture_06.html
-	decktape automatic --no-sandbox -s 1280x960 slides/lecture_06.html slides/lecture_06.pdf
+	decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_06.html slides/lecture_06.pdf
 le08:
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_08.md -o slides/lecture_08.html
-	decktape automatic --no-sandbox -s 1290x960 slides/lecture_08.html slides/lecture_08.pdf
+	decktape automatic --chrome-arg=--no-sandbox -s 1290x960 slides/lecture_08.html slides/lecture_08.pdf
 le09:
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_09.md -o slides/lecture_09.html
-	decktape automatic --no-sandbox -s 1290x960 slides/lecture_09.html slides/lecture_09.pdf
+	decktape automatic --chrome-arg=--no-sandbox -s 1290x960 slides/lecture_09.html slides/lecture_09.pdf
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/assignment03.md -o slides/assignment03.html
 le11:
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_11.md -o slides/lecture_11.html
-	decktape automatic --no-sandbox -s 1280x960 slides/lecture_11.html slides/lecture_11.pdf
+	decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_11.html slides/lecture_11.pdf
 
 labs: la00 la01 la02 la03 la04 la05 la06 la08 la09
 la00:
