@@ -4,7 +4,7 @@
 
 * Type: `Coursework`
 * 1h.
-* Date: **Friday, November 30th-2018** (Week 10).
+* Date: **Friday, November 21st-2019** (Week 9).
 * 25% of the final mark
 * Chance to be reassessed
 * In-lab electronic submission.
