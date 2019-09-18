@@ -4,7 +4,7 @@
 ##### Week 1: Introduction
 
 * Lecture: [Geographic Data Science](notes/Class_01.html).
-* Tutorial: [Manipulating data in Python - Tidy Data](labs/Lab_01.html).
+* Tutorial: [Tools](labs/lab_00.html) + [Manipulating data in Python - Tidy Data](labs/Lab_01.html).
 
 ##### Week 2: Spatial Data
 
