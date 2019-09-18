@@ -13187,13 +13187,16 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In order to begin a lab session, you need to do it from what is called the <em>command line</em>, a terminal window that allows you to interact with your computer through written commands. This is how you can fire up a terminal:</p>
+<p>How you begin a lab session depends on the install you have. A few options:</p>
 <ul>
-<li>If you are on a <strong>Windows</strong> computer, you can start Microsoft PowerShell from the Start menu. </li>
-<li>On a <strong>Mac</strong>, fire up the Terminal.app utility. </li>
-<li>In <strong>Linux</strong>, use any of the terminals available.</li>
+<li>If you are on a University of Liverpool machine, you can launch the <code>GDS19</code> app from the menu, this will directly open up a window with JupyterLab.</li>
+<li>If you installed Option 1 from the course guide (<a href="http://darribas.org/gds19/software.html"><code>url</code></a>), you can start <code>docker</code> with the following command on the terminal (<code>PowerShell</code> in Windows or <code>Terminal.app</code> in macOS):</li>
 </ul>
-<p>Then type the following command</p>
+
+<pre><code>docker run --rm -ti -p 8888:8888 -v ${PWD}:/home/jovyan/work darribas/gds:3.0</code></pre>
+<ul>
+<li>If you installed the stack through the <code>conda</code> approach (Option 2 in the guide), you can type the following command on a terminal (<code>Anaconda prompt</code> on Windows, or <code>Terminal.app</code> on macOS):</li>
+</ul>
 
 <pre><code>&gt; conda activate gds</code></pre>
 <p>Then launch <code>Jupyter</code> by typing on the same terminal:</p>
