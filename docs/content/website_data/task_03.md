@@ -7,7 +7,7 @@
 * 50% of the final mark
 * Chance to be reassessed
 * Final Assessment
-* Due on **Friday, December 14th-2018** (Week 12).
+* Due on **Thursday, December 5th-2019** (Week 11).
 * Electronic submission only. Static HTML with NO interactive cells.
 
 In this assignment, you will take the role of a real-world data scientist tasked to identify areas to direct investments. You are consulting for the City of Liverpool on a program to target investments towards particularly disadvantaged areas that are nevertheless popular or have the potential to become so. The Economic Development division knows that only five local super output areas (LSOAs) will be funded but would like to know which ones.

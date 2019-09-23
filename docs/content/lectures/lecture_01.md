@@ -13,21 +13,15 @@
 
 ## Quiz
 
-* Can you think of a **real-world** context where **data** and statistics are being
-  used to make a difference?
+* Have you ever used **data** to make decisions in your life?
 * Have you ever heard the term **"Data Science"**?
 * Have you ever written a line of **computer code**?
 
 ## 
 
-<div text-align="center" markdown="1">
-*More stats than a GIS course, more GIS than a stats course...*
-</div>
+> *More stats than a GIS course... more GIS than a stats course*
 
-<div text-align="center" markdown="1" class="fragment">
-*...but in a fun
-way!*
-</div>
+<span class='fragment'>With a few twists!</span>
 
 ## Philosophy
 
@@ -39,13 +33,7 @@ way!*
 - Emphasis on the **application** and **use**
 - Close connection to **"real world"** applications
 
-## Logistics - Website
-
-[http://darribas.org/gds19](http://darribas.org/gds19)
-
-<iframe src="http://darribas.org/gds19" width=600 height=400 ></iframe>
-
-## Logistics - Format
+## Format
 
 11 weeks of:
 
@@ -55,7 +43,7 @@ way!*
   (highly *employable*)
 - **Further readings**: how to go beyond the minimum
 
-## Logistics - Content
+## Content
 
 <ul>
 <li class='fragment'> **Weeks 1-3**: "big picture" lectures + introduction to 
@@ -63,6 +51,16 @@ way!*
 <li class='fragment'> **Weeks 4-9**: "meat" of the course (lots of concepts packed) + Week 7 **break** </li>
 <li class='fragment'> **Weeks 10-11**: catch up + prepare an awesome Computational Esssay </li>
 </ul>
+
+## Logistics - Website
+
+[http://darribas.org/gds19](http://darribas.org/gds19)
+
+<iframe src="http://darribas.org/gds19" width=600 height=400 ></iframe>
+
+## Logistics - Teams [`[URL]`](https://teams.microsoft.com/l/team/19%3a8d6f5566ce464d62b2cad14b8fd6ca17%40thread.skype/conversations?groupId=00bb1c97-5fec-4fe6-b619-af2d79864e89&tenantId=53255131-b129-4010-86e1-474bfd7e8076)
+
+![Team](../content/lectures/figs/l01_team.png)
 
 ## Code
 
@@ -80,7 +78,7 @@ way!*
 
 <ul>
 * **General purpose** programming language
-* Sweet spot between *"proof-of-concept"* and *"production-ready"*
+* "Sweet spot" between *"proof-of-concept"* and *"production-ready"*
 * Industry standard: **GIS** (Esri, QGIS) and **Data Science** (Google, Facebook, Amazon, Netflix, The New York Times, NASA...)
 </ul>
 
@@ -94,7 +92,7 @@ way!*
 --> If the first time you see a notebook is at the lab, you won't be able to
   follow on </li>
 <li class='fragment'> **Bring** questions, comments, feedback, (informed) rants to class/labs </li>
-<li class='fragment'> Use the **forum** (link on VITAL) </li>
+<li class='fragment'> Use the **Team** </li>
 <li class='fragment'> **Collaborate** (it's **NOT** a zero-sum win!!!) </li>
 </ul>
 
@@ -200,6 +198,7 @@ knowledge** *
 
 #
 ## **Geo**-Data Science
+## {data-background=../content/lectures/figs/l01_batman.png data-background-size=contain}
 ## **Geo**-Data Science
 
 * A (very) large portion of all these new data are inherently **geographic** or can be traced back to some location over space.
@@ -209,13 +208,18 @@ knowledge** *
 
 Some examples...
 
-## {data-background=../content/lectures/figs/l01_airbnb.png data-background-size=contain}
-
 ## {data-background=../content/lectures/figs/l01_uber.png data-background-size=contain}
 
-## {data-background=../content/lectures/figs/l01_gmaps.png data-background-size=contain}
-
 ## {data-background=../content/lectures/figs/l01_jsnow.jpg data-background-size=contain}
+
+#
+## For next week...
+## For next week...
+
+* Join Teams
+* After the lab on Thursday, drop questions about JupyterLab on the
+  `JupyterLab` channel created on Teams
+* I'll respond them in class
 
 #
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Geographic Data Science'19</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://darribas.org" property="cc:attributionName" rel="cc:attributionURL">Dani Arribas-Bel</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
