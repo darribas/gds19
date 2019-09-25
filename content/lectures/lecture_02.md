@@ -14,9 +14,6 @@
 
 ## In the old days...
 
-## 
-
-
 <table>
 <col width="33%">
 <col width="33%">
@@ -105,23 +102,85 @@
 </td>
 <td style="vertical-align:middle;">
 
+One-file documents:
+
 * (Executable) code
 * Output
 * Narrative text
-
-... all in ONE file
 
 </td>
 </tr>
 </table>
 
-## Packages
+## Open-Source Packages
+
+D.R.Y. (Don't Repeat Yourself)
+
+<table>
+<col width="50%">
+<col width="50%">
+<tr>
+<td style="vertical-align:middle;">
+
+* Encapsulate <span class='hlg'>reusable</span> functionality
+* Easy <span class='hlg'>access</span> + more <span class='hlg'>reliable</span> (if package is good!)
+* Code available (<span class='hlg'>free</span> as in beer... but also as in speech!)
+
+</td>
+<td style="vertical-align:middle;">
+    ![](../content/lectures/figs/l02_package.png)
+</td>
+</tr>
+</table>
 
 ## Platforms
 
+*Hardware and low-level software (OS) that supports computations*
+
+<div class='fragment'>
+Change of models:
+
+- Desktop Vs cloud
+- Integrated Vs distributed
+- Native installation Vs virtualisation/containerisation
+</div>
+
+## Examples
+
 ## Ligo gravitational waves
 
-## Black holes
+<table>
+<col width="50%">
+<col width="50%">
+<tr>
+<td style="vertical-align:middle;">
+    ![](../content/lectures/figs/l02_ligo.png)
+</td>
+<td class='fragment' style="vertical-align:middle;">
+    ![](../content/lectures/figs/l02_ligo_notebooks.png)
+</td>
+</tr>
+</table>
+
+
+## 2019
+
+<table>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+<tr>
+<td style="vertical-align:middle;">
+    ![](../content/lectures/figs/l02_drives.jpg)
+</td>
+<td class='fragment' style="vertical-align:middle;">
+    ![](../content/lectures/figs/l02_bouman.png)
+</td>
+<td class='fragment' style="vertical-align:middle;">
+    ![](../content/lectures/figs/l02_black_hole.png)
+</td>
+</tr>
+</table>
 
 #
 ## JupyterLab (live) demo

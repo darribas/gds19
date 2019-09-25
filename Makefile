@@ -4,7 +4,7 @@ le01:
 	decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_01.html slides/lecture_01.pdf
 le02:
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_02.md -o slides/lecture_02.html
-	#decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_02.html slides/lecture_02.pdf
+	decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_02.html slides/lecture_02.pdf
 le03:
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_03.md -o slides/lecture_03.html
 	decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_03.html slides/lecture_03.pdf
