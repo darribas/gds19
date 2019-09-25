@@ -1,5 +1,5 @@
 ---
-title: Week 2 - Geo-Data
+title: Week 2 - Modern Computational Environments
 ---
 
 ### Slides
