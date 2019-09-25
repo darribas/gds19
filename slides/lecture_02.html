@@ -53,40 +53,153 @@
  
 <section id="section" class="level1">
 <h1></h1>
-<section id="yesterday" class="level2">
-<h2>“Yesterday”</h2>
+<section id="how-does-science-get-done" class="level2">
+<h2>How does Science “get done”?</h2>
 <ul>
-<li><p>Introduced the (geo-)data revolution</p>
-<ul>
-<li>What is it?</li>
-<li>Why now?</li>
-</ul></li>
-<li><p>The <em>need</em> of <strong>(geo-)data science</strong> to make sense of it all</p></li>
+<li>Reproducibility in Science</li>
+<li>Modern scientific tools</li>
+<li>JupyterLab demo</li>
 </ul>
 </section>
-<section id="today" class="level2">
-<h2>Today</h2>
-<p>How…</p>
-<ul>
-<li>can we make sense of the data revolution?</li>
-<li>do we ensure these processes are open and transparent?</li>
-</ul>
 </section>
-<section id="section-1" class="level2">
+<section id="section-1" class="level1">
+<h1></h1>
+<section id="reproducibility-in-science" class="level2">
+<h2>Reproducibility in Science</h2>
+</section>
+<section id="in-the-old-days" class="level2">
+<h2>In the old days…</h2>
+</section>
+<section id="section-2" class="level2">
 <h2></h2>
+<table>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+<tr>
+<td style="vertical-align:middle;">
+<a href="https://commons.wikimedia.org/wiki/File:Galileo_Galilei_Leoni_Louvre_2.jpg"><img src="../content/lectures/figs/l02_galileo.jpg" /></a>
+</td>
+<td style="vertical-align:middle;">
+<a href="https://www.needpix.com/photo/download/599171/blank-book-notebook-paper-text-textbook-tome-free-vector-graphics-free-pictures"><img src="../content/lectures/figs/l02_notebook.png" /></a>
+</td>
+<td style="vertical-align:middle;">
+<a href="https://commons.wikimedia.org/wiki/File:Galileo%27s_sketches_of_the_moon.png"><img src="../content/lectures/figs/l02_galileo_sketch.png" /></a>
+</td>
+</tr>
+</table>
+</section>
+<section id="reproducibility" class="level2">
+<h2>Reproducibility</h2>
+<ul>
+<li>Ability to reproduce scientific procedures (e.g. experiments, results)</li>
+<li>Key to the scientific endeavour</li>
+<li>Embedded in early work</li>
+</ul>
+</section>
+<section id="but" class="level2">
+<h2>But…</h2>
 <CENTER>
 <iframe width="660" height="415" src="https://giphy.com/gifs/CTX0ivSQbI78A/html5" frameborder="0" allowfullscreen>
 </iframe>
 </CENTER>
 </section>
+<section id="section-3" class="level2" data-background="../content/lectures/figs/l02_duke_scandal.png" data-background-size="contain">
+<h2></h2>
+<p><a href="https://www.sciencemag.org/news/2016/09/whistleblower-sues-duke-claims-doctored-data-helped-win-200-million-grants"><code>url</code></a></p>
 </section>
-<section id="section-2" class="level1">
+<section id="section-4" class="level2" data-background="../content/lectures/figs/l02_rr_scandal.png" data-background-size="contain">
+<h2></h2>
+<p><a href="https://www.bloomberg.com/news/articles/2013-04-18/faq-reinhart-rogoff-and-the-excel-error-that-changed-history"><code>url</code></a></p>
+</section>
+<section id="section-5" class="level2" data-background="../content/lectures/figs/l02_psy_scandal.png" data-background-size="contain">
+<h2></h2>
+<p><a href="https://www.nature.com/news/over-half-of-psychology-studies-fail-reproducibility-test-1.18248"><code>url</code></a></p>
+</section>
+</section>
+<section id="section-6" class="level1">
 <h1></h1>
-<section id="computers-computers-computers" class="level2">
-<h2>Computers, computers, computers…</h2>
+<section id="modern-scientific-tools" class="level2">
+<h2>Modern Scientific Tools</h2>
+</section>
+<section id="reproducible-science" class="level2">
+<h2>Reproducible Science</h2>
+<ul>
+<li><span class="hlg">Transparent</span> (computational) processes</li>
+<li>Enough <span class="hlg">detail</span> to reproduce the entire analysis</li>
+<li>Efficient model of <span class="hlg">reusability</span> (D.R.Y.)</li>
+</ul>
+</section>
+<section id="building-blocks" class="level2">
+<h2>Building Blocks</h2>
+<ul>
+<li>Computational Notebooks</li>
+<li>Open-Source Packages</li>
+<li>Open Platforms</li>
+</ul>
+</section>
+<section id="computational-notebooks" class="level2">
+<h2>Computational Notebooks</h2>
+</section>
+<section id="section-7" class="level2" data-background="../content/lectures/figs/l02_paper.png" data-background-size="contain">
+<h2></h2>
+<p><a href="https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/"><code>url</code></a></p>
+</section>
+<section id="section-8" class="level2">
+<h2></h2>
+<table>
+<col width="65%">
+<col width="34%">
+<tr>
+<td style="vertical-align:middle;">
+<img src="../content/lectures/figs/l02_notebook_py.png" />
+</td>
+<td style="vertical-align:middle;">
+<img src="../content/lectures/figs/l02_notebook_r.png" />
+</td>
+</tr>
+</table>
+</section>
+<section id="computational-notebooks-1" class="level2">
+<h2>Computational Notebooks</h2>
+<table>
+<col width="50%">
+<col width="50%">
+<tr>
+<td style="vertical-align:middle;">
+<img src="../content/lectures/figs/l02_notebook_example.png" />
+</td>
+<td style="vertical-align:middle;">
+<ul>
+<li>(Executable) code</li>
+<li>Output</li>
+<li>Narrative text</li>
+</ul>
+<p>… all in ONE file</p>
+</td>
+</tr>
+</table>
+</section>
+<section id="packages" class="level2">
+<h2>Packages</h2>
+</section>
+<section id="platforms" class="level2">
+<h2>Platforms</h2>
+</section>
+<section id="ligo-gravitational-waves" class="level2">
+<h2>Ligo gravitational waves</h2>
+</section>
+<section id="black-holes" class="level2">
+<h2>Black holes</h2>
 </section>
 </section>
-<section id="section-3" class="level1">
+<section id="section-9" class="level1">
+<h1></h1>
+<section id="jupyterlab-live-demo" class="level2">
+<h2>JupyterLab (live) demo</h2>
+</section>
+</section>
+<section id="section-10" class="level1">
 <h1></h1>
 <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Geographic Data Science’19</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://darribas.org" property="cc:attributionName" rel="cc:attributionURL">Dani Arribas-Bel</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
 </section>

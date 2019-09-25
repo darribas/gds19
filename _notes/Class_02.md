@@ -11,15 +11,14 @@ title: Week 2 - Geo-Data
 
 Some examples of new data sources and how they are being applied:
 
-* [TED talk](https://www.youtube.com/watch?v=CijsvAGU6-c) by Carlo Rati about MIT's SENSEable City Lab projects: excellent set of examples 
-* [NY Times article](http://www.nytimes.com/2012/02/12/sunday-review/big-datas-impact-in-the-world.html?_r=1) by Steve Lohr about the Age of Big Data. 
+* [Reproducibility crisis and solutions](https://theconversation.com/the-science-reproducibility-crisis-and-what-can-be-done-about-it-74198) piece in the Conversation, 2017.
+* ["The Scientific Paper is obsolete"](https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/) piece in The Atlantic, 2018.
+* 
 
 ### Related readings
 
-* The part of the lecture on new sources of data relies on {% cite ArribasBel201445 %}.
-* {% cite goodchild2007citizens %}: a classic on the rise of volunteered geographic information.
-* {% cite kitchin2014data %}: recent book on the data revolution from a Social Science/Human geography perspective.
-* {% cite lazer2017data %}: recent paper contextualizing the rise of new forms of data and the potential they hold for Social Sciences.
+* Recent publication formalising good practices about computational notebook
+  {% cite rule2019ten %}
 
 ### References
 
