@@ -6,19 +6,19 @@
 * Lecture: [Geographic Data Science](notes/Class_01.html).
 * Tutorial: [Tools](labs/lab_00.html) + [Manipulating data in Python - Tidy Data](labs/Lab_01.html).
 
-##### Week 2: Spatial Data
+##### Week 2: Modern Computational Environments
 
-* Lecture: [Geo-Data](notes/Class_02.html).
+* Lecture: [Modern Computational Environments](notes/Class_02.html).
 * Tutorial: [Manipulating data in Python - Advanced Tricks](labs/Lab_02.html).
 
-##### Week 3: (Geo)Visualization
+##### Week 3: Spatial Data
 
-* Lecture: [(Geo)Visualization](notes/Class_03.html).
+* Lecture: [Spatial Data](notes/Class_03.html).
 * Tutorial: [Manipulating geospatial data in Python](labs/Lab_03.html).
 
 -----
 
-##### Week 4: Choropleth mapping
+##### Week 4: (Geo)Visualization + Choropleth mapping
 
 * Lecture: [Choropleth mapping](notes/Class_04.html).
 * Tutorial: [Mapping deprivation](labs/Lab_04.html).
