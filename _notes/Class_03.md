@@ -1,5 +1,5 @@
 ---
-title: Week 3 - (Geo)Visualization
+title: Week 3 - Spatial Data
 ---
 
 ### Slides
@@ -9,15 +9,13 @@ title: Week 3 - (Geo)Visualization
 
 ### To do before class
 
-* Nathan Yau's [video](https://www.youtube.com/watch?v=j8g4_ee27Tk) on visualization.
-* Spend the rest of the prep hour browsing through his excellet blog, [Flowing Data](http://flowingdata.com/).
+* [TED talk](https://www.youtube.com/watch?v=CijsvAGU6-c) by Carlo Rati about MIT's SENSEable City Lab projects: excellent set of examples
 
 ### Related readings
 
-* This class was partially based on {% cite rey2015gis471l3 %}.
-* The slides are also based on {% cite tufte1983visual %}, which is not only a classic resource for all things visualization, but a beautiful book.
-* Nathan Yau's book ["Visualize this"](http://flowingdata.com/visualize-this/) is a good introductory overview.
-* Interesting chronology of milestones in visualization ([pdf](http://www.math.usu.edu/~symanzik/teaching/2009_stat6560/Downloads/Friendly_milestone.pdf)).
+* The part of the lecture on new sources of data relies on {% cite ArribasBel201445 %} and {% cite lazer2017data %}.
+* {% cite goodchild2007citizens %}: a classic on the rise of volunteered geographic information.
+* {% cite kitchin2014data %}: recent book on the data revolution from a Social Science/Human geography perspective.
 
 ### References
 
