@@ -152,15 +152,9 @@ new forms of data
 Keep an <span class='hlg'>open mind</span> to tools, approaches, and methods
 </span>
 
-##
-
-Buildings from satellite (NYTimes)
-
+## {data-background=../content/lectures/figs/l03_buildings.png data-background-size=contain data-transition=none}
 ## {data-background=../content/lectures/figs/l03_strava.png data-background-size=contain data-transition=none}
-
-##
-
-GHSL
+## {data-background=../content/lectures/figs/l03_ghsl.png data-background-size=contain data-transition=none}
 
 #
      

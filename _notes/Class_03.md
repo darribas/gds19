@@ -10,6 +10,8 @@ title: Week 3 - Spatial Data
 ### To do before class
 
 * [TED talk](https://www.youtube.com/watch?v=CijsvAGU6-c) by Carlo Rati about MIT's SENSEable City Lab projects: excellent set of examples
+* [New York Times piece](https://www.nytimes.com/interactive/2018/10/12/us/map-of-every-building-in-the-united-states.html) on US buildings map
+* [GHSL](https://ghsl.jrc.ec.europa.eu/index.php) Dataset, by the European Comission
 
 ### Related readings
 
