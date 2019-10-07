@@ -8,7 +8,7 @@
  
 <meta name="description" content="Geographic Data Science - Lecture III">    
  
-  <meta name="author" content="(Geo-)Visualization" />
+  <meta name="author" content="Spatial Data" />
  
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -44,7 +44,7 @@
  
 <section>
 <h1>Geographic Data Science - Lecture III</h1>
-<h3>(Geo-)Visualization</h3>
+<h3>Spatial Data</h3>
 <p>
 <h4><a href="http://darribas.org">Dani Arribas-Bel</a></h4>
 </p>
@@ -53,304 +53,189 @@
  
 <section id="section" class="level1">
 <h1></h1>
+<section id="day-1" class="level2">
+<h2>“Day 1”</h2>
+<ul>
+<li><p>Introduced the (geo-)data revolution</p>
+<ul>
+<li>What is it?</li>
+<li>Why now?</li>
+</ul></li>
+<li><p>The <em>need</em> of <strong>(geo-)data science</strong> to make sense of it all</p></li>
+</ul>
+</section>
 <section id="today" class="level2">
 <h2>Today</h2>
 <ul>
-<li><p>Visualization</p>
-<ul>
-<li><em>What</em> and <em>why</em></li>
-<li>History</li>
-<li>Examples</li>
-</ul></li>
-<li><p>Geovisualization</p>
-<ul>
-<li><em>What</em></li>
-<li>“A map for everyone”</li>
-<li>Dangers of geovisualization</li>
-</ul></li>
+<li>Types of (geo-)data: refresher</li>
+<li>Traditional and new sources of spatial data</li>
+<li>New ways for traditional approaches</li>
 </ul>
 </section>
 </section>
 <section id="section-1" class="level1">
 <h1></h1>
-<section id="visualization" class="level2">
-<h2>Visualization</h2>
+<section id="representing-the-world-digitally" class="level2">
+<h2>Representing the World Digitally</h2>
 </section>
-<section id="section-2" class="level2">
-<h2></h2>
-<center>
-<em>“Data graphics <strong>visually display measured quantities</strong> by means of the <strong>combined use</strong> of points, lines, a coordinate system, numbers, symbols, words, shading, and color.”</em>
-</center>
-<div style="text-align:right">
-<p><small> <em>The Visual Display of Quantitative Information</em>. Edward R. Tufte. </small></p>
-</div>
-</section>
-<section id="section-3" class="level2">
-<h2></h2>
-<CENTER>
-<img src="../content/lectures/figs/l03_monalisa_data.png" alt="ML data"
-style="width:450px;height:450px;"/> <span class="fragment"> <img src="../content/lectures/figs/l03_monalisa.png" alt="ML pic"
-style="width:450px;height:450px;"/>
-</CENTER>
-<p>[<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg/687px-Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg">Source</a>]</p>
-</section>
-<section id="a-bit-of-history" class="level2">
-<h2>A bit of history</h2>
-<center>
-Maps <span class="fragment"> –&gt; Data Maps (XVIIth.C.) <span class="fragment"> –&gt; Time series (1786) <span class="fragment"> –&gt; Scatter plots
-</center>
-<span class="fragment">
+<section id="gis-data-models" class="level2">
+<h2>GIS Data Models</h2>
+<p>Traditionally, geographic information is represented as:</p>
 <ul>
-<li>
-Surprisingly recent: 1750-1800 approx. (much later than many other advances in math and stats!)
-</li>
-<li>
-<strong>William Playfair</strong>’s <em>“linear arithmetic”</em>: encode/replace numbers in tables into visual representations.
-</li>
-<li>
-Other relevant names throughout history: Lambert, Minard, Marey.
-</li>
+<li><code>Vector</code> <span class="fragment"><span class="hlg">finite</span> set of entities (<span class="hlg">shapes</span>/geometries)</span></li>
+<li><code>Raster</code> <span class="fragment"> <span class="hlg">images</span> encoding <span class="hlg">surfaces</span> (values, colours, etc.)</span></li>
 </ul>
 </section>
-<section id="visualization-1" class="level2">
-<h2>Visualization</h2>
-<p><em>The Visual Display of Quantitative Information</em>. Edward R. Tufte.</p>
+<section id="vector" class="level2">
+<h2>Vector</h2>
+<table>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+<tr>
+<td>
+<img src="../content/lectures/figs/l03_points.png" style="height:250px">
+</td>
+<td>
+<img src="../content/lectures/figs/l03_streets.png" style="height:250px">
+</td>
+<td>
+<img src="../content/lectures/figs/l03_polygons.png" style="height:250px">
+</td>
+</tr>
+</table>
+</section>
+<section id="raster" class="level2">
+<h2>Raster</h2>
+<table>
+<col width="60%">
+<col width="40%">
+<tr>
+<td>
+<img src="../content/lectures/figs/l03_dem.jpg" style="height:300px">
+</td>
+<td>
+<img src="../content/lectures/figs/l03_sat.jpg" style="height:300px">
+</td>
+</tr>
+</table>
+</section>
+</section>
+<section id="section-2" class="level1">
+<h1></h1>
+<section id="good-old-spatial-data" class="level2">
+<h2><em>Good old</em> spatial data</h2>
+</section>
+<section id="good-old-spatial-data-1" class="level2">
+<h2><em>Good old</em> spatial data</h2>
+<p>[<a href="https://www.youtube.com/embed/RY2J8ETZzLo">source</a>]</p>
+<iframe width="660" height="415" src="https://www.youtube.com/embed/RY2J8ETZzLo" frameborder="0" allowfullscreen>
+</iframe>
+</section>
+<section id="good-old-spatial-data-2" class="level2">
+<h2><em>Good old</em> spatial data (+)</h2>
+<p>Traditionally, datasets used in the (social) sciences are:</p>
 <ul>
-<li>By <strong>encoding information visually</strong>, they allow to present <strong>large amounts</strong> of numbers in a <strong>meaninful</strong> way.</li>
-<li>If well made, visualizations provide leads into the processes underlying the graphic.</li>
+<li>Collected for the purpose –&gt; <strong>carefully</strong> designed</li>
+<li><strong>Detailed</strong> in information (“<em>…rich profiles and portraits of the country…</em>”)</li>
+<li><strong>High quality</strong></li>
 </ul>
 </section>
-<section id="historical-examples" class="level2">
-<h2>Historical examples</h2>
-<TABLE>
-<TR>
-<TD class="fragment">
-<center>
-<img src="../content/lectures/figs/l03_pyrometrie.gif" alt=""
-style="width:150px;height:150px;"/> <small> [<a href="http://www.fisme.science.uu.nl/wiskrant/artikelen/hist_grafieken/begin/images/pyrometrie.gif">Source</a>] XVIIIth. Cent. - <em>Pytometrie</em> by J. H Lambert<br />
-</small>
-</center>
-</TD>
-<TD class="fragment">
-<center>
-<img src="../content/lectures/figs/l03_playfair.gif" alt=""
-style="width:150px;height:150px;"/> <small> [<a href="https://upload.wikimedia.org/wikipedia/commons/3/3f/Playfair_Barchart.gif">Source</a>] Playfair’s bar chart in The Commercial and Political Atlas (1786) </small>
-</center>
-</TD>
-</small>
-</TR>
-<TR>
-<TD class="fragment">
-<CENTER>
-<img src="../content/lectures/figs/l03_lambert_plot.png" alt=""
-style="width:150px;height:150px;"/> <small> [<a href="https://hal.archives-ouvertes.fr/halshs-00663305/document">Source</a>] Lambert - Evaporation rate against temperature, 1769 </small>
-</CENTER>
-</TD>
-<TD class="fragment">
-<CENTER>
-<img src="../content/lectures/figs/l03_minard.png" alt=""
-style="width:250px;height:100px;"/> <small> Minard - Napoleon army map (XIXth. Cent.) </small>
-</CENTER>
-</TD>
-</TR>
-</TABLE>
+<section id="good-old-spatial-data--" class="level2">
+<h2><em>Good old</em> spatial data (-)</h2>
+<p>But also:</p>
+<ul>
+<li>Massive enterprises ("<em>…every single person…</em>) –&gt; <strong>costly</strong></li>
+<li>But <strong>coarse</strong> in resolution (to preserve pricacy they need to be aggregated)</li>
+<li><strong>Slow</strong>: the more detailed, the less frequent they are available</li>
+</ul>
+</section>
+<section id="examples" class="level2">
+<h2>Examples</h2>
+<ul>
+<li>Decenial census (and census geographies)</li>
+<li>Longitudinal surveys</li>
+<li>Customly collected surveys, interviews, etc.</li>
+<li>Economic indicators</li>
+<li>…</li>
+</ul>
+</section>
+</section>
+<section id="section-3" class="level1">
+<h1></h1>
+<section id="new-sources-of-spatial-data" class="level2">
+<h2>New sources of (spatial) data</h2>
+</section>
+<section id="new-sources-of-spatial-data-1" class="level2">
+<h2>New sources of (spatial) data</h2>
+<p>Tied into the (geo-)data revolution, new sources are appearing that are:</p>
+<ul>
+<li><span class="hlg"><strong>Accidental</strong></span> –&gt; created for different purposes but available for analysis as a side effect</li>
+<li>Very <span class="hlg">diverse</span> in nature, resolution, and quality but, potentially, much more <strong>detailed</strong> in both space and time</li>
+</ul>
+<p>Different ways to categorise them…</p>
+</section>
+<section id="lazer-radford-2017" class="level2">
+<h2>Lazer &amp; Radford (2017)</h2>
+<ul>
+<li><span class="hlg">Digital life</span>: digital actions (Twitter, Facebook, WikiPedia…)</li>
+<li><span class="hlg">Digital traces</span>: record of digital actions (CDRs, metadata…)</li>
+<li><span class="hlg">Digitalised life</span>: nonintrinsically digital life in digital form (Government records, web…)</li>
+</ul>
+</section>
+<section id="arribas-bel-2014" class="level2">
+<h2>Arribas-Bel (2014)</h2>
+<p>Three levels, based on how they originate:</p>
+<ul>
+<li><span class="hlg">Bottom up</span>: “Citizens as sensors”</li>
+<li><span class="hlg">Intermediate</span>: Digital businesses/businesses going digital</li>
+<li><span class="hlg">Top down</span>: Open Government Data</li>
+</ul>
+</section>
+<section id="opportunities-lazer-radford-2017" class="level2">
+<h2>Opportunities (Lazer &amp; Radford, 2017)</h2>
+<ul>
+<li>Massive, passive</li>
+<li>Nowcasting</li>
+<li>Data on social systems</li>
+<li>Natural and field experiments (“always-on” observatory of human behaviour)</li>
+<li>Making big data small</li>
+</ul>
+</section>
+<section id="challenges-arribas-bel-2014" class="level2">
+<h2>Challenges (Arribas-Bel, 2014)</h2>
+<ul>
+<li>Bias</li>
+<li>Technical barriers</li>
+<li>Methodological “mismatch”</li>
+</ul>
 </section>
 </section>
 <section id="section-4" class="level1">
 <h1></h1>
-<section id="geovisualization" class="level2">
-<h2><strong>Geo</strong>visualization</h2>
+<section id="oldnew-rastervector" class="level2">
+<h2>Old/New, raster/vector…</h2>
 </section>
-<section id="tufte-1983" class="level2">
-<h2>Tufte (1983)</h2>
-<center>
-<em>“The most extensive data maps […] place millions of bits of information on a single page before our eyes. No other method for the display of statistical information is so powerful”</em>
-</center>
+<section id="oldnew-rastervector-1" class="level2">
+<h2>Old/New, raster/vector…</h2>
+<p><span class="fragment"> Traditional <span class="hlg">approaches</span> to represent the world in a computer are <span class="hlg">blending</span> thanks to new forms of data </span></p>
+<p><span class="fragment"> Keep an <span class="hlg">open mind</span> to tools, approaches, and methods </span></p>
 </section>
-<section id="maceachren-1994" class="level2">
-<h2>MacEachren (1994)</h2>
-<center>
-<em>“<strong>Geographic visualization</strong> can be defined as the use of concrete visual representations –whether on paper or through computer displays or other media–to <strong>make spatial contexts and problems visible</strong>, so as to engage the most powerful <strong>human information processing</strong> abilities, those associated with vision.”</em>
-</center>
-</section>
-<section id="geovisualization-1" class="level2">
-<h2>GeoVisualization</h2>
-<ul>
-<li>End goal is not to replace the human <em>in the loop</em>, but to <strong>augment</strong> her/him.</li>
-<li>Augmentation here comes through engaging the <strong>pattern recognition</strong> capabilities that our brain inherently has.</li>
-<li>Combines:
-<ul>
-<li>Traditional maps</li>
-<li>Statistical maps</li>
-<li>Statistical devices of other kind (charts, scatter plots, etc.)</li>
-</ul></li>
-<li><strong>Different roles</strong> in the analysis process…</li>
-</ul>
-</section>
-<section id="a-map-for-everyone" class="level2">
-<h2>A map for everyone</h2>
-<p>Maps can fulfill several needs</p>
-<p>Depending on which one we want to stress, the best map will look very different</p>
-<p>MacEachren &amp; Kraak (1997) identify three main dimensions:</p>
-<ul>
-<li>Knowledge of what is being plotted</li>
-<li>Target audience</li>
-<li>Degree of interactivity</li>
-</ul>
-</section>
-<section id="maceachren-kraak-1997-map-cube" class="level2">
-<h2>MacEachren &amp; Kraak (1997) map cube</h2>
-<div style="height: 500px;" data-markdown="1">
-<p><img src="../content/lectures/figs/l03_map_cube.png" /></p>
-</div>
-<p>[<a href="http://cartography.tuwien.ac.at/wordpress/wp-content/uploads/2013/01/cartotalk-corne-van-elzakker.pdf">Source</a>]</p>
-</section>
-<section id="unknown-fast-and-slow-maps" class="level2">
-<h2>Un/known: <em>fast</em> and <em>slow</em> maps</h2>
-</section>
-<section id="fast-maps-source" class="level2">
-<h2>Fast maps [<a href="http://darribas.org/buzz_adam/">Source</a>]</h2>
-<div style="height: 450px;" data-markdown="1">
-<p><img src="../content/lectures/figs/l03_adam_pc.png" /></p>
-</div>
-</section>
-<section id="slow-maps-source" class="level2">
-<h2>Slow maps [<a href="http://www.tandfonline.com/doi/full/10.1080/21681376.2015.1067151">Source</a>]</h2>
-<div style="height: 500px;" data-markdown="1">
-<p><img src="../content/lectures/figs/l03_pc4_low.png" /></p>
-</div>
-</section>
-<section id="audience-easy-and-hard-maps" class="level2">
-<h2>Audience: <em>easy</em> and <em>hard</em> maps</h2>
-<!--
-The larger and non-specialized the audience, the less you can assume about
-what they know, hence less information can be emedded
-
-Highly specialized maps are not particularly compelling to the general eye,
-but they contain a lot of specific information that can be easily decoded by
-the trained eye
-
-This changes with statistical/geographic literacy (the minimum grows)
-
-Pro-tip: know your audience and optimize for it
--->
-</section>
-<section id="easy-map" class="level2">
-<h2>Easy map</h2>
-<p>[<a href="https://en.wikipedia.org/wiki/Template:Map_of_same-sex_marriage_in_the_United_States#/media/File:Same-sex_marriage_in_the_United_States.svg">Source</a>] Map of same-sex marriage in the US, 2015</p>
-<div style="height: 500px;" data-markdown="1">
-<p><img src="../content/lectures/figs/l03_easy_map.svg" /></p>
-</div>
-</section>
-<section id="hard-map-source" class="level2">
-<h2>Hard map [<a href="http://epn.sagepub.com/content/44/9/2041.short">Source</a>]</h2>
-<CENTER>
-<img src="../content/lectures/figs/l03_arribas_gerritse.png" alt="DAB-G"
-style="width:550px;height:550px;"/>
-</CENTER>
-</section>
-<section id="interaction-one-or-many-maps-in-one" class="level2">
-<h2>Interaction: one or many maps in one</h2>
-<!--
-Talk about interaction, oportunity for discovery, and the end-user as explorer
-rather than mere consumer
-
-Interactivity, however, not always desired: sometimes you need one-message,
-clear maps to make a case and you don't have time for rich interactive one. It
-also takes much more time (althought changing)
--->
-</section>
-<section id="static-map" class="level2">
-<h2>Static map</h2>
-<div style="height: 500px;" data-markdown="1">
-<p><img src="../content/lectures/figs/l03_la.png" /></p>
-</div>
-</section>
-<section id="interactive-map" class="level2">
-<h2>Interactive map</h2>
-<iframe width="100%" height="450" frameborder="0" src="http://maps.cdrc.ac.uk/#/geodemographics/oac11/default/BTTTFTT/13/-2.9700/53.4000/">
-</iframe>
-</section>
-</section>
-<section id="section-5" class="level1">
-<h1></h1>
-<section id="dangers-of-geovisualization" class="level2">
-<h2><strong>Dangers</strong> of GeoVisualization</h2>
-</section>
-<section id="section-6" class="level2">
+<section id="section-5" class="level2">
 <h2></h2>
-<div style="height: 600px;" data-markdown="1">
-<p><img src="../content/lectures/figs/l03_lie.png" /></p>
-</div>
+<p>Buildings from satellite (NYTimes)</p>
 </section>
-<section id="how-to-lie-with-maps" class="level2">
-<h2><em>How to lie with maps</em></h2>
-<CENTER>
-<img src="../content/lectures/figs/l03_liv_equal.png" alt="ML data"
-style="width:450px;;"/> <img src="../content/lectures/figs/l03_liv_quantiles.png" alt="ML pic"
-style="width:450px;;"/>
-</CENTER>
+<section id="section-6" class="level2" data-background="../content/lectures/figs/l03_strava.png" data-background-size="contain" data-transition="none">
+<h2></h2>
 </section>
-<section id="how-to-lie-with-maps-1" class="level2">
-<h2><em>How to lie with maps</em></h2>
-<p>The human brain is so good a picking up patterns…</p>
-<p class="fragment">
-… that it finds them even where they don’t exist!
-</p>
-<p class="fragment">
-<strong>Patternicity</strong> (Shermer, 2008) <em>The tendency to find meaningful patterns in meaningless noise</em>
-</p>
-<p class="fragment">
-<strong>Apophenia</strong> (Konrad, 1958) <em>The experience of seeing patterns or connections in random or meaningless data</em>
-</p>
-</section>
-<section id="twitter-clusters" class="level2">
-<h2>Twitter clusters</h2>
-<CENTER>
-<img src="../content/lectures/figs/l03_kde.png" alt="ML data"
-style="width:550px;height:550px;"/>
-</CENTER>
-</section>
-<section id="how-to-be-truthful-with-maps" class="level2">
-<h2>How to <em>be truthful</em> with maps</h2>
-<center>
-<em>“With great power comes great responsibility”</em>
-</center>
-<span class="fragment"> <strong>Statistics</strong> to the rescue!!! <span class="fragment">
-<ul>
-<li>
-<strong>Complement</strong> and enhance visuals
-</li>
-<li>
-Help disentangling <strong>true</strong> from <strong>spurious</strong> patterns (a.k.a. identifying the “Jesus on the toast”)
-</li>
-<li>
-<strong>Reciprocity</strong>: GeoVis can also enhance statistics and make them more useful
-</li>
-</ul>
-</section>
-<section id="statistics-for-twitter-clusters" class="level2">
-<h2>Statistics for Twitter clusters</h2>
-<CENTER>
-<img src="../content/lectures/figs/l03_kfun.png" alt="ML data"
-style="width:550px;height:550px;"/>
-</CENTER>
-</section>
-</section>
-<section id="section-7" class="level1">
-<h1></h1>
-<section id="recapitulation" class="level2">
-<h2>Recapitulation</h2>
-<ul>
-<li>Visualization of statistical data is a fairly <strong>recent</strong> phenomenon.</li>
-<li>Its power comes from engaging and <strong>augmenting</strong> the human in the loop, rather than replacing her/him.</li>
-<li>Its power <strong>can be misused</strong>, but there are methods to limit this risk.</li>
-</ul>
+<section id="section-7" class="level2">
+<h2></h2>
+<p>GHSL</p>
 </section>
 </section>
 <section id="section-8" class="level1">
 <h1></h1>
-<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" data-property="dct:title">Geographic Data Science’18</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://darribas.org" property="cc:attributionName" rel="cc:attributionURL">Dani Arribas-Bel</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Geographic Data Science’19</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://darribas.org" property="cc:attributionName" rel="cc:attributionURL">Dani Arribas-Bel</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
 </section>
 </div>
  
