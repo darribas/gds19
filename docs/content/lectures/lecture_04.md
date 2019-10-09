@@ -5,33 +5,112 @@
 #
 ## Today
 
+* Visualisation
+* Geo-Visualisation
 * Mapping data
-* MAUP
-* Choropleths
-    * Definition
-    * Classes
-* Cartograms
-* Conditional maps
-* Space-Time mapping
+    * MAUP
+    * Choropleths
 
 #
+## Visualization
+
 ##
-<h3>Mapping Data with Data maps</h3>
 
-* **Abstraction** from the purely geographical map
-* Representing **numerical values** within a **spatial** context
-* A geographical approach to statistical visualization
+<center>
+*"Data graphics **visually display measured quantities** by means of the **combined
+use** of points, lines, a coordinate system, numbers, symbols, words, shading,
+and color."*
+</center>
 
-<div class='fragment'>
-`Key components`
-
-* "Container" geographies
-* Choropleths: displaying data on maps (choropleths)
-
+<div style="text-align:right">
+<small>
+*The Visual Display of Quantitative Information*. Edward R. Tufte.
+</small>
 </div>
 
+##
+
+<CENTER>
+<img src="../content/lectures/figs/l03_monalisa_data.png" alt="ML data"
+style="width:450px;height:450px;"/>
+ <span class="fragment"> 
+<img src="../content/lectures/figs/l03_monalisa.png" alt="ML pic"
+style="width:450px;height:450px;"/>
+</CENTER>
+
+
+[[Source](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg/687px-Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg)]
+
+
+## Visualization
+
+* By **encoding information visually**, they allow to present **large amounts** of
+  numbers in a **meaninful** way.
+* If well made, visualizations provide leads into the processes underlying the
+  graphic.
+
+<div style="text-align:right">
+<small>
+*The Visual Display of Quantitative Information*. Edward R. Tufte.
+</small>
+</div>
+
+
 #
-## MAUP
+## **Geo**visualization
+
+## Tufte (1983)
+
+<center>
+*"The most extensive data maps [...] place millions of bits of information on
+a single page before our eyes. No other method for the display of statistical
+information is so powerful"*
+</center>
+
+## MacEachren (1994)
+
+<center>
+ *"**Geographic visualization** can be defined as the use of concrete visual
+ representations --whether on paper or through computer displays or other
+ media--to **make spatial contexts and problems visible**, so as to engage
+ the most powerful **human information processing** abilities, those
+ associated with vision."*
+</center>
+
+## GeoVisualization
+
+* Not to replace the human *in the loop*, but to **augment** her/him.
+* Augmentation through engaging the **pattern recognition**
+  capabilities that our brain inherently has.
+* Combines cartography, infovis and statistics
+
+## A map for everyone
+
+Maps can fulfill several needs, looking very different depending on the
+end-goal
+
+MacEachren & Kraak (1997) identify three main dimensions:
+
+* Knowledge of what is being plotted
+* Target audience
+* Degree of interactivity
+
+## MacEachren & Kraak (1997) map cube
+
+<div style="height: 500px;" markdown="1">
+![](../content/lectures/figs/l03_map_cube.png)
+</div>
+
+[[Source](http://cartography.tuwien.ac.at/wordpress/wp-content/uploads/2013/01/cartotalk-corne-van-elzakker.pdf)]
+
+
+# Making good data maps
+
+* "Containers"
+* Choropleths
+
+#
+## Data "containers"
 
 ##
 **M**odifiable **A**real **U**nit **P**roblem <span class='fragment'>(Openshaw, 1984)</span>
@@ -113,34 +192,17 @@ gradient of some sort*
 
 ## Classification choices
 
-* Colors <span class="fragment"> --> in alignment with the goal of the map
-* Bins <span class="fragment"> --> How many?
-* Algorithm:
+* N. of bins
+* How to bin?
+* Colors
 
-<ul class="fragment"> 
- <li> Unique values </li>
- <li> Equal interval </li>
- <li> Qua/Quintiles (equal count) </li>
- <li> Fisher-Jenks </li>
- <li> ... </li>
-</ul>
+## How many bins?
 
-## Color schemes
+- Trade-off: detail Vs cognitive load
+- Exact number depends on purpose of the map
+- Usually not more than 12
 
-Align with your purpose
-
-* **Categories**, non-ordered [<img src="../content/lectures/figs/l04_pal_qual.png" alt="Qualitative"
-style="width:300px;height:50px;vertical-align:middle;border:0px;" class="fragment"/>](https://jiffyclub.github.io/palettable/wesanderson/#fantasticfox2_5)
-* Graduated, **sequential** [<img src="../content/lectures/figs/l04_pal_seq.png" alt="Sequential"
-style="width:300px;height:50px;vertical-align:middle;border:0px;" class="fragment"/>](https://jiffyclub.github.io/palettable/colorbrewer/sequential/#rdpu_5)
-* Graduated, **divergent** [<img src="../content/lectures/figs/l04_pal_div.png" alt="Divergent"
-style="width:300px;height:50px;vertical-align:middle;border:0px;" class="fragment"/>](https://jiffyclub.github.io/palettable/colorbrewer/diverging/#rdylgn_5)
-
-## {data-background=../content/lectures/figs/l04_colorbrewer.png data-background-size=contain}
-
-[[Source](http://colorbrewer2.org/)]
-
-## Classification algorithms
+## How to bin?
 
 ## Unique values
 
@@ -178,90 +240,25 @@ style="width:300px;height:50px;vertical-align:middle;border:0px;" class="fragmen
 * Natural breaks
 * Outlier maps: box maps, std. maps...
 
+## Color schemes
+
+Align with your purpose
+
+* **Categories**, non-ordered [<img src="../content/lectures/figs/l04_pal_qual.png" alt="Qualitative"
+style="width:300px;height:50px;vertical-align:middle;border:0px;" class="fragment"/>](https://jiffyclub.github.io/palettable/wesanderson/#fantasticfox2_5)
+* Graduated, **sequential** [<img src="../content/lectures/figs/l04_pal_seq.png" alt="Sequential"
+style="width:300px;height:50px;vertical-align:middle;border:0px;" class="fragment"/>](https://jiffyclub.github.io/palettable/colorbrewer/sequential/#rdpu_5)
+* Graduated, **divergent** [<img src="../content/lectures/figs/l04_pal_div.png" alt="Divergent"
+style="width:300px;height:50px;vertical-align:middle;border:0px;" class="fragment"/>](https://jiffyclub.github.io/palettable/colorbrewer/diverging/#rdylgn_5)
+
+**TIP**: check [ColorBrewer](http://colorbrewer2.org/) for guidance
+
+#
 ## Tips
 
-Different classification schemes can produce widely different maps as a
-result of:
-
-* The distribution of the values
-* The inherent simplification that a choropleth implies
-
-Best advice is to **explore** different ones and **combine** choropleths with other
-graphical devices like histograms or density plots
-
-#
-## Cartograms
-
-*"**Data maps** where the variable is encoded, not by a color gradient, but by
-**distorting the shape/size** of the geographical objects"*
-
-<ul class="fragment">
-<li> Useful in cases where the natural size/shape induces to wrong
-interpretation, or obscures the intended representation. </li>
-<li> If not done carefully, it can distort the message in unintended ways
-</li>
-</ul>
-
-## Cartograms
-
-<center>
-<img src="../content/lectures/figs/l04_liv_choro.png" alt=""
-style="width:400px"/>
-<span class="fragment"> 
-<img src="../content/lectures/figs/l04_liv_carto.png" alt=""
-style="width:400px"/>
-</center>
-
-## {data-background=../content/lectures/figs/l04_carto_consumption.png data-background-size=contain}
-
-[[Source](http://www.worldmapper.org/)]
-
-#
-## Conditional maps
-
-<center>
-Split a dataset in *buckets* by *conditioning* on additional variables, then
-create a map for each *bucket*
-</center>
-
-* If no association, maps should look the same
-* But, if the conditioning variables are somewhat related to the outcome we
-  are mapping, the spatial distribution can vary substantially
-* **Exploration** of **multivariate** relationships
-
-## Conditional maps
-
-<center>
-<div style="width: 600px;" markdown="1">
-![](../content/lectures/figs/l04_conditional_plot.png)
-</div>
-</center>
-
-#
-## Space-Time mapping
-## Space-Time mapping
-
-* Bringing time into a spatial 2D context is "tricky" (it's really 3D!)
-* Traditionally <span class="fragment"> --> sequence of time periods, 3D plots
-* More recently <span class="fragment"> --> animation and interactivity
-
-## 
-
-[[Source](http://www.svgopen.org/2005/papers/abstract_neumann_thematic_navigation_in_space_and_time/)]
-<div style="height: 500px;" markdown="1">
-![](../content/lectures/figs/l04_space_time_cube.png)
-</div>
-
-
-<!--
-## {data-background-iframe="http://cartodb.github.io/torque/examples/navy_leaflet.html"}
-
-[[Source](http://cartodb.github.io/torque/examples/navy_leaflet.html)]
--->
-
-## {data-background-iframe="https://d9a.cartodb.com/viz/fe9751f0-6ced-11e4-98f3-0e9d821ea90d/embed_map"}
-
-[[Source](https://cartodb.com/case-studies/la-metro-movement/)]
+- Think of the purpose of the map
+- Explore by trying different classification alternatives
+- Combine (Geo)visualisation with other statistical devices
 
 #
     

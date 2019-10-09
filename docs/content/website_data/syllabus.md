@@ -18,9 +18,9 @@
 
 -----
 
-##### Week 4: (Geo)Visualization + Choropleth mapping
+##### Week 4: (Geo)Visualization + Choropleths
 
-* Lecture: [Choropleth mapping](notes/Class_04.html).
+* Lecture: [(Geo)Visualization + Choropleths](notes/Class_04.html).
 * Tutorial: [Mapping deprivation](labs/Lab_04.html).
 
 ##### Week 5: Spatial Weights
