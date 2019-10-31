@@ -1,12 +1,12 @@
 ---
-title: Lab 9 - Points
+title: Lab 8 - Points
 ---
 
 ### Notebook
 
-- [ipynb](../content/labs/lab_09.ipynb)
-- [html](../content/labs/lab_09.html)
-- [pdf](../content/labs/lab_09.pdf)
+- [ipynb](../content/labs/lab_08.ipynb)
+- [html](../content/labs/lab_08.html)
+- [pdf](../content/labs/lab_08.pdf)
 
 ### Data
 

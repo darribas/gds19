@@ -43,7 +43,7 @@
 ##### Week 8: Point Data
 
 * Lecture: [Point Data](notes/Class_09.html).
-* Tutorial: [Exploring Twitter patterns](labs/Lab_09.html).
+* Tutorial: [Exploring Twitter patterns](labs/Lab_08.html).
 
 -----
 
