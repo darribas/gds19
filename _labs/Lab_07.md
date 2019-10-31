@@ -1,12 +1,12 @@
 ---
-title: Lab 8 - Clustering
+title: Lab 7 - Clustering
 ---
 
 ### Notebook
 
-- [ipynb](../content/labs/lab_08.ipynb)
-- [html](../content/labs/lab_08.html)
-- [pdf](../content/labs/lab_08.pdf)
+- [ipynb](../content/labs/lab_07.ipynb)
+- [html](../content/labs/lab_07.html)
+- [pdf](../content/labs/lab_07.pdf)
 
 ### Data
 

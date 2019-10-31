@@ -38,7 +38,7 @@
 ##### Week 7: Clustering
 
 * Lecture: [Clustering](notes/Class_08.html).
-* Tutorial: [Geodemographic analysis](labs/Lab_08.html).
+* Tutorial: [Geodemographic analysis](labs/Lab_07.html).
 
 ##### Week 8: Point Data
 
