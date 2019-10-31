@@ -7,7 +7,7 @@
   <meta name="author" content="Dani Arribas-Bel">
   <meta name="description" content="An introduction to Geographic Data Science">
 
-  <title>GDS19 &mdash; Lab 8 - Clustering</title>
+  <title>GDS19 &mdash; Lab 8 - Points</title>
 
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/css/course-site-custom.css" rel="stylesheet">
@@ -70,17 +70,15 @@
               
               <li><a href="../notes/Class_06.html">Week 6 - ESDA</a></li>
               
-              <li><a href="../notes/Class_07.html">Week 7 - Break</a></li>
+              <li><a href="../notes/Class_07.html">Week 7 - Clustering</a></li>
               
-              <li><a href="../notes/Class_08.html">Week 8 - Clustering</a></li>
+              <li><a href="../notes/Class_08.html">Week 8 - Points</a></li>
               
-              <li><a href="../notes/Class_09.html">Week 9 - Points</a></li>
+              <li><a href="../notes/Class_09.html">Week 09 - Assignment preparation</a></li>
               
-              <li><a href="../notes/Class_10.html">Week 10 - Assignment preparation</a></li>
+              <li><a href="../notes/Class_10.html">Week 10 - Causal Inference</a></li>
               
-              <li><a href="../notes/Class_11.html">Week 11 - Causal Inference</a></li>
-              
-              <li><a href="../notes/Class_12.html">Week 12 - Geographic Data Science in Action</a></li>
+              <li><a href="../notes/Class_11.html">Week 11 - Geographic Data Science in Action</a></li>
               
               
             </ul>
@@ -104,9 +102,9 @@
               
               <li><a href="../labs/Lab_06.html">Lab 6 - ESDA</a></li>
               
-              <li><a href="../labs/Lab_08.html">Lab 8 - Clustering</a></li>
+              <li><a href="../labs/Lab_07.html">Lab 7 - Clustering</a></li>
               
-              <li><a href="../labs/Lab_09.html">Lab 9 - Points</a></li>
+              <li><a href="../labs/Lab_08.html">Lab 8 - Points</a></li>
               
               
             </ul>
@@ -130,7 +128,7 @@
   <div class="container" id="body">
 
     
-    <h2>Lab 8 - Clustering</h2>
+    <h2>Lab 8 - Points</h2>
     
 
     <h3 id="notebook">Notebook</h3>
@@ -143,20 +141,21 @@
 
 <h3 id="data">Data</h3>
 
-<p>This session uses the <strong>“AirBnb listing for Inner London - MSOA level”</strong> dataset. Go to the <a href="../datasets.html">Datasets</a> tab to find out more information as well as instructions to download it.</p>
+<p>This lab uses a sample of geo-referenced tweets for the city of Liverpool. Go to the <a href="../datasets.html">Datasets</a> tab and check the “Geo-referenced tweets” section to find out more information about the data as well as instructions to download it.</p>
 
 <h3 id="required-before-the-practical">Required before the practical</h3>
 
-<p>Watch the section on spatial clustering of the SciPy’16 tutorial on Geographic Data Science with PySAL.</p>
+<p>Watch the section on points of the SciPy’16 tutorial on Geographic Data Science with PySAL.</p>
 
 <blockquote>
-  <p>[<a href="https://youtu.be/TY4QWnnd4jY?t=2h30m">YouTube</a> - Min 2:30:00 to 3:02:00] [<a href="http://darribas.org/gds_scipy16/ipynb_md/07_spatial_clustering.html">Online materials</a>]</p>
+  <p>[<a href="https://youtu.be/TY4QWnnd4jY?t=1h50m">YouTube</a> - Min 1:50:00 to 2:30:00] [<a href="http://darribas.org/gds_scipy16/ipynb_md/06_points.html">Online materials</a>]</p>
 </blockquote>
 
 <h3 id="additional-materials">Additional materials</h3>
 
 <ul>
-  <li>Although a bit more advanced, the documentation for <a href="http://scikit-learn.org"><code class="highlighter-rouge">scikit-learn</code></a>, a world-class Python library for machine learning, is excellent and includes many examples that cover the entire functionality set of the library.</li>
+  <li>A very good resource for kernel density estimation in Python is provided in <a href="https://jakevdp.github.io/blog/2013/12/01/kernel-density-estimation/">this blog post</a> by Jake Vanderplas.</li>
+  <li>The R package <a href="http://spatstat.github.io/"><code class="highlighter-rouge">spatstat</code></a> provides extensive functionality to statistically describe and model point patterns.</li>
 </ul>
 
 

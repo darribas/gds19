@@ -1,223 +1,256 @@
 % Geographic Data Science - Lecture VIII
-% Grouping Data over Space
+% Points
 %[Dani Arribas-Bel](http://darribas.org)
 
 #
 ## Today
 
-* The need to group data
-* Geodemographic analysis
-* Non-spatial clustering
-* Regionalization
-* Examples "in the wild"
+* The *point* of points
+* Point patterns
+* Visualization of point patterns
+* Identifying clusters of points
 
 #
-## The need to group data
-##
+## The *point* of points
+## Points like polygons
 
-<center>
-*Everything should be made as simple as possible, but not simpler*
-</center>
+Points *can* represent **"fixed" entities**
 
-<div style="text-align:right">
-<small>
-Albert Einstein
-</small>
-</div>
+<span class='fragment'>
+In this case, points are **qualitatively** similar to **polygons/lines**
 
-## The need to group data
+<span class='fragment'>
+The **goal** here is, taking location fixed, to model other aspects of the
+data
 
-* The world is **complex** and **multidimensional**
-* **Univariate** analysis focuses on **only one** dimension
-* Sometimes, world issues are best understood as **multivariate**. E.g.
+## Points like polygons
 
-<ul class="fragment">
-* Percentage of foreign-born Vs. *What is a neighborhood?*
-* Years of schooling Vs. *Human development*
-* Monthly income Vs. *Deprivation*
+Examples:
+
+<ul>
+<li> Cities (in most cases) </li>
+<li> Buildings </li>
+<li> Polygons represented as their centroid </li>
+<li> ... </li>
 </ul>
 
-## *Grouping* as *simplifying*
+## When points are not polygons
 
-* Define a given number of categories based on **many characteristics**
-  (multi-dimensional)
-* Find the **category** where each observation *fits best*
-* **Reduce complexity**, keep all the **relevant information**
-* Produce easier-to-understand outputs
-
-#
-## Geodemographic analysis
-## Geodemographic analysis
-
-<table>
-<col width="70%">
-<col width="30%">
-<tr>
-<td style="vertical-align:top">
-
-* 1970’s, Richard Webber
-* **Identify similar neighborhoods** $\rightarrow$ Target urban 
-  deprivation funding
-* **Public** Sector (policy) $\rightarrow$
-  **Private** sector (marketing and business intelligence)
-</td>
-<td><img src="../content/lectures/figs/l08_predictive_postcode.jpg"
-alt="Predictive Postcode"/></td>
-</table>
-
-## {data-background=../content/lectures/figs/l08_oac.png data-transition=none}
-
-[Source](http://maps.cdrc.ac.uk)
-
-## 
-
-*How do you segment/cluster observations over space?*
-
-* Statistical clustering
-* Explicitly spatial clustering (regionalization)
-
-#
-## Non-spatial clustering
-## 
-
-**Split** a dataset into **groups** of observations that are **similar within** the group
-and **dissimilar between** groups, based on a series of **attributes**
-
-##
-
-**Machine learning**
-
-<div class="fragment current-visible">
-  The computer *learns* some of the properties of the dataset without the
-  human specifying them
-</div>
-
-**Unsupervised**
-
-<div class="fragment current-visible">
-  There is no a-priori structure imposed on the classification $\rightarrow$
-  before the analysis, no observations is in a category
-</div>
-
-## Intuition
-
-<center>
-<img src="../content/lectures/figs/l08_split.png" alt="Clustering"
-style="width:750px;height:450px;"/>
-</center>
-
-## K-means <small>[[Source](https://youtu.be/hDmNF9JG3lo)]</small>
-
-<iframe width="750" height="450" src="https://www.youtube.com/embed/hDmNF9JG3lo" frameborder="0" allowfullscreen></iframe>
-
-## More clustering...
-
-* Hierarchical clustering
-* Agglomerative clustering
-* Spectral clustering
-* Neural networks (e.g. Self-Organizing Maps)
-* DBSCAN
-* ...
-
-Different properties, different best usecases
-
-See [interesting comparison](http://scikit-learn.org/stable/modules/clustering.html#overview-of-clustering-methods) table
-
-#
-## Regionalization
-## 
-
-Unsupervised <span class="fragment">**Spatial**</span> Machine Learning
+Point data are not only a different geometry than polygons or lines...
 
 <span class="fragment">
-*Aggregating basic spatial units (**areas**) **into** larger units (**regions**)*
+... Points can also represent a fundamentally different way to approach spatial analysis
 
-## Regionalization
+## Points unlike polygons
 
-**Split** a dataset into **groups** of observations that are **similar within** the group
-and **dissimilar between** groups, based on a series of 
-**attributes**...
-
-<span class="fragment"> ...with the additional constraint observations need to be
-**spatial neighbors**</span>
-
-## Regionalization {data-transition=none}
-
-<SMALL>
 <ul>
-<li class="fragment current-visible"> All the methods aggregate geographical areas into a predefined number of regions, while optimizing a particular aggregation criterion; </li>
-<li class="fragment current-visible"> The areas within a region must be geographically connected (the spatial contiguity constraint); </li>
-<li class="fragment current-visible"> The number of regions must be smaller than or equal to the number of areas; </li>
-<li class="fragment current-visible"> Each area must be assigned to one and only one region; </li>
-<li class="fragment current-visible"> Each region must contain at least one area. </li>
+<li class="fragment current-visible">  Rather than exhausting the entire space, points can be **events** subject to
+  **occur anywhere** </li>
+<li class="fragment current-visible"> The **location** of the event is **part** of what we are trying to understand/**model** </li>
+<li class="fragment current-visible"> The interest focuses on **characterizing** the **pattern**
+that the points follow **over space**
 </ul>
-</SMALL>
 
-<div style="text-align:right">
-[Duque et al. (2007)](http://irx.sagepub.com/content/30/3/195)
-</div>
+## A few examples...
 
-## Regionalization {data-transition=none}
+## {data-background=../content/lectures/figs/l09_crime.png}
 
-<SMALL>
-<ul>
-<li> All the methods aggregate geographical areas into a predefined number of regions, while optimizing a particular aggregation criterion;</li>
-<li> The areas within a region must be geographically connected (the spatial contiguity constraint); </li>
-<li> The number of regions must be smaller than or equal to the number of areas; </li>
-<li> Each area must be assigned to one and only one region;</li>
-<li> Each region must contain at least one area. </li>
-</ul>
-</SMALL>
+[[Source](http://www.crimemapping.com/map.aspx?aid=3db8cf99-a73b-46d2-b218-bd24cf491577)]
 
-<div style="text-align:right">
-[Duque et al. (2007)](http://irx.sagepub.com/content/30/3/195)
-</div>
+## {data-background=../content/lectures/figs/l09_trees.png}
 
-## {data-background=../content/lectures/figs/l08_abb_london.png}
+[[Source](http://jillhubley.com/project/nyctrees/)]
 
-## Algorithms
+## UFO Sightings (1933-)
 
-* Automated Zoning Procedure (AZP)
-* Arisel
-* Max-P
-* ...
+<iframe width='100%' height='520' frameborder='0' src='https://lcpearso.cartodb.com/viz/e36e448a-da87-11e4-a327-0e018d66dc29/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
-See [Duque et al. (2007)](http://irx.sagepub.com/content/30/3/195) for an
-excellent, though advanced, overview
+## Geo-tagged tweets
+
+<iframe width="100%" height="500px" frameBorder="0" src="https://api.tiles.mapbox.com/v4/enf.c3a2de35/page.html?access_token=pk.eyJ1IjoiZW5mIiwiYSI6IkNJek92bnMifQ.xn2_Uj9RkYTGRuCGg4DXZQ#12/53.4155/-2.9680"></iframe>
 
 #
-## Examples
+## Point patterns
 
-## Non-spatial clustering
+## Point patterns
 
-## {data-background=../content/lectures/figs/l08_spotify.png data-transition=none data-background-size=contain}
-## {data-background=../content/lectures/figs/l08_ca.png data-transition=none data-background-size=contain}
+Distribution of **points over** a portion of **space**
 
-## Regionalisation
+Assumption is a point can happen anywhere on that space, but only happens in
+specific locations
 
-## Census geographies {data-transition=none}
+<div class='fragment'>
+* **Unmarked**: locations only
+* **Marked**: values attached to each point
+</div>
+
+##
+
+**`Point Pattern Analysis`**
+
+Describe, characterize, and explain point patterns, focusing on their **generating process**
+
+* <u>Visual exploration</u>
+* *Clustering* properties and <u>*clusters*</u>
+* Statistical modeling of the underlying processes
+
+#
+## Visualization of PPs
+## Visualization of PPs
+
+Two routes (today):
+
+* *Aggregate* <span class='fragment'> $\leftrightarrow$ "Histogram"
+* *Smooth* <span class='fragment'> $\leftrightarrow$ KDE
+
+## Aggregation
+##
 
 <center>
-<img src="../content/lectures/figs/l08_census.png" alt="Choropleth"
-style="width:800px;height:350px;"/>
+*Points meet polygons*
 </center>
 
-## {data-background=../content/lectures/figs/l08_livehoods.png data-transition=none}
+<span class="fragment"> Use **polygon** boundaries and **count** points per area
 
-[Livehoods](http://www.livehoods.org/)
+<span class="fragment"> [Insert your skills for **choropleth mapping** here!!!]
+
+<span class="fragment"> **But**, <span class="fragment"> the polygons need to *"make sense"* (their
+delineation needs to relate to the point generating process)
+
+## 
+
+<center>
+<img src="../content/lectures/figs/l09_liv_pts.png" alt=""
+style="width:400px;height:500px;"/>
+<span class="fragment"> 
+<img src="../content/lectures/figs/l09_liv_cho.png" alt=""
+style="width:400px;height:500px;"/>
+</center>
+
+## Hex-binning
+
+If **no** polygon boundary seems like a **good candidate** for aggregation...
+
+<span class='fragment'> ...draw a **hexagonal** (or squared) **tesselation**!!!
+
+<div class='fragment'>
+Hexagons...
+
+* Are **regular**
+* **Exhaust** the space (Unlike circles)
+* Have **many sides** (minimize boundary problems)
+</div>
+
+## 
+
+<center>
+<img src="../content/lectures/figs/l09_liv_pts.png" alt=""
+style="width:300px;height:400px;"/>
+<span class="fragment"> 
+<img src="../content/lectures/figs/l09_liv_hex_empty.png" alt=""
+style="width:300px;height:400px;"/>
+<span class="fragment"> 
+<img src="../content/lectures/figs/l09_liv_hex_filled.png" alt=""
+style="width:300px;height:400px;"/>
+</center>
+
+
+## But...
+
+<div class="fragment">
+(Arbitrary) aggregation may induce **MAUP** (see Lecture 4)
+</div>
+
+<center class="fragment">
+$+$
+</center>
+
+<div class="fragment">
+Points usually represent events that affect only **part** of the population
+and hence are best considered as **rates** (see Lecture 4)
+</div>
+
+## Kernel Density Estimation
+## Kernel Density Estimation
+
+*Estimate the (**continuous**) observed **distribution** of a variable*
+
+<div class='fragment'>
+* Probability of finding an observation at a given point
+* "Continuous histogram"
+* Solves (much of) the MAUP problem, but not the underlying population issue
+</div>
+
+## {data-background=../content/lectures/figs/l09_kde.png data-background-size=contain}
+
+[[Source](https://en.wikipedia.org/wiki/Kernel_density_estimation#/media/File:Comparison_of_1D_histogram_and_KDE.png)]
+
+## Bivariate (spatial) KDE
+
+*Probability of finding observations at a given point in space*
+
+* **Bivariate** version: distribution of **pairs of values**
+* In **space**: values are coordinates (XY), locations
+* Continuous "version" of a choropleth
+
+## {data-background=../content/lectures/figs/l09_kde2d.png}
+
+## 
+
+<center>
+<img src="../content/lectures/figs/l09_liv_pts.png" alt=""
+style="width:400px;height:500px;"/>
+<span class="fragment"> 
+<img src="../content/lectures/figs/l09_liv_kde.png" alt=""
+style="width:400px;height:500px;"/>
+</center>
 
 #
-## Recapitulation
+## Finding clusters of PPs
 
-* Some problems are truly **highly dimensional** and univariate representations
-  are not appropriate
-* **Clustering** can help reduce complexity by creating **categories** that
-  retain statistical information but are easier to understand
-* Two main types of clustering in this context:
-    * Geo-demographic analysis
-    * Regionalization
+##
 
+<span class='fragment fade-out'> **Cluster** is a hard to define term </span>
+
+<CENTER>
+<span class='fragment'> *Concentrations/agglomerations of points over space, significantly more so than in the rest
+of the space considered* </span>
+</CENTER>
+
+<span class='fragment'> Huge literature spanning **spatial analysis**, **statistics** and **computer science**. Today, we'll look at... </span>
+
+##
+
+`D`<span class='fragment'>ensity</span> 
+
+`B`<span class='fragment'>ased</span> 
+
+`S`<span class='fragment'>patial</span> 
+
+`C`<span class='fragment'>lustering of</span>
+
+`A`<span class='fragment'>pplications with</span> 
+
+`N`<span class='fragment'>oise</span>
+
+##
+
+<iframe width="700" height="500" src="https://www.youtube.com/embed/5E097ZLE9Sg" frameborder="0" allowfullscreen></iframe>
+
+## `DBSCAN`
+
+<small>(Additional)</small> **Pros**:
+
+- Not necessarily spatial
+- Very fast to run so $\rightarrow$ scales relatively well $\rightarrow$
+  applicable to large datasets
+
+<small>(Additional)</small> **Cons**:
+
+- Not based on any probabilistic model (no inference)
+- Hard to learn about the underlying process
 
 #
 
     <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Geographic Data Science'19</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://darribas.org" property="cc:attributionName" rel="cc:attributionURL">Dani Arribas-Bel</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
