@@ -1,5 +1,5 @@
 ---
-title: Week 8 - Clustering
+title: Week 8 - Points
 ---
 
 ### Slides
@@ -9,17 +9,14 @@ title: Week 8 - Clustering
 
 ### To do before class
 
-* Talk on "Geodemographics and the Internal Structure of Cities" by Prof. Alex Singleton ([link](https://www.youtube.com/watch?v=lslLujtqGlw) to 50min. video).
+* Lecture on  "Point Pattern Analysis Basics" by Luc Anselin ([link](https://www.youtube.com/watch?v=Z2iT4JpqGZg&list=PLzREt6r1NenlmAiF3ds5_WGVAG1rTYSK-&index=1) to 45min video, and [link](https://www.youtube.com/watch?v=BN94XXT6Io4) to a more recent 6min intro).
 
 ### Related readings
 
-* Chapters 1 and 2 in {% cite webber2018predictive %} provides a fascinating
-  account of the origins of Geodemographic classifications.
-* Chapter 7 in {% cite brunsdon2015geocomputation %}: *Geodemographic Analysis*, by Alexandros Alexiou and Alex Singleton.
-* {% cite duque2007supervised %} is an excellent review of regionalization algorthims, but it is an advanced read.
+* This class was partially based on {% cite rey2015gis471l4 %}.
+* The slides for this lecture were also inspired by Part 6 in {% cite brunsdoncomber2015 %}. 
 
 ### References
 
 {% bibliography --cited %}
-
 

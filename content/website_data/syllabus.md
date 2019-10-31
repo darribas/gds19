@@ -37,26 +37,26 @@
 
 ##### Week 7: Clustering
 
-* Lecture: [Clustering](notes/Class_08.html).
+* Lecture: [Clustering](notes/Class_07.html).
 * Tutorial: [Geodemographic analysis](labs/Lab_07.html).
 
 ##### Week 8: Point Data
 
-* Lecture: [Point Data](notes/Class_09.html).
+* Lecture: [Point Data](notes/Class_08.html).
 * Tutorial: [Exploring Twitter patterns](labs/Lab_08.html).
 
 -----
 
 ##### Week 9
 
-* Lecture: [Assignment preparation](notes/Class_10.html).
+* Lecture: [Assignment preparation](notes/Class_09.html).
 * Tutorial: 
     - [**TEST 2**](assignments.html#task_02) (1h): Thursday Nov. 21st
     - Assignment Clinic
 
 ##### Week 10: (Spatial) causal inference
 
-* Lecture: [Spatial causal inference](notes/Class_11.html).
+* Lecture: [Spatial causal inference](notes/Class_10.html).
 * Tutorial: Assignment Clinic.
 
 ##### Week 11: Geographic Data Science in Action

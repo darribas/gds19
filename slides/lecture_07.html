@@ -1,0 +1,359 @@
+<!-- Copied from https://gist.github.com/aaronwolen/5017084#file-template-revealjs-html -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+ 
+<title>Geographic Data Science - Lecture VII</title>
+ 
+<meta name="description" content="Geographic Data Science - Lecture VII">    
+ 
+  <meta name="author" content="Grouping Data over Space" />
+ 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+<link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/journal.css" id="theme">
+ 
+ 
+<!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+ 
+ 
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+  document.write( '<link rel="stylesheet" href="css/print/' +
+    ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + 
+    '.css" type="text/css" media="print">' );
+</script>
+ 
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+ 
+<body>
+ 
+<div class="reveal">
+ 
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+ 
+<section>
+<h1>Geographic Data Science - Lecture VII</h1>
+<h3>Grouping Data over Space</h3>
+<p>
+<h4><a href="http://darribas.org">Dani Arribas-Bel</a></h4>
+</p>
+</section>  
+ 
+ 
+<section id="section" class="level1">
+<h1></h1>
+<section id="today" class="level2">
+<h2>Today</h2>
+<ul>
+<li>The need to group data</li>
+<li>Geodemographic analysis</li>
+<li>Non-spatial clustering</li>
+<li>Regionalization</li>
+<li>Examples “in the wild”</li>
+</ul>
+</section>
+</section>
+<section id="section-1" class="level1">
+<h1></h1>
+<section id="the-need-to-group-data" class="level2">
+<h2>The need to group data</h2>
+</section>
+<section id="section-2" class="level2">
+<h2></h2>
+<center>
+<em>Everything should be made as simple as possible, but not simpler</em>
+</center>
+<div style="text-align:right">
+<p><small> Albert Einstein </small></p>
+</div>
+</section>
+<section id="the-need-to-group-data-1" class="level2">
+<h2>The need to group data</h2>
+<ul>
+<li>The world is <strong>complex</strong> and <strong>multidimensional</strong></li>
+<li><strong>Univariate</strong> analysis focuses on <strong>only one</strong> dimension</li>
+<li>Sometimes, world issues are best understood as <strong>multivariate</strong>. E.g.</li>
+</ul>
+<ul class="fragment">
+<ul>
+<li>Percentage of foreign-born Vs. <em>What is a neighborhood?</em></li>
+<li>Years of schooling Vs. <em>Human development</em></li>
+<li>Monthly income Vs. <em>Deprivation</em></li>
+</ul>
+</ul>
+</section>
+<section id="grouping-as-simplifying" class="level2">
+<h2><em>Grouping</em> as <em>simplifying</em></h2>
+<ul>
+<li>Define a given number of categories based on <strong>many characteristics</strong> (multi-dimensional)</li>
+<li>Find the <strong>category</strong> where each observation <em>fits best</em></li>
+<li><strong>Reduce complexity</strong>, keep all the <strong>relevant information</strong></li>
+<li>Produce easier-to-understand outputs</li>
+</ul>
+</section>
+</section>
+<section id="section-3" class="level1">
+<h1></h1>
+<section id="geodemographic-analysis" class="level2">
+<h2>Geodemographic analysis</h2>
+</section>
+<section id="geodemographic-analysis-1" class="level2">
+<h2>Geodemographic analysis</h2>
+<table>
+<col width="70%">
+<col width="30%">
+<tr>
+<td style="vertical-align:top">
+<ul>
+<li>1970’s, Richard Webber</li>
+<li><strong>Identify similar neighborhoods</strong> <span class="math inline">→</span> Target urban deprivation funding</li>
+<li><strong>Public</strong> Sector (policy) <span class="math inline">→</span> <strong>Private</strong> sector (marketing and business intelligence)</li>
+</ul>
+</td>
+<td>
+<img src="../content/lectures/figs/l08_predictive_postcode.jpg"
+alt="Predictive Postcode"/>
+</td>
+</table>
+</section>
+<section id="section-4" class="level2" data-background="../content/lectures/figs/l08_oac.png" data-transition="none">
+<h2></h2>
+<p><a href="http://maps.cdrc.ac.uk">Source</a></p>
+</section>
+<section id="section-5" class="level2">
+<h2></h2>
+<p><em>How do you segment/cluster observations over space?</em></p>
+<ul>
+<li>Statistical clustering</li>
+<li>Explicitly spatial clustering (regionalization)</li>
+</ul>
+</section>
+</section>
+<section id="section-6" class="level1">
+<h1></h1>
+<section id="non-spatial-clustering" class="level2">
+<h2>Non-spatial clustering</h2>
+</section>
+<section id="section-7" class="level2">
+<h2></h2>
+<p><strong>Split</strong> a dataset into <strong>groups</strong> of observations that are <strong>similar within</strong> the group and <strong>dissimilar between</strong> groups, based on a series of <strong>attributes</strong></p>
+</section>
+<section id="section-8" class="level2">
+<h2></h2>
+<p><strong>Machine learning</strong></p>
+<div class="fragment current-visible">
+<p>The computer <em>learns</em> some of the properties of the dataset without the human specifying them</p>
+</div>
+<p><strong>Unsupervised</strong></p>
+<div class="fragment current-visible">
+<p>There is no a-priori structure imposed on the classification <span class="math inline">→</span> before the analysis, no observations is in a category</p>
+</div>
+</section>
+<section id="intuition" class="level2">
+<h2>Intuition</h2>
+<center>
+<img src="../content/lectures/figs/l08_split.png" alt="Clustering"
+style="width:750px;height:450px;"/>
+</center>
+</section>
+<section id="k-means-source" class="level2">
+<h2>K-means <small>[<a href="https://youtu.be/hDmNF9JG3lo">Source</a>]</small></h2>
+<iframe width="750" height="450" src="https://www.youtube.com/embed/hDmNF9JG3lo" frameborder="0" allowfullscreen>
+</iframe>
+</section>
+<section id="more-clustering" class="level2">
+<h2>More clustering…</h2>
+<ul>
+<li>Hierarchical clustering</li>
+<li>Agglomerative clustering</li>
+<li>Spectral clustering</li>
+<li>Neural networks (e.g. Self-Organizing Maps)</li>
+<li>DBSCAN</li>
+<li>…</li>
+</ul>
+<p>Different properties, different best usecases</p>
+<p>See <a href="http://scikit-learn.org/stable/modules/clustering.html#overview-of-clustering-methods">interesting comparison</a> table</p>
+</section>
+</section>
+<section id="section-9" class="level1">
+<h1></h1>
+<section id="regionalization" class="level2">
+<h2>Regionalization</h2>
+</section>
+<section id="section-10" class="level2">
+<h2></h2>
+<p>Unsupervised <span class="fragment"><strong>Spatial</strong></span> Machine Learning</p>
+<p><span class="fragment"> <em>Aggregating basic spatial units (<strong>areas</strong>) <strong>into</strong> larger units (<strong>regions</strong>)</em></p>
+</section>
+<section id="regionalization-1" class="level2">
+<h2>Regionalization</h2>
+<p><strong>Split</strong> a dataset into <strong>groups</strong> of observations that are <strong>similar within</strong> the group and <strong>dissimilar between</strong> groups, based on a series of <strong>attributes</strong>…</p>
+<p><span class="fragment"> …with the additional constraint observations need to be <strong>spatial neighbors</strong></span></p>
+</section>
+<section id="regionalization-2" class="level2" data-transition="none">
+<h2>Regionalization</h2>
+<SMALL>
+<ul>
+<li class="fragment current-visible">
+All the methods aggregate geographical areas into a predefined number of regions, while optimizing a particular aggregation criterion;
+</li>
+<li class="fragment current-visible">
+The areas within a region must be geographically connected (the spatial contiguity constraint);
+</li>
+<li class="fragment current-visible">
+The number of regions must be smaller than or equal to the number of areas;
+</li>
+<li class="fragment current-visible">
+Each area must be assigned to one and only one region;
+</li>
+<li class="fragment current-visible">
+Each region must contain at least one area.
+</li>
+</ul>
+<p></SMALL></p>
+<div style="text-align:right">
+<p><a href="http://irx.sagepub.com/content/30/3/195">Duque et al. (2007)</a></p>
+</div>
+</section>
+<section id="regionalization-3" class="level2" data-transition="none">
+<h2>Regionalization</h2>
+<SMALL>
+<ul>
+<li>
+All the methods aggregate geographical areas into a predefined number of regions, while optimizing a particular aggregation criterion;
+</li>
+<li>
+The areas within a region must be geographically connected (the spatial contiguity constraint);
+</li>
+<li>
+The number of regions must be smaller than or equal to the number of areas;
+</li>
+<li>
+Each area must be assigned to one and only one region;
+</li>
+<li>
+Each region must contain at least one area.
+</li>
+</ul>
+<p></SMALL></p>
+<div style="text-align:right">
+<p><a href="http://irx.sagepub.com/content/30/3/195">Duque et al. (2007)</a></p>
+</div>
+</section>
+<section id="section-11" class="level2" data-background="../content/lectures/figs/l08_abb_london.png">
+<h2></h2>
+</section>
+<section id="algorithms" class="level2">
+<h2>Algorithms</h2>
+<ul>
+<li>Automated Zoning Procedure (AZP)</li>
+<li>Arisel</li>
+<li>Max-P</li>
+<li>…</li>
+</ul>
+<p>See <a href="http://irx.sagepub.com/content/30/3/195">Duque et al. (2007)</a> for an excellent, though advanced, overview</p>
+</section>
+</section>
+<section id="section-12" class="level1">
+<h1></h1>
+<section id="examples" class="level2">
+<h2>Examples</h2>
+</section>
+<section id="non-spatial-clustering-1" class="level2">
+<h2>Non-spatial clustering</h2>
+</section>
+<section id="section-13" class="level2" data-background="../content/lectures/figs/l08_spotify.png" data-transition="none" data-background-size="contain">
+<h2></h2>
+</section>
+<section id="section-14" class="level2" data-background="../content/lectures/figs/l08_ca.png" data-transition="none" data-background-size="contain">
+<h2></h2>
+</section>
+<section id="regionalisation" class="level2">
+<h2>Regionalisation</h2>
+</section>
+<section id="census-geographies" class="level2" data-transition="none">
+<h2>Census geographies</h2>
+<center>
+<img src="../content/lectures/figs/l08_census.png" alt="Choropleth"
+style="width:800px;height:350px;"/>
+</center>
+</section>
+<section id="section-15" class="level2" data-background="../content/lectures/figs/l08_livehoods.png" data-transition="none">
+<h2></h2>
+<p><a href="http://www.livehoods.org/">Livehoods</a></p>
+</section>
+</section>
+<section id="section-16" class="level1">
+<h1></h1>
+<section id="recapitulation" class="level2">
+<h2>Recapitulation</h2>
+<ul>
+<li>Some problems are truly <strong>highly dimensional</strong> and univariate representations are not appropriate</li>
+<li><strong>Clustering</strong> can help reduce complexity by creating <strong>categories</strong> that retain statistical information but are easier to understand</li>
+<li>Two main types of clustering in this context:
+<ul>
+<li>Geo-demographic analysis</li>
+<li>Regionalization</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="section-17" class="level1">
+<h1></h1>
+<pre><code>&lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;&lt;img alt=&quot;Creative Commons License&quot; style=&quot;border-width:0&quot; src=&quot;https://i.creativecommons.org/l/by-sa/4.0/88x31.png&quot; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span xmlns:dct=&quot;http://purl.org/dc/terms/&quot; property=&quot;dct:title&quot;&gt;Geographic Data Science&#39;19&lt;/span&gt; by &lt;a xmlns:cc=&quot;http://creativecommons.org/ns#&quot; href=&quot;http://darribas.org&quot; property=&quot;cc:attributionName&quot; rel=&quot;cc:attributionURL&quot;&gt;Dani Arribas-Bel&lt;/a&gt; is licensed under a &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;Creative Commons Attribution-ShareAlike 4.0 International License&lt;/a&gt;.</code></pre>
+</section>
+</div>
+ 
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+ 
+<script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    transition: 'linear',
+
+        math: {
+            // mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+            config: 'TeX-AMS_HTML-full'
+        },
+
+  // available themes are in /css/theme
+      theme: Reveal.getQueryHash().theme || 'journal', 
+   
+  // default/cube/page/concave/zoom/linear/fade/none
+      transition: Reveal.getQueryHash().transition || 'linear',
+   
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+    // { src: '../../lib/js/classList.js' },
+    { src: 'plugin/math/math.js', async: true }
+  ]
+  });
+ 
+</script>
+
+</body>
+</html>

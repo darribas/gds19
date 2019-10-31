@@ -17,16 +17,16 @@ le05:
 le06:
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_06.md -o slides/lecture_06.html
 	decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_06.html slides/lecture_06.pdf
+le07:
+	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_07.md -o slides/lecture_07.html
+	decktape automatic --chrome-arg=--no-sandbox -s 1290x960 slides/lecture_07.html slides/lecture_07.pdf
 le08:
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_08.md -o slides/lecture_08.html
 	decktape automatic --chrome-arg=--no-sandbox -s 1290x960 slides/lecture_08.html slides/lecture_08.pdf
-le09:
-	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_09.md -o slides/lecture_09.html
-	decktape automatic --chrome-arg=--no-sandbox -s 1290x960 slides/lecture_09.html slides/lecture_09.pdf
-	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/assignment03.md -o slides/assignment03.html
-le11:
-	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_11.md -o slides/lecture_11.html
-	decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_11.html slides/lecture_11.pdf
+	#pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/assignment03.md -o slides/assignment03.html
+le10:
+	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_10.md -o slides/lecture_10.html
+	decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_10.html slides/lecture_10.pdf
 
 labs: la00 la01 la02 la03 la04 la05 la06 la08 la09
 la00:
