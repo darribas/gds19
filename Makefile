@@ -1,4 +1,4 @@
-lectures: le01 le02 le03 le04 le05 le06 le07 le08 le09 le10
+lectures: le01 le02 le03 le04 le05 le06 le07 le08 le07 le10
 le01:
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_01.md -o slides/lecture_01.html
 	decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_01.html slides/lecture_01.pdf
@@ -28,7 +28,7 @@ le10:
 	pandoc -t html5 --template=slides/template.revealjs --standalone --section-divs --variable theme="journal"   --variable transition="linear" content/lectures/lecture_10.md -o slides/lecture_10.html
 	decktape automatic --chrome-arg=--no-sandbox -s 1280x960 slides/lecture_10.html slides/lecture_10.pdf
 
-labs: la00 la01 la02 la03 la04 la05 la06 la08 la09
+labs: la00 la01 la02 la03 la04 la05 la06 la08 la07
 la00:
 	# Begin
 	cd content/labs && jupyter nbconvert --to html begin.ipynb --output begin.html
@@ -57,14 +57,13 @@ la05:
 la06:
 	cd content/labs && jupyter nbconvert --to html lab_06.ipynb --output lab_06.html
 	cd content/labs && jupyter nbconvert --to latex lab_06.ipynb --output lab_06.tex && texbuild lab_06.tex && rm lab_06.tex && rm -R lab_06_files/
+la07:
+	cd content/labs && jupyter nbconvert --to html lab_07.ipynb --output lab_07.html
+	cd content/labs && jupyter nbconvert --to latex lab_07.ipynb --output lab_07.tex && texbuild lab_07.tex && rm lab_07.tex && rm -R lab_07_files/
+
 la08:
 	cd content/labs && jupyter nbconvert --to html lab_08.ipynb --output lab_08.html
 	cd content/labs && jupyter nbconvert --to latex lab_08.ipynb --output lab_08.tex && texbuild lab_08.tex && rm lab_08.tex && rm -R lab_08_files/
-la09:
-	cd content/labs && jupyter nbconvert --to html lab_09.ipynb --output lab_09.html
-	cd content/labs && jupyter nbconvert --to html lab_09-lecture_figures.ipynb --output lab_09-lecture_figures.html
-	cd content/labs && jupyter nbconvert --to latex lab_09.ipynb --output lab_09.tex && texbuild lab_09.tex && rm lab_09.tex && rm -R lab_09_files/
-
 website:
 	rm -rf _site
 	jekyll build
