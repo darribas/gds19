@@ -1,5 +1,19 @@
 # Geographic Data Science
 
+---
+
+:warning::warning::warning: **IMPORTANT** :warning::warning::warning:
+
+This is the version of the course delivered in 2019 and it is currently archived. A superseeding version of this course is available at:
+
+> [https://darribas.org/gds_course](https://darribas.org/gds_course)
+
+Development can be followed at:
+
+> [https://github.com/darribas/gds_course](https://github.com/darribas/gds_course)
+
+---
+
 | <CENTER>OS</CENTER>    | | <CENTER>Status</CENTER> |
 | ------- | ----- | -----------------|
 | Linux & macOS  | | [![Build Status](https://travis-ci.org/darribas/gds19.svg?branch=master)](https://travis-ci.org/darribas/gds19) |
